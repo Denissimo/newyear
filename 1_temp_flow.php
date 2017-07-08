@@ -25,10 +25,7 @@ header('Content-type: text/html; charset=utf-8');
 
 <link rel="stylesheet/less" type="text/css" href="style.less">
 <script src="/js/less/less.min.js"></script>
-<!--
-<script src="/js/jquery.mobile-1.4.3.min.js"></script>
-<script src="/js/jquery.maskedinput-1.3.js"></script>
--->
+
 <script src="/css/bootstrap3/js/bootstrap.min.js"></script>
 <script src="/css/bootstrap3/js/respond.js"></script>
 <script src="/js/row.js"></script>
