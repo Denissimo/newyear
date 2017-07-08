@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(colors.css);
+@import url(sizes.css);
+
+
+body{
+
+	zoom:1;
+	adding:0; margin:0; min-height:100%; color:#000000;
+
+	/*background: #FFFFFF url('/imag/back/bkg-site.jpg') fixed top left no-repeat;*/
+	
+	/*
+	background: #FFFFFF url('/imag/back/gf050.jpg') fixed center left no-repeat;
+	background-color: #e4e4e4;*/
+	background: #FFFFFF url('/imag/back/sky02.jpg') fixed top left no-repeat;
+	-o-background-size: 100% 100%; 
+	-webkit-background-size:100% 100%; 
+	-moz-background-size:100% 100%; 
+	-khtml-background-size:100% 100%;
+	background-size: 100% 100%;
+	behavior: url('/pie/PIE.htc');
+}
+
+.container{
+	margin-top:15px;
+	min-height:600px;
+	background:rgba(255, 255, 255, 0.7);
+}
+
+.navbar{
+	margin-top:15px;
+}
+.navbar-brand{
+	margin:-40px 0 0 0;
+}
+
+.navbar-brand img{
+	width:120px;
+}

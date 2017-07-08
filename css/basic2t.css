@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(colors.css);
+@import url(sizes.css);
+@import url(lightbox.css);
+
+.top_block2 {
+    width: 242px;
+    height: 123px;
+    display: inline-block;
+    margin-left: 2px;
+    float: left;
+	font-size: 12px;
+	font-family: trebuchet MS,arial,helvetica !important;
+	
+}
+
+.top_block2 a:link {
+    background-image: url('/images/i/top_block3_bg.png');
+    background-repeat: no-repeat;
+    width: 242px;
+    height: 123px;
+    display: inline-block;
+    margin-left: 2px;
+    float: left;
+    text-decoration: none;
+	
+}
+.top_block2 a:hover{
+
+ background-image: url('/images/i/top_block2_bg_a.png');
+ background-repeat: no-repeat;
+  width:242px;
+ height:127px;
+ display:inline-block;
+ margin-left: 2px;
+ float: left;
+
+}
+.top_block2.mobile-pay .tb_image {
+    background: url('/images/i/smartphone.png') no-repeat scroll 10px 23px transparent;
+}
+.top_block2.jku-pay .tb_image {
+    background: url('/images/i/house.png') no-repeat scroll 10px 24px transparent;
+}
+.top_block2.gosposhlini-pay .tb_image {
+    background: url('/images/i/gibdd.png') no-repeat scroll 10px 24px transparent;
+}
+.top_block2.games-pay .tb_image {
+    background: url('/images/i/game.png') no-repeat scroll 12px 25px transparent;
+}
+.top_block2.credit-pay .tb_image {
+    background: url('/images/i/calc.png') no-repeat scroll 11px 24px transparent;
+}
+.top_block2.internet-pay .tb_image {
+    background: url('/images/i/payinet1.png') no-repeat scroll 10px 24px transparent;
+}
+.top_block2.internet-purses-pay .tb_image {
+    background: url('/images/i/emoney1.png') no-repeat scroll 11px 24px transparent;
+}
+
+.tb_image {
+    width: 220px;
+    height: 140px;
+    display: block;
+    margin-top: 5px;
+    margin-left: 11px;
+    padding-left: 30px;
+    height: 115px !important;
+}
+
+.tb_text {
+    width: 150px;
+    height: 50px;
+    display: block;
+    float: right;
+    clear: both;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    color: #000;
+    color: #686868 !important;
+    font-family: trebuchet MS,arial,helvetica !important;
+    font-size: 16px !important;
+    text-align: left !important;
+    line-height: 19px !important;
+    padding-top: 37px !important;
+}
+
+.tb_button {
+	display: none !important;
+
+    background-repeat: no-repeat;
+	background-position: 60px 0px;
+    width: 150px;
+    height: 27px;
+    display: block;
+    float: right;
+    clear: both;
+    padding-left: 12px;
+    font-weight: bold;
+    font-size: 11px;
+	padding-right: 10px;
+	padding-top: 15px !important;
+	text-align: right;
+}

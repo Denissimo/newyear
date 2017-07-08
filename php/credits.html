@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>2TБанк</title>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- jQueryMobileCSS - original without styling -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.light.css"  id='jQMnDTheme' />
+        <!--<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />-->
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.yellow.css" id='jQMnDColor' />
+
+		<!-- customize nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.2tbank.css" />
+		
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.4.3.min.js"></script>
+
+		<!-- Extras for: Cards.html -->
+	    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+        <script src="js/ttbank.js"></script>
+	    <script>
+			$(function(){
+				$("#idDepositPeriod").change(function(){
+					var depends={
+						2:9
+						,3:9.1
+						,4:9.4
+						,5:9.7
+						,6:10.1
+						,7:10.1
+						,8:10.1
+						,9:10.5
+						,10:10.5
+						,11:10.5
+						,12:11.14
+						
+					};
+					$("#idDependsOnPeriod").html(depends[$(this).val()]+"%");
+				});
+			})
+		</script>
+		
+    </head>
+    <body>
+	<div id='map-canvas'></div>        
+    <div data-role="page" data-theme='b'>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="#ttb-menu" data-ajax="false"><i class='fa fa-bars'></i></a>
+            <h1><a href="http://2tbank.ru" target="blank"><img data-inline="true" alt="2ТБанк" src="img/2t-logo.small.png"/></a></h1>
+			<!--
+			<a href="#" data-position="right"><i class="lIcon fa fa-user"></i>Пользователь</a>
+			<a href="#" data-position="right"><i class="lIcon fa fa-exit"></i>Выход</a>
+			-->
+        </div>
+        <div data-role="popup" id="smsConfirmation" data-theme="b">
+			<div data-role="header" data-theme="b">
+				<h1>Подтверждение операции</h1>
+			</div>
+			<div data-role="content" data-theme="b">
+				<div data-role="fieldcontain">
+					<div id="idPopupMessage"></div>
+					<!--<label for="smscode">SMS код:</label>-->
+					<input type="number" name="smscode" id="smscode" value="" data-clear-btn="true" placeholder="Введите полученный sms-код ">
+					<div class='showastabs center nobg'>
+						<a href="#" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-refresh'></i>Отправить еще раз.</a>
+						<a href="index.html" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-check'></i>Ок</a>
+					</div>
+				</div>
+			<!--
+			-->
+			</div>
+		</div>
+		<div data-role="panel" id="ttb-menu" data-theme="b">
+			<ul data-role="listview">
+				<li>Меню</li>
+				<li data-icon="false"><a href="index.html" data-ajax="false"><i class="lIcon fa fa-home"></i>На главную</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="cards.html" data-ajax="false"><i class="lIcon fa fa-credit-card"></i>Мои карты</a></li>
+				<li data-icon="false"><a href="accounts.html" data-ajax="false"><i class="lIcon fa fa-rouble"></i>Мои счета</a></li>
+				<li data-icon="false"><a href="deposits.html" data-ajax="false"><i class="lIcon fa fa-bank"></i>Вклады</a></li>
+				<li data-icon="false"><a href="credits.html" data-ajax="false"><i class="lIcon fa fa-money"></i>Кредиты</a></li>
+				<li data-icon="false">Платежи&Переводы</li>
+				<li data-icon="false"><a href="#" data-ajax="false"><i class="lIcon fa fa-mobile"></i>Мобильная связь</a></li>
+				<li data-icon="false"><a href="#" data-ajax="false"><i class="lIcon fa fa-hand-o-right"></i>P2P</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="settings.html" data-ajax="false"><i class="lIcon fa fa-gears"></i>Сервисы</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="#idContacts" data-ajax="false"><i class="lIcon fa fa-compass"></i>Контакты</a></li>
+				<!--<a href='#popupDialog' data-rel='popup' data-position-to='window' data-role='button' data-icon='external-link' data-transition='pop' data-inline='true'>Open popup dialog</a>-->
+			</ul>
+		</div>
+		<div data-role="content">  			
+			<div class="deep-header">Дополнительные услуги банка</div>
+			<ul data-nativedroid-plugin='cards'>
+				<li data-cards-type='weather'>
+					<h1>Кредит на Вашу Карту</h1>
+					<h2></h2>
+					<ul class='detail'>
+						<li><i class='fa fa-credit-card sunny'></i>
+							<span>минимальный платеж</span>
+							<span><i class='fa fa-chevron-circle-right'></i> 3%</span>
+						</li>
+						<li id="idDependsOnAmount">19.9%</li>
+					</ul>
+					<ul class='property'>
+						<li>
+							<a href="https://2tbank.ru/files/file/tariff-knvk-current/" target="blank"><i class='fa fa-file-pdf-o'></i></a>
+							<small>Тарифный план</small>
+							<strong>КнВК</strong>
+						</li>
+						<li>
+							<small>Требования к заемщику</small>
+							<strong>Гражданство РФ</strong>
+							<strong>от 23 до 60 лет</strong>
+						</li>
+						<li>
+							<a href="deposits.html?#idOpenDeposit" style="height:62px;">
+								<i class='lIcon fa fa-check-circle-o fa'></i>
+								Получить
+							</a>							
+						</li>
+					</ul>
+				</li>
+			</ul>
+        </div>
+    </div>
+    <script src="js/nativedroid.script.js"></script>
+    </body>
+</html>

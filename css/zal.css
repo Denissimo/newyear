@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+}
+div.frm01{
+	position:relative;
+	border:none;
+	
+}
+
+div.frm02{
+	position:absolute;
+	cursor:pointer;
+	/*border: black 1px solid;*/
+}
+
+
+#zal{
+	margin: 0 auto;
+	width:940px;
+	height:449px;
+	background-image:url(../imag/hall/hall.gif);
+	background-repeat:no-repeat;
+}
+
+#mon{
+	position:absolute;
+	padding: 10px;
+	/*margin: 0 auto;*/
+	width:200px;
+	height:auto;
+	background:#202040;
+	color:#FFFF00;
+	
+}
+
+#mon2{
+	position:absolute;
+	padding: 10px;
+	/*margin: 0 auto;*/
+	width:200px;
+	min-height:150px;
+	bottom:0;
+	right:0;
+	height:auto;
+	background:#402020;
+	color:#FFFF00;
+	
+}
+
+
+#lodge001{
+	top:64px;
+	left: 285px;
+	width:46px;
+	height:23px;
+	/*background-image:url(../imag/hall/hall_b.gif);
+	background-position: -285px -64px;*/
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+table.evetlist{
+	border-collapse:collapse;
+	
+}
+
+table.evetlist td{
+	padding:3px;
+	border:#000000 1px solid;
+}
+
+table td.central{
+	text-align:center;
+}

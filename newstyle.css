@@ -1,0 +1,122 @@
+.topline {
+background: #767676;
+width:100%;
+height:5px;
+}
+
+.tdw140{
+	width:140px;
+}
+
+.tdw100{
+	width:100px;
+}
+
+.tdw80{
+	width:80px;
+}
+
+.backgroundtop {
+background: url(http://1331.ru/img/backgroundtop.png) #9ece16;
+background-repeat: repeat-x;
+height:192px;
+width:100%;
+margin-bottom:10px;
+}
+
+.flowersheader {
+background: url(http://1331.ru/img/flowers.jpg);
+height:192px;
+width:100%;
+margin-bottom:10px;
+}
+.phone{
+background: url(http://1331.ru/img/phone.png);
+background-repeat: no-repeat;
+margin:0 auto;
+height:146px;
+width:341px;
+margin-top:-185px;
+margin-bottom:45px;
+}
+
+.call{
+background: url(http://1331.ru/img/call.png);
+background-repeat: no-repeat;
+float:right;
+height:222px;
+width:178px;
+margin-top:-190px;
+margin-right:200px;
+}
+
+.logosq{
+background: url(http://1331.ru/img/logo.png);
+background-repeat: no-repeat;
+float:left;
+height:237px;
+width:254px;
+margin-top:-220px;
+margin-left:120px;
+}
+
+.shash {
+background: url(http://1331.ru/img/shas.png);
+background-repeat: repeat-x;
+height:35px;
+margin-top:-50px;
+margin-bottom:10px;
+}
+
+.menu1 {
+margin-left:350px;
+}
+
+.home {
+background: url(http://1331.ru/img/home.png);
+height:30px;
+width:32px;
+float:left;
+}
+
+.sitemap {
+background: url(http://1331.ru/img/sitemap.png);
+height:27px;
+width:27px;
+float:left;
+}
+
+.feedback {
+background: url(http://1331.ru/img/feedback.png);
+height:30px;
+float:left;
+width:34px;
+}
+
+
+.show {
+background: url(http://1331.ru/img/show.png);
+background-repeat: repeat-x;
+height:89px;
+margin-top:-50px;
+}
+
+.showb {
+background: url(http://1331.ru/img/showbs.png);
+background-repeat: no-repeat;
+height:69px;
+margin-top:-72px;
+margin-left:161px;
+}
+
+.showbr {
+background: url(http://1331.ru/img/showbsr.png);
+background-repeat: repeat-x;
+height:173px;
+margin-top:-225px;
+margin-left:21px;
+}
+            
+            .shapka {
+                position: relative;
+            }

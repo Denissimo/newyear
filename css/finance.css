@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(colors.css);
+@import url(sizes.css);
+@import url(lightbox.css);
+
+
+body{
+
+	zoom:1;
+	adding:0; margin:0; min-height:100%; color:#000000;
+/*
+	background: #FFFFFF url('/imag/back/bkg-site.jpg') fixed top left no-repeat;
+	
+	background: #FFFFFF url('/imag/back/gf050.jpg') fixed center left no-repeat;
+	background-color: #e4e4e4;*/
+	
+	-o-background-size: 100% 100%; 
+	-webkit-background-size:100% 100%; 
+	-moz-background-size:100% 100%; 
+	-khtml-background-size:100% 100%;
+	background-size: 100% 100%;
+	
+	behavior: url('/pie/PIE.htc');
+
+}
+/*
+@font-face {font-family:"Arial Rubl Sign"; src:url('../fonts/rubl.eot';}
+*/
+.separator{
+	height:15px;
+}
+.hdr{
+	height: 230px;
+	margin: 0 0 10px 0;
+
+
+	background: #FFFFFF url('/imag/back/finance1.png') center left no-repeat;
+	-o-background-size: 100% 100%; 
+	-webkit-background-size:100% 100%; 
+	-moz-background-size:100% 100%; 
+	-khtml-background-size:100% 100%;
+	background-size: 100% 100%;
+	
+	behavior: url('/pie/PIE.htc');
+
+}
+.ftr{
+	padding:10px 10px 0 10px;
+	min-height:40px;
+    background: #F8F8F8;
+    border: #E7E7E7 1px solid;
+	border-radius:3px;
+}
+
+.footerlink{
+	margin: 0 0 0 30px;
+}
+
+.transpar{
+	color:#FFFFFF;
+	position:absolute;
+	padding:10px;
+	right:30px;
+	top: 20px;
+	width:350px;
+	height:190px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background:rgba(128, 128, 128, 0.6) !important; 
+	-ms-background:rgba(128, 128, 128, 0.6) !important; 
+	-pie-background: rgba(128,128, 128, 0.6) !important; 
+	/*z-index:0;*/
+	behavior: url('/pie/PIE.htc');
+}
+.shad1{
+	position:inherit;
+
+	background:#FFFFFF;
+	min-height:100%;
+	-moz-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	-webkit-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	box-shadow: 1px 1px 3px 1px #AAAAAA;
+	padding:10px 0 10px 0;
+	margin-bottom:0;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+.shad2{
+
+	background:#FFFFFF;
+	min-height:160px;
+	-moz-box-shadow: 3px 3px 3px 3px #AAAAAA;
+	-webkit-box-shadow: 3px 3px 3px 3px #AAAAAA;
+	box-shadow: 3px 3px 3px 3px #AAAAAA;
+	padding:10px 0 10px 0;
+	margin-bottom:0;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+
+
+.shad3{
+
+	background:#FFFFFF;
+	/*min-height:160px;*/
+	-moz-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	-webkit-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	box-shadow: 1px 1px 3px 1px #AAAAAA;
+	padding:10px 5px 10px 5px;
+	margin-bottom:0;
+	border-radius:8px;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+
+.navbar-brand {
+	padding: 0 15px;
+}
+
+.navbar-default {
+	margin:10px 0 10px 0;
+	}

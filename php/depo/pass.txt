@@ -1,0 +1,11 @@
+array(14) { ["fname"]=> string(3) "Den" ["mname"]=> string(2) "G." ["sname"]=> string(5) "Drake" ["phone"]=> string(12) "+79057107350" ["email"]=> string(18) "droden@mobiplas.ru" ["login"]=> string(12) "+79057107350" ["fio"]=> string(12) "Drake Den G." ["nameOnCard"]=> string(9) "DEN DRAKE" ["sex"]=> string(1) "M" ["pin"]=> string(4) "1111" ["account"]=> string(20) "40903810401040000116" ["personid"]=> string(3) "293" ["pan"]=> string(16) "0000000000186254" ["telebank"]=> string(11) "18625602711" } 
+array(14) { ["fname"]=> string(5) "Denis" ["mname"]=> string(1) "G" ["sname"]=> string(5) "Drake" ["phone"]=> string(12) "+79261234215" ["email"]=> string(15) "den@mobiplas.ru" ["login"]=> string(12) "+79261234215" ["fio"]=> string(13) "Drake Denis G" ["nameOnCard"]=> string(11) "DENIS DRAKE" ["sex"]=> string(1) "M" ["pin"]=> string(4) "1111" ["account"]=> string(20) "40903810701040000120" ["personid"]=> string(3) "297" ["pan"]=> string(16) "0000000000151027" ["telebank"]=> string(11) "13955310571" } 
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tel="http://schemas.compassplus.com/two/1.0/telebank.xsd">
+   <soap:Header/>
+   <soap:Body>
+      <tel:CreateSessionRq>
+         <tel:Request Ver="4" Product="TB" PAN="10002231000005" MBR="0" STAN="1" />
+      </tel:CreateSessionRq>
+   </soap:Body>
+</soap:Envelope>

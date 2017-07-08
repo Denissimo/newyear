@@ -1,0 +1,324 @@
+2015-07-20T15:32:00+03:00 [27423] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreatePerson[ fname="Vladimir" mname="Sergeevich" sname="Bushuev" phone="+79265766710" email="bushuev@mobiplas.ru" login="+79265766710" fio="Bushuev Vladimir Sergeevich" nameOnCard="VLADIMIR BUSHUEV" sex="M" pin="1111" account="40903810601040000110" personid="287"]
+2015-07-20T15:32:00+03:00 [27423] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreatePersonRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:InstName>BBNK</fimi1:InstName><fimi1:VIP>0</fimi1:VIP><fimi1:FIO>Bushuev Vladimir Sergeevich</fimi1:FIO><fimi1:PersonId>287</fimi1:PersonId><fimi1:Sex>M</fimi1:Sex></fimi:Request></fimi:CreatePersonRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T15:32:00+03:00 [27423] Tym.64 FIMIAdapter DEBUG RESPONSE:
+
+2015-07-20T15:32:00+03:00 [27423] Tym.70 FIMIAdapter ERROR CURL ERROR[couldn't connect to host] STATUS[0]
+2015-07-20T15:41:46+03:00 [27485] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreatePerson[ fname="Vladimir" mname="Sergeevich" sname="Bushuev" phone="+79265766710" email="bushuev@mobiplas.ru" login="+79265766710" fio="Bushuev Vladimir Sergeevich" nameOnCard="VLADIMIR BUSHUEV" sex="M" pin="1111" account="40903810201040000112" personid="289"]
+2015-07-20T15:41:46+03:00 [27485] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreatePersonRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:InstName>BBNK</fimi1:InstName><fimi1:VIP>0</fimi1:VIP><fimi1:FIO>Bushuev Vladimir Sergeevich</fimi1:FIO><fimi1:PersonId>289</fimi1:PersonId><fimi1:Sex>M</fimi1:Sex></fimi:Request></fimi:CreatePersonRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T15:41:46+03:00 [27485] Tym.64 FIMIAdapter DEBUG RESPONSE:
+
+2015-07-20T15:41:46+03:00 [27485] Tym.70 FIMIAdapter ERROR CURL ERROR[couldn't connect to host] STATUS[0]
+2015-07-20T15:48:43+03:00 [27205] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreatePerson[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810401040000116" personid="293"]
+2015-07-20T15:48:43+03:00 [27205] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreatePersonRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:InstName>BBNK</fimi1:InstName><fimi1:VIP>0</fimi1:VIP><fimi1:FIO>Drake Den G.</fimi1:FIO><fimi1:PersonId>293</fimi1:PersonId><fimi1:Sex>M</fimi1:Sex></fimi:Request></fimi:CreatePersonRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T15:48:43+03:00 [27205] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreatePersonRp >
+<m1:Response Response="1" TranId="1394" Product="FIMI"><m0:PersonId>293</m0:PersonId>
+</m1:Response>
+</m1:CreatePersonRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T15:48:43+03:00 [27205] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateAccount[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810401040000116" personid="293"]
+2015-07-20T15:48:43+03:00 [27205] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateAccountRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AvailBalance>0</fimi1:AvailBalance><fimi1:Currency>810</fimi1:Currency><fimi1:LedgerBalance>0</fimi1:LedgerBalance><fimi1:Status>1</fimi1:Status><fimi1:Type>1</fimi1:Type><fimi1:PersonID>293</fimi1:PersonID><fimi1:Account>40903810401040000116</fimi1:Account></fimi:Request></fimi:CreateAccountRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T15:48:43+03:00 [27205] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateAccountRp >
+<m1:Response Response="1" TranId="1395" Product="FIMI"></m1:Response>
+</m1:CreateAccountRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T15:48:43+03:00 [27205] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateVCard[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810401040000116" personid="293"]
+2015-07-20T15:48:43+03:00 [27205] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateVCardRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:CardProfile>1</fimi1:CardProfile><fimi1:NameOnCard>DEN DRAKE</fimi1:NameOnCard><fimi1:Account>40903810401040000116</fimi1:Account></fimi:Request></fimi:CreateVCardRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T15:48:44+03:00 [27205] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateVCardRp >
+<m1:Response Response="1" TranId="1396" Product="FIMI"><m0:CVV2>337</m0:CVV2>
+<m0:Expiration>2182-03-20T16:44:54</m0:Expiration>
+<m0:LimitCount>10</m0:LimitCount>
+<m0:LimitCurrency>810</m0:LimitCurrency>
+<m0:MBR>0</m0:MBR>
+<m0:PAN>0000000000186254</m0:PAN>
+<m0:StrCVV2>337</m0:StrCVV2>
+</m1:Response>
+</m1:CreateVCardRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T15:48:44+03:00 [27205] Tym.61 FIMIAdapter INFO  FIMIAdapter::CNSCardConfig[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810401040000116" personid="293" pan="0000000000186254"]
+2015-07-20T15:48:44+03:00 [27205] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CNSCardConfigRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AlternativeMessaging><fimi1:Row><fimi1:Channel>Email</fimi1:Channel><fimi1:Address>+79057107350</fimi1:Address><fimi1:Scheme>Platfon</fimi1:Scheme><fimi1:TestMessage>Welcome to PLATfon. You are registered.</fimi1:TestMessage><fimi1:UseForDynAuth>1</fimi1:UseForDynAuth><fimi1:IsDefault>1</fimi1:IsDefault><fimi1:Name>mobile</fimi1:Name><fimi1:Title>mobile</fimi1:Title></fimi1:Row></fimi1:AlternativeMessaging><fimi1:PAN>0000000000186254</fimi1:PAN><fimi1:MBR>0</fimi1:MBR><fimi1:PersonId>293</fimi1:PersonId></fimi:Request></fimi:CNSCardConfigRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T15:48:44+03:00 [27205] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CNSCardConfigRp >
+<m1:Response Response="1" TranId="1397" Product="FIMI"></m1:Response>
+</m1:CNSCardConfigRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:01:32+03:00 [27719] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreatePerson[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810001040000118" personid="295"]
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreatePersonRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:InstName>BBNK</fimi1:InstName><fimi1:VIP>0</fimi1:VIP><fimi1:FIO>Drake Den G.</fimi1:FIO><fimi1:PersonId>295</fimi1:PersonId><fimi1:Sex>M</fimi1:Sex></fimi:Request></fimi:CreatePersonRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreatePersonRp >
+<m1:Response Response="1" TranId="1412" Product="FIMI"><m0:PersonId>295</m0:PersonId>
+</m1:Response>
+</m1:CreatePersonRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:01:32+03:00 [27719] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateAccount[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810001040000118" personid="295"]
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateAccountRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AvailBalance>0</fimi1:AvailBalance><fimi1:Currency>810</fimi1:Currency><fimi1:LedgerBalance>0</fimi1:LedgerBalance><fimi1:Status>1</fimi1:Status><fimi1:Type>1</fimi1:Type><fimi1:PersonID>295</fimi1:PersonID><fimi1:Account>40903810001040000118</fimi1:Account></fimi:Request></fimi:CreateAccountRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateAccountRp >
+<m1:Response Response="1" TranId="1413" Product="FIMI"></m1:Response>
+</m1:CreateAccountRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:01:32+03:00 [27719] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateVCard[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810001040000118" personid="295"]
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateVCardRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:CardProfile>1</fimi1:CardProfile><fimi1:NameOnCard>DEN DRAKE</fimi1:NameOnCard><fimi1:Account>40903810001040000118</fimi1:Account></fimi:Request></fimi:CreateVCardRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateVCardRp >
+<m1:Response Response="1" TranId="1414" Product="FIMI"><m0:CVV2>960</m0:CVV2>
+<m0:Expiration>2182-03-20T16:57:42</m0:Expiration>
+<m0:LimitCount>10</m0:LimitCount>
+<m0:LimitCurrency>810</m0:LimitCurrency>
+<m0:MBR>0</m0:MBR>
+<m0:PAN>0000000000125757</m0:PAN>
+<m0:StrCVV2>960</m0:StrCVV2>
+</m1:Response>
+</m1:CreateVCardRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:01:32+03:00 [27719] Tym.61 FIMIAdapter INFO  FIMIAdapter::CNSCardConfig[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111" account="40903810001040000118" personid="295" pan="0000000000125757"]
+2015-07-20T16:01:32+03:00 [27719] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CNSCardConfigRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AlternativeMessaging><fimi1:Row><fimi1:Channel>Email</fimi1:Channel><fimi1:Address>+79057107350</fimi1:Address><fimi1:Scheme>Platfon</fimi1:Scheme><fimi1:TestMessage>Welcome to PLATfon. You are registered.</fimi1:TestMessage><fimi1:UseForDynAuth>1</fimi1:UseForDynAuth><fimi1:IsDefault>1</fimi1:IsDefault><fimi1:Name>mobile</fimi1:Name><fimi1:Title>mobile</fimi1:Title></fimi1:Row></fimi1:AlternativeMessaging><fimi1:PAN>0000000000125757</fimi1:PAN><fimi1:MBR>0</fimi1:MBR><fimi1:PersonId>295</fimi1:PersonId></fimi:Request></fimi:CNSCardConfigRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:01:33+03:00 [27719] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CNSCardConfigRp >
+<m1:Response Response="1" TranId="1415" Product="FIMI"></m1:Response>
+</m1:CNSCardConfigRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:29+03:00 [27720] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreatePerson[ fname="Denis" mname="G" sname="Drake" phone="+79057107350" email="den@mobiplas.ru" login="+79057107350" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810301040000119" personid="296"]
+2015-07-20T16:02:29+03:00 [27720] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreatePersonRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:InstName>BBNK</fimi1:InstName><fimi1:VIP>0</fimi1:VIP><fimi1:FIO>Drake Denis G</fimi1:FIO><fimi1:PersonId>296</fimi1:PersonId><fimi1:Sex>M</fimi1:Sex></fimi:Request></fimi:CreatePersonRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:29+03:00 [27720] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreatePersonRp >
+<m1:Response Response="1" TranId="1418" Product="FIMI"><m0:PersonId>296</m0:PersonId>
+</m1:Response>
+</m1:CreatePersonRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:29+03:00 [27720] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateAccount[ fname="Denis" mname="G" sname="Drake" phone="+79057107350" email="den@mobiplas.ru" login="+79057107350" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810301040000119" personid="296"]
+2015-07-20T16:02:29+03:00 [27720] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateAccountRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AvailBalance>0</fimi1:AvailBalance><fimi1:Currency>810</fimi1:Currency><fimi1:LedgerBalance>0</fimi1:LedgerBalance><fimi1:Status>1</fimi1:Status><fimi1:Type>1</fimi1:Type><fimi1:PersonID>296</fimi1:PersonID><fimi1:Account>40903810301040000119</fimi1:Account></fimi:Request></fimi:CreateAccountRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:30+03:00 [27720] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateAccountRp >
+<m1:Response Response="1" TranId="1419" Product="FIMI"></m1:Response>
+</m1:CreateAccountRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:30+03:00 [27720] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateVCard[ fname="Denis" mname="G" sname="Drake" phone="+79057107350" email="den@mobiplas.ru" login="+79057107350" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810301040000119" personid="296"]
+2015-07-20T16:02:30+03:00 [27720] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateVCardRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:CardProfile>1</fimi1:CardProfile><fimi1:NameOnCard>DENIS DRAKE</fimi1:NameOnCard><fimi1:Account>40903810301040000119</fimi1:Account></fimi:Request></fimi:CreateVCardRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:30+03:00 [27720] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateVCardRp >
+<m1:Response Response="1" TranId="1420" Product="FIMI"><m0:CVV2>315</m0:CVV2>
+<m0:Expiration>2182-03-20T16:58:40</m0:Expiration>
+<m0:LimitCount>10</m0:LimitCount>
+<m0:LimitCurrency>810</m0:LimitCurrency>
+<m0:MBR>0</m0:MBR>
+<m0:PAN>0000000000196543</m0:PAN>
+<m0:StrCVV2>315</m0:StrCVV2>
+</m1:Response>
+</m1:CreateVCardRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:30+03:00 [27720] Tym.61 FIMIAdapter INFO  FIMIAdapter::CNSCardConfig[ fname="Denis" mname="G" sname="Drake" phone="+79057107350" email="den@mobiplas.ru" login="+79057107350" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810301040000119" personid="296" pan="0000000000196543"]
+2015-07-20T16:02:30+03:00 [27720] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CNSCardConfigRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AlternativeMessaging><fimi1:Row><fimi1:Channel>Email</fimi1:Channel><fimi1:Address>+79057107350</fimi1:Address><fimi1:Scheme>Platfon</fimi1:Scheme><fimi1:TestMessage>Welcome to PLATfon. You are registered.</fimi1:TestMessage><fimi1:UseForDynAuth>1</fimi1:UseForDynAuth><fimi1:IsDefault>1</fimi1:IsDefault><fimi1:Name>mobile</fimi1:Name><fimi1:Title>mobile</fimi1:Title></fimi1:Row></fimi1:AlternativeMessaging><fimi1:PAN>0000000000196543</fimi1:PAN><fimi1:MBR>0</fimi1:MBR><fimi1:PersonId>296</fimi1:PersonId></fimi:Request></fimi:CNSCardConfigRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:30+03:00 [27720] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CNSCardConfigRp >
+<m1:Response Response="1" TranId="1421" Product="FIMI"></m1:Response>
+</m1:CNSCardConfigRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:52+03:00 [27802] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreatePerson[ fname="Denis" mname="G" sname="Drake" phone="+79261234215" email="den@mobiplas.ru" login="+79261234215" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810701040000120" personid="297"]
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreatePersonRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:InstName>BBNK</fimi1:InstName><fimi1:VIP>0</fimi1:VIP><fimi1:FIO>Drake Denis G</fimi1:FIO><fimi1:PersonId>297</fimi1:PersonId><fimi1:Sex>M</fimi1:Sex></fimi:Request></fimi:CreatePersonRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreatePersonRp >
+<m1:Response Response="1" TranId="1424" Product="FIMI"><m0:PersonId>297</m0:PersonId>
+</m1:Response>
+</m1:CreatePersonRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:52+03:00 [27802] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateAccount[ fname="Denis" mname="G" sname="Drake" phone="+79261234215" email="den@mobiplas.ru" login="+79261234215" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810701040000120" personid="297"]
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateAccountRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AvailBalance>0</fimi1:AvailBalance><fimi1:Currency>810</fimi1:Currency><fimi1:LedgerBalance>0</fimi1:LedgerBalance><fimi1:Status>1</fimi1:Status><fimi1:Type>1</fimi1:Type><fimi1:PersonID>297</fimi1:PersonID><fimi1:Account>40903810701040000120</fimi1:Account></fimi:Request></fimi:CreateAccountRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateAccountRp >
+<m1:Response Response="1" TranId="1425" Product="FIMI"></m1:Response>
+</m1:CreateAccountRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:52+03:00 [27802] Tym.61 FIMIAdapter INFO  FIMIAdapter::CreateVCard[ fname="Denis" mname="G" sname="Drake" phone="+79261234215" email="den@mobiplas.ru" login="+79261234215" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810701040000120" personid="297"]
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CreateVCardRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:CardProfile>1</fimi1:CardProfile><fimi1:NameOnCard>DENIS DRAKE</fimi1:NameOnCard><fimi1:Account>40903810701040000120</fimi1:Account></fimi:Request></fimi:CreateVCardRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CreateVCardRp >
+<m1:Response Response="1" TranId="1426" Product="FIMI"><m0:CVV2>257</m0:CVV2>
+<m0:Expiration>2182-03-20T16:59:02</m0:Expiration>
+<m0:LimitCount>10</m0:LimitCount>
+<m0:LimitCurrency>810</m0:LimitCurrency>
+<m0:MBR>0</m0:MBR>
+<m0:PAN>0000000000151027</m0:PAN>
+<m0:StrCVV2>257</m0:StrCVV2>
+</m1:Response>
+</m1:CreateVCardRp>
+</env:Body>
+</env:Envelope>
+
+2015-07-20T16:02:52+03:00 [27802] Tym.61 FIMIAdapter INFO  FIMIAdapter::CNSCardConfig[ fname="Denis" mname="G" sname="Drake" phone="+79261234215" email="den@mobiplas.ru" login="+79261234215" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111" account="40903810701040000120" personid="297" pan="0000000000151027"]
+2015-07-20T16:02:52+03:00 [27802] Tym.64 FIMIAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:fimi="http://schemas.compassplus.com/two/1.0/fimi.xsd" xmlns:fimi1="http://schemas.compassplus.com/two/1.0/fimi_types.xsd">
+			<soap:Header/>
+			<soap:Body>
+				<fimi:CNSCardConfigRq><fimi:Request Ver="3.5" Clerk="PLATFON" Password="PLATFON" Product="FIMI"><fimi1:AlternativeMessaging><fimi1:Row><fimi1:Channel>Email</fimi1:Channel><fimi1:Address>+79261234215</fimi1:Address><fimi1:Scheme>Platfon</fimi1:Scheme><fimi1:TestMessage>Welcome to PLATfon. You are registered.</fimi1:TestMessage><fimi1:UseForDynAuth>1</fimi1:UseForDynAuth><fimi1:IsDefault>1</fimi1:IsDefault><fimi1:Name>mobile</fimi1:Name><fimi1:Title>mobile</fimi1:Title></fimi1:Row></fimi1:AlternativeMessaging><fimi1:PAN>0000000000151027</fimi1:PAN><fimi1:MBR>0</fimi1:MBR><fimi1:PersonId>297</fimi1:PersonId></fimi:Request></fimi:CNSCardConfigRq>
+			</soap:Body>
+		</soap:Envelope>
+2015-07-20T16:02:53+03:00 [27802] Tym.64 FIMIAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://schemas.compassplus.com/two/1.0/fimi_types.xsd"
+xmlns:m1="http://schemas.compassplus.com/two/1.0/fimi.xsd">
+<env:Body>
+<m1:CNSCardConfigRp >
+<m1:Response Response="1" TranId="1427" Product="FIMI"></m1:Response>
+</m1:CNSCardConfigRp>
+</env:Body>
+</env:Envelope>
+

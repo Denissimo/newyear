@@ -1,0 +1,56 @@
+/*
+.tt-header{
+	background: rgba(0,0,0,.5) url("../img/default-bg.jpg") no-repeat center center;
+}
+*/
+.nativeDroidCards > li[data-cards-type="weather"] .property li small,.nativeDroidCards > li[data-cards-type="weather"] .property li strong,.nativeDroidCards > li[data-cards-type="weather"] .property li span,.nativeDroidCards > li[data-cards-type="weather"] .property i {
+	display: block;
+	width: auto;
+}
+
+.nativeDroidCards > li[data-cards-type="weather"] .property li {
+	display: inline-block;
+	width: 50%;
+}
+.nativeDroidCards > li[data-cards-type="weather"] .property li:first-child {
+	width: 22%;
+}
+.nativeDroidCards > li[data-cards-type="weather"] .property li:last-child {
+	border-right: 0px solid rgba(0,0,0,0.05);
+	width: 22%;
+}
+.nativeDroidCards > li[data-cards-type="weather"] .property li {
+	border-right: 1px solid rgba(0,0,0,0.05);
+}
+.nativeDroidCards > li[data-cards-type="weather"] .property li a{
+	border:none;
+}
+.nativeDroidCards  td a {
+	padding:0;
+}
+
+.nativeDroidCards > li[data-cards-type="weather"] .detail li:nth-child(2) {
+	width: 70%;
+	font-size: 48px;
+	text-align: right;
+}
+.ui-popup-container.ui-popup-active {
+	z-index: 99999;	
+	border:3px solid #eee;
+}
+.deep-header{
+	display: block;
+	width: 84%;
+	text-align:right;
+	color:#bbb;
+	font-size:14pt;
+	border-bottom:1px solid #ddd;
+	padding:.2em 1em;
+	margin:.2em 2em 0 0;
+}
+.ui-popup-screen {
+	background-color: rgba(0,0,0,0.5);
+}
+.tt-box {
+	display:none;
+}

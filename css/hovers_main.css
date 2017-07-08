@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+#dd06{
+	background-image:url(/imag/dd06.jpg);
+}
+
+#dd07{
+	background-image:url(/imag/dd07.jpg);
+}
+
+#dd08{
+	background-image:url(/imag/dd08.jpg);
+}
+
+#dd09{
+	background-image:url(/imag/dd09.jpg);
+}
+
+#dd06:hover{
+	background-image:url(/imag/dd06_br.jpg);
+	color:#000000;
+}
+
+#dd07:hover{
+	background-image:url(/imag/dd07_br.jpg);
+	color:#000000;
+}
+
+#dd08:hover{
+	background-image:url(/imag/dd08_br.jpg);
+	color:#000000;
+}
+
+#dd09:hover{
+	background-image:url(/imag/dd09_br.jpg);
+	color:#000000;
+}

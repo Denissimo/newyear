@@ -1,0 +1,492 @@
+2015-07-20T15:31:58+03:00 [27423] Tym.61 OMSAdapter INFO  OMSAdapter::UserRegistration[ fname="Vladimir" mname="Sergeevich" sname="Bushuev" phone="+79265766710" email="bushuev@mobiplas.ru" login="+79265766710" fio="Bushuev Vladimir Sergeevich" nameOnCard="VLADIMIR BUSHUEV" sex="M" pin="1111"]
+2015-07-20T15:31:58+03:00 [27423] Tym.64 OMSAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <ns2:RequestHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+            <RType>Do</RType>
+            <Cpimode timeout="59">Sync</Cpimode>
+            <Branch>1</Branch>
+            <Station>50</Station>
+        </ns2:RequestHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns2:Request xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd" >
+            <Request>
+                <UserDefinedCommand Id="UserRegistration">
+                    <Command Action="Execute">
+                    </Command>
+                    <UserDefinedCommandParams Type="1">
+                        <Command Action="Init"/>
+                        <Param Id="Name">Bushuev Vladimir Sergeevich</Param>
+                        <Param Id="Phone">+79265766710</Param>
+                        <Param Id="Email">bushuev@mobiplas.ru</Param>
+                    </UserDefinedCommandParams>
+                </UserDefinedCommand>
+            </Request>
+        </ns2:Request>
+    </soap:Body>
+</soap:Envelope>
+2015-07-20T15:32:00+03:00 [27423] Tym.64 OMSAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <ns2:ResponseHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <RType>Do</RType>
+      <RID>1B49E9D1EAF77451E053D32911AC421A</RID>
+      <Result>Processed</Result>
+    </ns2:ResponseHeader>
+  </soap:Header>
+  <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ns2:Response xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <ResponseDocument>
+        <Response SysId="939" GUID="{1B49E9D1-EAF7-7451-E053-D32911AC421A}">
+          <Transaction SysId="1018" State="PROCESSED" ProcessedBy="15" ProcessingDateTime="20150720153013">
+            <ProcessingResult Code="0" Message="Транзакция выполнена успешно">
+              <USERDEFINEDCOMMAND ID="UserRegistration">
+                <ProcessingResult SourceCommand="EXECUTE" ProcessedCommand="EXECUTE" Code="0" Message="Операция выполнена успешно" ProcessingIndex="2">
+                  <USERDEFINEDCOMMAND>
+                    <SYSID>4</SYSID>
+                    <ID>UserRegistration</ID>
+                    <LOGENTRYSYSID>3101</LOGENTRYSYSID>
+                    <LOGENTRYGUID>{1B49E9D1-EAF8-7451-E053-D32911AC421A}</LOGENTRYGUID>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                      <PARAM ID="EMAIL">bushuev@mobiplas.ru</PARAM>
+                      <PARAM ID="NAME">Bushuev Vladimir Sergeevich</PARAM>
+                      <PARAM ID="PHONE">+79265766710</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="2">
+                      <PARAM ID="ACCOUNTNO">40903810601040000110</PARAM>
+                      <PARAM ID="PERSON">287</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                  </USERDEFINEDCOMMAND>
+                </ProcessingResult>
+                <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                  <ProcessingResult SourceCommand="INIT" ProcessedCommand="INIT" Code="0" Message="Операция выполнена успешно" ProcessingIndex="1"/>
+                </USERDEFINEDCOMMANDPARAMS>
+              </USERDEFINEDCOMMAND>
+            </ProcessingResult>
+            <ProcessingMessage Type="MESSAGE" ReportedBy="15" ReportDateTime="20150720153013">Транзакция выполнена успешно</ProcessingMessage>
+          </Transaction>
+          <RequestDetails>
+            <LoadedBy>15</LoadedBy>
+            <LoadingDateTime>20152007153012</LoadingDateTime>
+            <TransactionCount>1</TransactionCount>
+            <ProcessedTransactionCount>1</ProcessedTransactionCount>
+            <FailedProcessingsCount>0</FailedProcessingsCount>
+            <ProcessingMessageCount>1</ProcessingMessageCount>
+          </RequestDetails>
+        </Response>
+      </ResponseDocument>
+    </ns2:Response>
+  </soap:Body>
+</soap:Envelope>
+
+
+2015-07-20T15:41:45+03:00 [27485] Tym.61 OMSAdapter INFO  OMSAdapter::UserRegistration[ fname="Vladimir" mname="Sergeevich" sname="Bushuev" phone="+79265766710" email="bushuev@mobiplas.ru" login="+79265766710" fio="Bushuev Vladimir Sergeevich" nameOnCard="VLADIMIR BUSHUEV" sex="M" pin="1111"]
+2015-07-20T15:41:45+03:00 [27485] Tym.64 OMSAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <ns2:RequestHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+            <RType>Do</RType>
+            <Cpimode timeout="59">Sync</Cpimode>
+            <Branch>1</Branch>
+            <Station>50</Station>
+        </ns2:RequestHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns2:Request xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd" >
+            <Request>
+                <UserDefinedCommand Id="UserRegistration">
+                    <Command Action="Execute">
+                    </Command>
+                    <UserDefinedCommandParams Type="1">
+                        <Command Action="Init"/>
+                        <Param Id="Name">Bushuev Vladimir Sergeevich</Param>
+                        <Param Id="Phone">+79265766710</Param>
+                        <Param Id="Email">bushuev@mobiplas.ru</Param>
+                    </UserDefinedCommandParams>
+                </UserDefinedCommand>
+            </Request>
+        </ns2:Request>
+    </soap:Body>
+</soap:Envelope>
+2015-07-20T15:41:46+03:00 [27485] Tym.64 OMSAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <ns2:ResponseHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <RType>Do</RType>
+      <RID>1B49E9D1EB017451E053D32911AC421A</RID>
+      <Result>Processed</Result>
+    </ns2:ResponseHeader>
+  </soap:Header>
+  <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ns2:Response xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <ResponseDocument>
+        <Response SysId="943" GUID="{1B49E9D1-EB01-7451-E053-D32911AC421A}">
+          <Transaction SysId="1024" State="PROCESSED" ProcessedBy="15" ProcessingDateTime="20150720153959">
+            <ProcessingResult Code="0" Message="Транзакция выполнена успешно">
+              <USERDEFINEDCOMMAND ID="UserRegistration">
+                <ProcessingResult SourceCommand="EXECUTE" ProcessedCommand="EXECUTE" Code="0" Message="Операция выполнена успешно" ProcessingIndex="2">
+                  <USERDEFINEDCOMMAND>
+                    <SYSID>4</SYSID>
+                    <ID>UserRegistration</ID>
+                    <LOGENTRYSYSID>3107</LOGENTRYSYSID>
+                    <LOGENTRYGUID>{1B49E9D1-EB02-7451-E053-D32911AC421A}</LOGENTRYGUID>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                      <PARAM ID="EMAIL">bushuev@mobiplas.ru</PARAM>
+                      <PARAM ID="NAME">Bushuev Vladimir Sergeevich</PARAM>
+                      <PARAM ID="PHONE">+79265766710</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="2">
+                      <PARAM ID="ACCOUNTNO">40903810201040000112</PARAM>
+                      <PARAM ID="PERSON">289</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                  </USERDEFINEDCOMMAND>
+                </ProcessingResult>
+                <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                  <ProcessingResult SourceCommand="INIT" ProcessedCommand="INIT" Code="0" Message="Операция выполнена успешно" ProcessingIndex="1"/>
+                </USERDEFINEDCOMMANDPARAMS>
+              </USERDEFINEDCOMMAND>
+            </ProcessingResult>
+            <ProcessingMessage Type="MESSAGE" ReportedBy="15" ReportDateTime="20150720153959">Транзакция выполнена успешно</ProcessingMessage>
+          </Transaction>
+          <RequestDetails>
+            <LoadedBy>15</LoadedBy>
+            <LoadingDateTime>20152007153959</LoadingDateTime>
+            <TransactionCount>1</TransactionCount>
+            <ProcessedTransactionCount>1</ProcessedTransactionCount>
+            <FailedProcessingsCount>0</FailedProcessingsCount>
+            <ProcessingMessageCount>1</ProcessingMessageCount>
+          </RequestDetails>
+        </Response>
+      </ResponseDocument>
+    </ns2:Response>
+  </soap:Body>
+</soap:Envelope>
+
+
+2015-07-20T15:48:42+03:00 [27205] Tym.61 OMSAdapter INFO  OMSAdapter::UserRegistration[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111"]
+2015-07-20T15:48:42+03:00 [27205] Tym.64 OMSAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <ns2:RequestHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+            <RType>Do</RType>
+            <Cpimode timeout="59">Sync</Cpimode>
+            <Branch>1</Branch>
+            <Station>50</Station>
+        </ns2:RequestHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns2:Request xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd" >
+            <Request>
+                <UserDefinedCommand Id="UserRegistration">
+                    <Command Action="Execute">
+                    </Command>
+                    <UserDefinedCommandParams Type="1">
+                        <Command Action="Init"/>
+                        <Param Id="Name">Drake Den G.</Param>
+                        <Param Id="Phone">+79057107350</Param>
+                        <Param Id="Email">droden@mobiplas.ru</Param>
+                    </UserDefinedCommandParams>
+                </UserDefinedCommand>
+            </Request>
+        </ns2:Request>
+    </soap:Body>
+</soap:Envelope>
+2015-07-20T15:48:43+03:00 [27205] Tym.64 OMSAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <ns2:ResponseHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <RType>Do</RType>
+      <RID>1B49E9D1EB157451E053D32911AC421A</RID>
+      <Result>Processed</Result>
+    </ns2:ResponseHeader>
+  </soap:Header>
+  <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ns2:Response xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <ResponseDocument>
+        <Response SysId="951" GUID="{1B49E9D1-EB15-7451-E053-D32911AC421A}">
+          <Transaction SysId="1036" State="PROCESSED" ProcessedBy="15" ProcessingDateTime="20150720154656">
+            <ProcessingResult Code="0" Message="Транзакция выполнена успешно">
+              <USERDEFINEDCOMMAND ID="UserRegistration">
+                <ProcessingResult SourceCommand="EXECUTE" ProcessedCommand="EXECUTE" Code="0" Message="Операция выполнена успешно" ProcessingIndex="2">
+                  <USERDEFINEDCOMMAND>
+                    <SYSID>4</SYSID>
+                    <ID>UserRegistration</ID>
+                    <LOGENTRYSYSID>3119</LOGENTRYSYSID>
+                    <LOGENTRYGUID>{1B49E9D1-EB16-7451-E053-D32911AC421A}</LOGENTRYGUID>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                      <PARAM ID="EMAIL">droden@mobiplas.ru</PARAM>
+                      <PARAM ID="NAME">Drake Den G.</PARAM>
+                      <PARAM ID="PHONE">+79057107350</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="2">
+                      <PARAM ID="ACCOUNTNO">40903810401040000116</PARAM>
+                      <PARAM ID="PERSON">293</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                  </USERDEFINEDCOMMAND>
+                </ProcessingResult>
+                <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                  <ProcessingResult SourceCommand="INIT" ProcessedCommand="INIT" Code="0" Message="Операция выполнена успешно" ProcessingIndex="1"/>
+                </USERDEFINEDCOMMANDPARAMS>
+              </USERDEFINEDCOMMAND>
+            </ProcessingResult>
+            <ProcessingMessage Type="MESSAGE" ReportedBy="15" ReportDateTime="20150720154657">Транзакция выполнена успешно</ProcessingMessage>
+          </Transaction>
+          <RequestDetails>
+            <LoadedBy>15</LoadedBy>
+            <LoadingDateTime>20152007154656</LoadingDateTime>
+            <TransactionCount>1</TransactionCount>
+            <ProcessedTransactionCount>1</ProcessedTransactionCount>
+            <FailedProcessingsCount>0</FailedProcessingsCount>
+            <ProcessingMessageCount>1</ProcessingMessageCount>
+          </RequestDetails>
+        </Response>
+      </ResponseDocument>
+    </ns2:Response>
+  </soap:Body>
+</soap:Envelope>
+
+
+2015-07-20T16:01:31+03:00 [27719] Tym.61 OMSAdapter INFO  OMSAdapter::UserRegistration[ fname="Den" mname="G." sname="Drake" phone="+79057107350" email="droden@mobiplas.ru" login="+79057107350" fio="Drake Den G." nameOnCard="DEN DRAKE" sex="M" pin="1111"]
+2015-07-20T16:01:31+03:00 [27719] Tym.64 OMSAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <ns2:RequestHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+            <RType>Do</RType>
+            <Cpimode timeout="59">Sync</Cpimode>
+            <Branch>1</Branch>
+            <Station>50</Station>
+        </ns2:RequestHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns2:Request xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd" >
+            <Request>
+                <UserDefinedCommand Id="UserRegistration">
+                    <Command Action="Execute">
+                    </Command>
+                    <UserDefinedCommandParams Type="1">
+                        <Command Action="Init"/>
+                        <Param Id="Name">Drake Den G.</Param>
+                        <Param Id="Phone">+79057107350</Param>
+                        <Param Id="Email">droden@mobiplas.ru</Param>
+                    </UserDefinedCommandParams>
+                </UserDefinedCommand>
+            </Request>
+        </ns2:Request>
+    </soap:Body>
+</soap:Envelope>
+2015-07-20T16:01:32+03:00 [27719] Tym.64 OMSAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <ns2:ResponseHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <RType>Do</RType>
+      <RID>1B49E9D1EB1F7451E053D32911AC421A</RID>
+      <Result>Processed</Result>
+    </ns2:ResponseHeader>
+  </soap:Header>
+  <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ns2:Response xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <ResponseDocument>
+        <Response SysId="955" GUID="{1B49E9D1-EB1F-7451-E053-D32911AC421A}">
+          <Transaction SysId="1042" State="PROCESSED" ProcessedBy="15" ProcessingDateTime="20150720155946">
+            <ProcessingResult Code="0" Message="Транзакция выполнена успешно">
+              <USERDEFINEDCOMMAND ID="UserRegistration">
+                <ProcessingResult SourceCommand="EXECUTE" ProcessedCommand="EXECUTE" Code="0" Message="Операция выполнена успешно" ProcessingIndex="2">
+                  <USERDEFINEDCOMMAND>
+                    <SYSID>4</SYSID>
+                    <ID>UserRegistration</ID>
+                    <LOGENTRYSYSID>3125</LOGENTRYSYSID>
+                    <LOGENTRYGUID>{1B49E9D1-EB20-7451-E053-D32911AC421A}</LOGENTRYGUID>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                      <PARAM ID="EMAIL">droden@mobiplas.ru</PARAM>
+                      <PARAM ID="NAME">Drake Den G.</PARAM>
+                      <PARAM ID="PHONE">+79057107350</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="2">
+                      <PARAM ID="ACCOUNTNO">40903810001040000118</PARAM>
+                      <PARAM ID="PERSON">295</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                  </USERDEFINEDCOMMAND>
+                </ProcessingResult>
+                <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                  <ProcessingResult SourceCommand="INIT" ProcessedCommand="INIT" Code="0" Message="Операция выполнена успешно" ProcessingIndex="1"/>
+                </USERDEFINEDCOMMANDPARAMS>
+              </USERDEFINEDCOMMAND>
+            </ProcessingResult>
+            <ProcessingMessage Type="MESSAGE" ReportedBy="15" ReportDateTime="20150720155946">Транзакция выполнена успешно</ProcessingMessage>
+          </Transaction>
+          <RequestDetails>
+            <LoadedBy>15</LoadedBy>
+            <LoadingDateTime>20152007155945</LoadingDateTime>
+            <TransactionCount>1</TransactionCount>
+            <ProcessedTransactionCount>1</ProcessedTransactionCount>
+            <FailedProcessingsCount>0</FailedProcessingsCount>
+            <ProcessingMessageCount>1</ProcessingMessageCount>
+          </RequestDetails>
+        </Response>
+      </ResponseDocument>
+    </ns2:Response>
+  </soap:Body>
+</soap:Envelope>
+
+
+2015-07-20T16:02:28+03:00 [27720] Tym.61 OMSAdapter INFO  OMSAdapter::UserRegistration[ fname="Denis" mname="G" sname="Drake" phone="+79057107350" email="den@mobiplas.ru" login="+79057107350" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111"]
+2015-07-20T16:02:28+03:00 [27720] Tym.64 OMSAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <ns2:RequestHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+            <RType>Do</RType>
+            <Cpimode timeout="59">Sync</Cpimode>
+            <Branch>1</Branch>
+            <Station>50</Station>
+        </ns2:RequestHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns2:Request xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd" >
+            <Request>
+                <UserDefinedCommand Id="UserRegistration">
+                    <Command Action="Execute">
+                    </Command>
+                    <UserDefinedCommandParams Type="1">
+                        <Command Action="Init"/>
+                        <Param Id="Name">Drake Denis G</Param>
+                        <Param Id="Phone">+79057107350</Param>
+                        <Param Id="Email">den@mobiplas.ru</Param>
+                    </UserDefinedCommandParams>
+                </UserDefinedCommand>
+            </Request>
+        </ns2:Request>
+    </soap:Body>
+</soap:Envelope>
+2015-07-20T16:02:29+03:00 [27720] Tym.64 OMSAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <ns2:ResponseHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <RType>Do</RType>
+      <RID>1B49E9D1EB247451E053D32911AC421A</RID>
+      <Result>Processed</Result>
+    </ns2:ResponseHeader>
+  </soap:Header>
+  <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ns2:Response xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <ResponseDocument>
+        <Response SysId="957" GUID="{1B49E9D1-EB24-7451-E053-D32911AC421A}">
+          <Transaction SysId="1045" State="PROCESSED" ProcessedBy="15" ProcessingDateTime="20150720160042">
+            <ProcessingResult Code="0" Message="Транзакция выполнена успешно">
+              <USERDEFINEDCOMMAND ID="UserRegistration">
+                <ProcessingResult SourceCommand="EXECUTE" ProcessedCommand="EXECUTE" Code="0" Message="Операция выполнена успешно" ProcessingIndex="2">
+                  <USERDEFINEDCOMMAND>
+                    <SYSID>4</SYSID>
+                    <ID>UserRegistration</ID>
+                    <LOGENTRYSYSID>3128</LOGENTRYSYSID>
+                    <LOGENTRYGUID>{1B49E9D1-EB25-7451-E053-D32911AC421A}</LOGENTRYGUID>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                      <PARAM ID="EMAIL">den@mobiplas.ru</PARAM>
+                      <PARAM ID="NAME">Drake Denis G</PARAM>
+                      <PARAM ID="PHONE">+79057107350</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="2">
+                      <PARAM ID="ACCOUNTNO">40903810301040000119</PARAM>
+                      <PARAM ID="PERSON">296</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                  </USERDEFINEDCOMMAND>
+                </ProcessingResult>
+                <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                  <ProcessingResult SourceCommand="INIT" ProcessedCommand="INIT" Code="0" Message="Операция выполнена успешно" ProcessingIndex="1"/>
+                </USERDEFINEDCOMMANDPARAMS>
+              </USERDEFINEDCOMMAND>
+            </ProcessingResult>
+            <ProcessingMessage Type="MESSAGE" ReportedBy="15" ReportDateTime="20150720160042">Транзакция выполнена успешно</ProcessingMessage>
+          </Transaction>
+          <RequestDetails>
+            <LoadedBy>15</LoadedBy>
+            <LoadingDateTime>20152007160042</LoadingDateTime>
+            <TransactionCount>1</TransactionCount>
+            <ProcessedTransactionCount>1</ProcessedTransactionCount>
+            <FailedProcessingsCount>0</FailedProcessingsCount>
+            <ProcessingMessageCount>1</ProcessingMessageCount>
+          </RequestDetails>
+        </Response>
+      </ResponseDocument>
+    </ns2:Response>
+  </soap:Body>
+</soap:Envelope>
+
+
+2015-07-20T16:02:51+03:00 [27802] Tym.61 OMSAdapter INFO  OMSAdapter::UserRegistration[ fname="Denis" mname="G" sname="Drake" phone="+79261234215" email="den@mobiplas.ru" login="+79261234215" fio="Drake Denis G" nameOnCard="DENIS DRAKE" sex="M" pin="1111"]
+2015-07-20T16:02:51+03:00 [27802] Tym.64 OMSAdapter DEBUG REQUEST:<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <ns2:RequestHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+            <RType>Do</RType>
+            <Cpimode timeout="59">Sync</Cpimode>
+            <Branch>1</Branch>
+            <Station>50</Station>
+        </ns2:RequestHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns2:Request xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd" >
+            <Request>
+                <UserDefinedCommand Id="UserRegistration">
+                    <Command Action="Execute">
+                    </Command>
+                    <UserDefinedCommandParams Type="1">
+                        <Command Action="Init"/>
+                        <Param Id="Name">Drake Denis G</Param>
+                        <Param Id="Phone">+79261234215</Param>
+                        <Param Id="Email">den@mobiplas.ru</Param>
+                    </UserDefinedCommandParams>
+                </UserDefinedCommand>
+            </Request>
+        </ns2:Request>
+    </soap:Body>
+</soap:Envelope>
+2015-07-20T16:02:52+03:00 [27802] Tym.64 OMSAdapter DEBUG RESPONSE:<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <ns2:ResponseHeader xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <RType>Do</RType>
+      <RID>1B49E9D1EB297451E053D32911AC421A</RID>
+      <Result>Processed</Result>
+    </ns2:ResponseHeader>
+  </soap:Header>
+  <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ns2:Response xmlns:ns2="http://schemas.compassplus.com/twcms/1.0/omsi.xsd">
+      <ResponseDocument>
+        <Response SysId="959" GUID="{1B49E9D1-EB29-7451-E053-D32911AC421A}">
+          <Transaction SysId="1048" State="PROCESSED" ProcessedBy="15" ProcessingDateTime="20150720160106">
+            <ProcessingResult Code="0" Message="Транзакция выполнена успешно">
+              <USERDEFINEDCOMMAND ID="UserRegistration">
+                <ProcessingResult SourceCommand="EXECUTE" ProcessedCommand="EXECUTE" Code="0" Message="Операция выполнена успешно" ProcessingIndex="2">
+                  <USERDEFINEDCOMMAND>
+                    <SYSID>4</SYSID>
+                    <ID>UserRegistration</ID>
+                    <LOGENTRYSYSID>3131</LOGENTRYSYSID>
+                    <LOGENTRYGUID>{1B49E9D1-EB2A-7451-E053-D32911AC421A}</LOGENTRYGUID>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                      <PARAM ID="EMAIL">den@mobiplas.ru</PARAM>
+                      <PARAM ID="NAME">Drake Denis G</PARAM>
+                      <PARAM ID="PHONE">+79261234215</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                    <USERDEFINEDCOMMANDPARAMS TYPE="2">
+                      <PARAM ID="ACCOUNTNO">40903810701040000120</PARAM>
+                      <PARAM ID="PERSON">297</PARAM>
+                    </USERDEFINEDCOMMANDPARAMS>
+                  </USERDEFINEDCOMMAND>
+                </ProcessingResult>
+                <USERDEFINEDCOMMANDPARAMS TYPE="1">
+                  <ProcessingResult SourceCommand="INIT" ProcessedCommand="INIT" Code="0" Message="Операция выполнена успешно" ProcessingIndex="1"/>
+                </USERDEFINEDCOMMANDPARAMS>
+              </USERDEFINEDCOMMAND>
+            </ProcessingResult>
+            <ProcessingMessage Type="MESSAGE" ReportedBy="15" ReportDateTime="20150720160106">Транзакция выполнена успешно</ProcessingMessage>
+          </Transaction>
+          <RequestDetails>
+            <LoadedBy>15</LoadedBy>
+            <LoadingDateTime>20152007160105</LoadingDateTime>
+            <TransactionCount>1</TransactionCount>
+            <ProcessedTransactionCount>1</ProcessedTransactionCount>
+            <FailedProcessingsCount>0</FailedProcessingsCount>
+            <ProcessingMessageCount>1</ProcessingMessageCount>
+          </RequestDetails>
+        </Response>
+      </ResponseDocument>
+    </ns2:Response>
+  </soap:Body>
+</soap:Envelope>
+
+

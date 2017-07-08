@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+.lightbox {
+ display: none;
+position: fixed; top: 0%; left: 0%;
+height: 100%; width: 100%;
+ background: rgba(0, 0, 0, 0.6);
+ z-index: 100;
+ text-align: center;
+}
+/*
+.lightbox:target { display: block; }
+
+
+.lightbox:target > p {
+ display: inline-block;
+ padding: 8px;
+ background: #fff;
+ margin-top: 250px;
+ text-align: left;
+ box-shadow: 0 0 25px #C00060;
+}
+
+.lightbox p {
+	margin-top:200px;
+	text-align:center;
+}
+
+
+.lightbox img { padding: 0px; }
+
+.lightbox a[href="#close"] {
+ float: right;
+ display: inline-block;
+}
+
+.lightbox > p > a, .lightbox > p > a > a { text-decoration: none; }
+
+#close a { cursor: zoom-in; cursor: -moz-zoom-in; cursor: -webkit-zoom-in;}
+*/
+
+/*
+.lightdiv{
+	position:relative;
+	display: inline-table; 
+	zoom: 1;
+	margin: 250px auto;
+	padding: 8px;
+	background: rgba(0, 150, 255, 0.2);
+	box-shadow: 0 0 25px #00A0FF;
+}
+*/

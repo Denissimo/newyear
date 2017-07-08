@@ -1,0 +1,4776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Toly (CCC) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Serg (ORiON) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://schemas.compassplus.com/two/1.0/telebank.xsd" targetNamespace="http://schemas.compassplus.com/two/1.0/telebank.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attributeGroup name="HeaderRp">
+		<xs:attribute name="Ver" type="xs:float" use="optional" default="4"/>
+		<xs:attribute name="Echo" type="xs:string"/>
+		<xs:attribute name="Product" type="xs:string" use="required"/>
+		<xs:attribute name="Response" type="xs:int"/>
+		<xs:attribute name="ExtResponse" type="xs:int"/>
+		<xs:attribute name="TranId" type="xs:int"/>
+		<xs:attribute name="ApprovalCode" type="xs:string"/>
+		<xs:attribute name="NewMessageCount" type="xs:int"/>
+		<xs:attribute name="TextMessage" type="xs:string"/>
+		<xs:attribute name="IssuerFee" type="xs:float"/>
+		<xs:attribute name="FeeCurrency" type="xs:int"/>
+		<xs:attribute name="DynPswdTriesLeft" type="xs:int"/>
+		<xs:attribute name="AuthRespText" type="xs:string"/>
+		<xs:attribute name="Fee" type="xs:float"/>
+		<xs:attribute name="OutParams" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="HeaderRq">
+		<xs:attribute name="Ver" type="xs:float" use="optional" default="4"/>
+		<xs:attribute name="Product" type="xs:string" use="required"/>
+		<xs:attribute name="Echo" type="xs:string"/>
+		<xs:attribute name="Language" type="xs:int"/>
+		<xs:attribute name="PAN" type="xs:string" use="required"/>
+		<xs:attribute name="MBR" type="xs:int" default="0"/>
+		<xs:attribute name="AuthPAN" type="xs:string"/>
+		<xs:attribute name="AuthMBR" type="xs:int"/>
+		<xs:attribute name="PIN" type="xs:string"/>
+		<xs:attribute name="KeyId" type="xs:int"/>
+		<xs:attribute name="RetAddress" type="xs:string"/>
+		<xs:attribute name="Clerk" type="xs:string"/>
+		<xs:attribute name="Password" type="xs:string"/>
+		<xs:attribute name="AuthorizedClerk" type="xs:int"/>
+		<xs:attribute name="SecurityLevel" type="xs:int"/>
+		<xs:attribute name="STAN" type="xs:int"/>
+		<xs:attribute name="CAPToken" type="xs:string"/>
+		<xs:attribute name="CustomerConfirmationState" type="xs:int"/>
+		<xs:attribute name="DynamicPassword" type="xs:string"/>
+		<xs:attribute name="PrevTranId" type="xs:int"/>
+		<xs:attribute name="TextMessage" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:element name="AcctLimitsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Limits" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Max" type="xs:float" minOccurs="0"/>
+													<xs:element name="Current" type="xs:float"/>
+													<xs:element name="LastResetTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="AtMomentCurrent" type="xs:float" minOccurs="0"/>
+													<xs:element name="PeriodType" type="xs:int" minOccurs="0"/>
+													<xs:element name="Period" type="xs:int" minOccurs="0"/>
+													<xs:element name="MaxUpperBound" type="xs:float" minOccurs="0"/>
+													<xs:element name="PermanentMax" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpMaxExpiration" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TmpMax" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpMaxPeriodType" type="xs:int" minOccurs="0"/>
+													<xs:element name="DateTimeForReset" type="xs:dateTime" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AcctLimitsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Account" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AcctsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Leger" type="xs:float"/>
+													<xs:element name="Available" type="xs:float"/>
+													<xs:element name="LastCardAccess" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="Status" type="ns:Status"/>
+													<xs:element name="CanChangeTitle" type="xs:int"/>
+													<xs:element name="Bonus" type="xs:float" minOccurs="0"/>
+													<xs:element name="Overdraft" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpOverdraft" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpOverdraftExpiration" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="DebitHold" type="xs:float" minOccurs="0"/>
+													<xs:element name="CreditHold" type="xs:float" minOccurs="0"/>
+													<xs:element name="CustomerName" type="xs:string" minOccurs="0"/>
+													<xs:element name="TmpOverdraftPeriodType" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OverdraftOn" type="xs:int" minOccurs="0"/>
+							<xs:element name="OfflineLimit" type="xs:float" minOccurs="0"/>
+							<xs:element name="OfflineLimitCurrency" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AcctsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddAbonentRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddAbonentRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="Channel" type="xs:string"/>
+							<xs:element name="Address" type="xs:string"/>
+							<xs:element name="Scheme" type="xs:string" minOccurs="0"/>
+							<xs:element name="Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Title" type="xs:string" minOccurs="0"/>
+							<xs:element name="Disabled" type="xs:int"/>
+							<xs:element name="TestMessage" type="xs:string" minOccurs="0"/>
+							<xs:element name="UseForDynAuth" type="xs:int" minOccurs="0"/>
+							<xs:element name="IsDefault" type="xs:int" minOccurs="0"/>
+							<xs:element name="Broadcast" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddCardVendorRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="SeqNo" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddCardVendorRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddTransferTemplateRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="SeqNo" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddTransferTemplateRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddVendorRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="SeqNo" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddVendorRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="CMSName" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AllVendorsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CustInfo" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="VendorAcct" type="xs:string"/>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Annotation" type="xs:string" minOccurs="0"/>
+													<xs:element name="Mask" type="xs:string" minOccurs="0"/>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="Mandatory" type="xs:int"/>
+													<xs:element name="EditAllowed" type="xs:int" minOccurs="0"/>
+													<xs:element name="MandatoryForCAP" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="GroupList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Name" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="xs:string" minOccurs="0"/>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+													<xs:element name="Address" type="xs:string" minOccurs="0"/>
+													<xs:element name="URL" type="xs:string" minOccurs="0"/>
+													<xs:element name="TBEnabled" type="xs:int"/>
+													<xs:element name="LinkedATMEnabled" type="xs:int"/>
+													<xs:element name="PrepaidEnabled" type="xs:int"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="GroupID" type="xs:int" minOccurs="0"/>
+													<xs:element name="ParentTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="SettlementAccount" type="xs:string" minOccurs="0"/>
+													<xs:element name="CorrespAccount" type="xs:string" minOccurs="0"/>
+													<xs:element name="INN" type="xs:string" minOccurs="0"/>
+													<xs:element name="BIC" type="xs:string" minOccurs="0"/>
+													<xs:element name="BillPaymentEnabled" type="xs:int"/>
+													<xs:element name="ExtraInfo" type="xs:string" minOccurs="0"/>
+													<xs:element name="CMEnabled" type="xs:int"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PrepaidPrices" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="VendorAcct" type="xs:string"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Price" type="xs:float"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="VendorRegions" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="RegionCode" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="VendorUserFields" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Acct" type="xs:string" minOccurs="0"/>
+													<xs:element name="Name" type="xs:string" minOccurs="0"/>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="VendorGroups" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="VendorAcct" type="xs:string"/>
+													<xs:element name="GroupId" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AllVendorsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="GroupID" type="xs:int" minOccurs="0"/>
+							<xs:element name="What" type="xs:int" minOccurs="0"/>
+							<xs:element name="HideCustInfo" type="xs:int" minOccurs="0"/>
+							<xs:element name="VendorRegion" type="xs:string" minOccurs="0"/>
+							<xs:element name="ParentRegionFilter" type="xs:int" minOccurs="0"/>
+							<xs:element name="VendorId" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AttachForeignCardToCustomerRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AttachForeignCardToCustomerRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExpDate" type="xs:dateTime"/>
+							<xs:element name="Description" type="xs:string" minOccurs="0"/>
+							<xs:element name="NameOnCard" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BillsRequestRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BillId" type="xs:int"/>
+													<xs:element name="VendorTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="BillingAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+													<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="BillAlias" type="xs:string" minOccurs="0"/>
+													<xs:element name="ParentBillId" type="xs:int" minOccurs="0"/>
+													<xs:element name="SubBillId" type="xs:string" minOccurs="0"/>
+													<xs:element name="VendorExtPaymentParam" type="xs:string" minOccurs="0"/>
+													<xs:element name="StartPeriodDate" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="EndPeriodDate" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="EffectiveDate" type="xs:dateTime" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BillsRequestRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Vendor" type="xs:string"/>
+							<xs:element name="FIID" type="xs:int" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetFormFieldsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Fields">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FieldName" type="xs:string"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="ValType" type="xs:int"/>
+													<xs:element name="MinVal" type="xs:float"/>
+													<xs:element name="MaxVal" type="xs:int"/>
+													<xs:element name="AllowedChar" type="xs:int"/>
+													<xs:element name="Mandatory" type="xs:int"/>
+													<xs:element name="DefaultValue" type="ns:CustAcct" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetFormFieldsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FormId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetFormsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Forms">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="Direction" type="xs:int"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="GroupId" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Groups">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="ParentId" type="xs:int" minOccurs="0"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetFormsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="Direction" type="xs:int" minOccurs="0"/>
+							<xs:element name="GroupId" type="xs:int" minOccurs="0"/>
+							<xs:element name="What" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetMessageFieldsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Fields">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="Value" type="xs:string" minOccurs="0"/>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="FileVal" type="xs:string" minOccurs="0"/>
+													<xs:element name="FileExtension" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetMessageFieldsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="MessId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetMessagesRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Messages" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="ParentId" type="xs:int" minOccurs="0"/>
+													<xs:element name="Status" type="xs:int"/>
+													<xs:element name="Direction" type="xs:int"/>
+													<xs:element name="FormId" type="xs:int"/>
+													<xs:element name="FormTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="SentTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="DeliverTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="NextMessList" type="xs:string" minOccurs="0"/>
+													<xs:element name="FormName" type="xs:string" minOccurs="0"/>
+													<xs:element name="WholeThread" type="xs:int" minOccurs="0"/>
+													<xs:element name="Start" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSGetMessagesRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Direction" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromTime" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Status" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToTime" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Title" type="xs:string" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="FormId" type="xs:int" minOccurs="0"/>
+							<xs:element name="WholeThread" type="xs:int" minOccurs="0"/>
+							<xs:element name="Start" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSReadMessagesRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSReadMessagesRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Id">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSSendMessageRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="DeclineCode" type="xs:int" minOccurs="0"/>
+							<xs:element name="DeclineField" type="xs:string" minOccurs="0"/>
+							<xs:element name="MessId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BMSSendMessageRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FormId" type="xs:integer" minOccurs="0"/>
+							<xs:element name="FormName" type="xs:string" minOccurs="0"/>
+							<xs:element name="MessField">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="Value" type="xs:string" minOccurs="0"/>
+													<xs:element name="FileVal" type="xs:string" minOccurs="0"/>
+													<xs:element name="FileExtension" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ParentId" type="xs:int" minOccurs="0"/>
+							<xs:element name="Title" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BalanceInquiryRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Avail" type="xs:float"/>
+							<xs:element name="Currency" type="xs:int"/>
+							<xs:element name="Ledger" type="xs:float"/>
+							<xs:element name="OverdraftOn" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BalanceInquiryRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="Acct" type="xs:string" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BillPaymentRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BillPaymentRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Amount" type="xs:float"/>
+							<xs:element name="BillId" type="xs:int"/>
+							<xs:element name="Currency" type="xs:int"/>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="PayerId" type="xs:int"/>
+							<xs:element name="SubSumSeq" type="xs:int" minOccurs="0"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BuyBalanceRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="AvailBalance" type="xs:float"/>
+							<xs:element name="Currency" type="xs:int"/>
+							<xs:element name="TranId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BuyBalanceRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Currency" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BuyMiniStmtRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Currency" type="xs:int"/>
+							<xs:element name="Statement" type="xs:string"/>
+							<xs:element name="TranId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BuyMiniStmtRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CalcVCardCVV2Rp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CVV2" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CalcVCardCVV2Rq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExpDate" type="xs:dateTime"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CancelScheduleRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CancelScheduleRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="Id" type="xs:int"/>
+							<xs:element name="Period" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="What" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardActivationRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardActivationRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardLimitsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Limits" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Max" type="xs:float" minOccurs="0"/>
+													<xs:element name="Current" type="xs:float"/>
+													<xs:element name="LastResetTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="AtMomentCurrent" type="xs:float" minOccurs="0"/>
+													<xs:element name="IsCounter" type="xs:int"/>
+													<xs:element name="PeriodType" type="xs:int" minOccurs="0"/>
+													<xs:element name="Period" type="xs:int" minOccurs="0"/>
+													<xs:element name="MaxUpperBound" type="xs:float" minOccurs="0"/>
+													<xs:element name="PermanentMax" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpMaxStartTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TmpMaxExpiration" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TmpMax" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpMaxPeriodType" type="xs:int" minOccurs="0"/>
+													<xs:element name="DateTimeForReset" type="xs:dateTime" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardLimitsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardLockRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardLockRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="Reason" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardPaymentRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TranTime" type="xs:float" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardPaymentRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:integer"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="Amount" type="xs:float"/>
+							<xs:element name="Currency" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+							<xs:element name="Date" type="xs:float" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="Period" type="xs:int"/>
+							<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+							<xs:element name="BackPaymentID" type="xs:string" minOccurs="0"/>
+							<xs:element name="FrontPaymentID" type="xs:int" minOccurs="0"/>
+							<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+							<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+							<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardPaymentByTemplateRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TranTime" type="xs:float" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardPaymentByTemplateRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:integer"/>
+							<xs:element name="SeqNo" type="xs:int"/>
+							<xs:element name="Date" type="xs:float" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="Period" type="xs:int"/>
+							<xs:element name="Amount" type="xs:float"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+							<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+							<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+							<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardPINChangeRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardPINChangeRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NewPIN" type="xs:string"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardVendorsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="CustAcct" type="ns:CustAcct"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int"/>
+													<xs:element name="Name" type="xs:string" minOccurs="0"/>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="ExtraInfo" type="xs:string" minOccurs="0"/>
+													<xs:element name="BackPaymentID" type="xs:string" minOccurs="0"/>
+													<xs:element name="FrontPaymentID" type="xs:int" minOccurs="0"/>
+													<xs:element name="ExtraAuthApproved" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardVendorsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Accts" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int"/>
+													<xs:element name="Account" type="xs:string"/>
+													<xs:element name="AcctStatus" type="xs:int"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="List" type="ns:Card" minOccurs="0"/>
+							<xs:element name="Messaging" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int"/>
+													<xs:element name="ChannelName" type="xs:string"/>
+													<xs:element name="ChannelTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="ChannelProtocol" type="xs:int"/>
+													<xs:element name="SchemeName" type="xs:string"/>
+													<xs:element name="SchemeTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="Address" type="xs:string"/>
+													<xs:element name="Name" type="xs:string" minOccurs="0"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Disabled" type="xs:int"/>
+													<xs:element name="UseForDynAuth" type="xs:int"/>
+													<xs:element name="Broadcast" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardsOnAcctRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" type="ns:Card" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardsOnAcctRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Account" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardStatementRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Account" type="xs:string"/>
+													<xs:element name="AcctCurrency" type="xs:int"/>
+													<xs:element name="AcctCurrAlpha3Code" type="xs:int"/>
+													<xs:element name="Date" type="xs:float"/>
+													<xs:element name="OperCode" type="xs:int"/>
+													<xs:element name="Amount" type="xs:float"/>
+													<xs:element name="TermClass" type="xs:int" minOccurs="0"/>
+													<xs:element name="TermName" type="xs:string" minOccurs="0"/>
+													<xs:element name="TermLocation" type="xs:string" minOccurs="0"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="TermSIC" type="xs:int" minOccurs="0"/>
+													<xs:element name="BackId" type="xs:string" minOccurs="0"/>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="TranTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="OrigAmount" type="xs:float" minOccurs="0"/>
+													<xs:element name="OrigCurrency" type="xs:int" minOccurs="0"/>
+													<xs:element name="OrigCurrAlpha3Code" type="xs:string" minOccurs="0"/>
+													<xs:element name="AnotherTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="BackAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="BackAmount" type="xs:float" minOccurs="0"/>
+													<xs:element name="Remain" type="xs:float" minOccurs="0"/>
+													<xs:element name="ApprovalCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="FrontId" type="xs:int" minOccurs="0"/>
+													<xs:element name="OnlineIssuerFee" type="xs:float" minOccurs="0"/>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="RespCode" type="xs:int" minOccurs="0"/>
+													<xs:element name="DeclineReason" type="xs:string" minOccurs="0"/>
+													<xs:element name="TranCode" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MultiAcct" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Amount" type="xs:float"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CardStatementRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromAmount" type="xs:float" minOccurs="0"/>
+							<xs:element name="FromDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="OperCode" type="xs:int" minOccurs="0"/>
+							<xs:element name="OperType" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToAmount" type="xs:float" minOccurs="0"/>
+							<xs:element name="ToDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="ShowDeclined" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeECStatusRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeECStatusRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ECStatus" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeAcctAliasRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeAcctAliasRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Account" type="xs:string"/>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCMSAddressRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCMSAddressRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="ChannelName" type="xs:string"/>
+							<xs:element name="NewCMSAddress" type="xs:string" minOccurs="0"/>
+							<xs:element name="OldCMSAddress" type="xs:string"/>
+							<xs:element name="TestMessage" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCard2AcctDescrRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCard2AcctDescrRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Account" type="xs:string"/>
+							<xs:element name="Description" type="xs:string" minOccurs="0"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCardAliasRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCardAliasRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCardCMSAddressRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCardCMSAddressRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="ChannelName" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="NewCMSAddress" type="xs:string"/>
+							<xs:element name="OldCMSAddress" type="xs:string"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="TestMessage" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeNumericLoginRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeNumericLoginRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NumericLogin" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangePasswordRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangePasswordRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NewPassword" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCardPasswordRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeCardPasswordRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="NewPassword" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeTextLoginRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeTextLoginRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TextLogin" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CheckCAPTokenRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Result" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CheckCAPTokenRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CheckPVVRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CheckPVVRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateSessionRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="KeyId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateSessionRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateSubscriptionRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Id" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateSubscriptionRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateTBCustomerRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateTBCustomerRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TBCustomerPIN" type="xs:string"/>
+							<xs:element name="ExpDate" type="xs:date" minOccurs="0"/>
+							<xs:element name="DocumentNo" type="xs:string"/>
+							<xs:element name="BirthDate" type="xs:date"/>
+							<xs:element name="SecretWord" type="xs:string"/>
+							<xs:element name="TextLogin" type="xs:string" minOccurs="0"/>
+							<xs:element name="Address" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateVCardRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CVV2" type="xs:int"/>
+							<xs:element name="Expiration" type="xs:dateTime"/>
+							<xs:element name="LimitAmount" type="xs:float"/>
+							<xs:element name="LimitCount" type="xs:int"/>
+							<xs:element name="LimitCurrency" type="xs:int"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="NameOnCard" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateVCardRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Account" type="xs:string"/>
+							<xs:element name="Description" type="xs:string" minOccurs="0"/>
+							<xs:element name="Expiration" type="xs:dateTime"/>
+							<xs:element name="LimitAmount" type="xs:float"/>
+							<xs:element name="LimitCount" type="xs:int"/>
+							<xs:element name="LimitCurrency" type="xs:int" minOccurs="0"/>
+							<xs:element name="LimitPeriod" type="xs:int"/>
+							<xs:element name="LimitPeriodType" type="xs:int"/>
+							<xs:element name="CardProductId" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelAbonentRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelAbonentRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="Channel" type="xs:string"/>
+							<xs:element name="Address" type="xs:string"/>
+							<xs:element name="TestMessage" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelCardVendorRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelCardVendorRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="SeqNo" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelTransferTemplateRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelTransferTemplateRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="SeqNo" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelVendorRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelVendorRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="SeqNo" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DeleteSubscriptionRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DeleteSubscriptionRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="Id" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DetachForeignCardFromCustomerRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DetachForeignCardFromCustomerRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DynAuthAddressListRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Fields" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Channel" type="xs:string"/>
+													<xs:element name="Provider" type="xs:string" minOccurs="0"/>
+													<xs:element name="Address" type="xs:string" minOccurs="0"/>
+													<xs:element name="FullAddress" type="xs:string" minOccurs="0"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Lock" type="xs:int"/>
+													<xs:element name="Default" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DynAuthAddressListRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EditSubscriptionRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EditSubscriptionRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+							<xs:element name="Id" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ExplainScheduleRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FromAcct" type="xs:string"/>
+													<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="CustVendorAcct" type="ns:CustAcct" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Date" type="xs:dateTime"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+													<xs:element name="PayType" type="xs:int"/>
+													<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="OutsideTransfer" type="xs:int"/>
+													<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+													<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+													<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+													<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+													<xs:element name="Amount2" type="xs:float" minOccurs="0"/>
+													<xs:element name="Id" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ExplainScheduleRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="FromDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="IsCustAcct" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ExceptToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GenerateDynPasswordRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PasswordCount" type="xs:int"/>
+							<xs:element name="LifeTime" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GenerateDynPasswordRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Channel" type="xs:string"/>
+							<xs:element name="Address" type="xs:string"/>
+							<xs:element name="What" type="xs:int" default="1" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetBICRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BIC" type="xs:string"/>
+													<xs:element name="CorrespAcct" type="xs:string"/>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Zip" type="xs:string"/>
+													<xs:element name="City" type="xs:string"/>
+													<xs:element name="Address" type="xs:string"/>
+													<xs:element name="Phones" type="xs:string"/>
+													<xs:element name="CBServiceBIC" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetBICRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="City" type="xs:string" minOccurs="0"/>
+							<xs:element name="Address" type="xs:string" minOccurs="0"/>
+							<xs:element name="BIC" type="xs:string" minOccurs="0"/>
+							<xs:element name="CorrespAcct" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetBackOfficeInfoRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Value" type="xs:base64Binary" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetBackOfficeInfoRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="IdentType" type="xs:int"/>
+							<xs:element name="Ident" type="xs:string"/>
+							<xs:element name="InfoType" type="xs:string" minOccurs="0"/>
+							<xs:element name="Format" type="xs:int"/>
+							<xs:element name="AddParams" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCAPChallengeRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCAPChallengeRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+							<xs:element name="PlainSignData" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+   <xs:element name="GetCardAllowed3DSecAuthRulesRp">
+      <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="AuthRuleList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+                                       <xs:element name="SeqNo" type="xs:int" minOccurs="0"/>
+                                       <xs:element name="NeedStatic" type="xs:int" minOccurs="0"/>
+                                       <xs:element name="NeedDynPwd" type="xs:int" minOccurs="0"/>
+                                       <xs:element name="NeedCAP" type="xs:int" minOccurs="0"/>
+                                       <xs:element name="NeedToken" type="xs:int" minOccurs="0"/>
+                                    </xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+   <xs:element name="GetCardAllowed3DSecAuthRulesRq">
+      <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+                     <xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCurrencyRatesRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Rates" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="RateGroup" type="xs:int"/>
+													<xs:element name="ExchangeDate" type="xs:dateTime"/>
+													<xs:element name="FromCurrency" type="xs:int"/>
+													<xs:element name="ToCurrency" type="xs:int"/>
+													<xs:element name="FromAmount" type="xs:float"/>
+													<xs:element name="ToAmount" type="xs:float"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCurrencyRatesRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="RateGroup" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExchangeDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="RateType" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromCurrency" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToCurrency" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetKeyRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Key" type="xs:string"/>
+							<xs:element name="KeyId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetKeyRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCustomerUserFieldsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int"/>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="TextValue" type="xs:string" minOccurs="0"/>
+													<xs:element name="XMLValue" type="xs:base64Binary" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCustomerUserFieldsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="ObjectType" type="xs:int" minOccurs="0"/>
+							<xs:element name="ObjectID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Name" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetChallengeRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Challenge" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetChallengeRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetDictionariesRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CMSChannelList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Protocol" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CMSSchemeList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="IsDynamic" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="UserDictionaryList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Section" type="xs:string"/>
+													<xs:element name="Code" type="xs:string"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="ParentCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="ParentSection" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetDictionariesRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="DictsMask" type="xs:int" default="1"/>
+							<xs:element name="UserSection" type="xs:string" minOccurs="0"/>
+							<xs:element name="UserCode" type="xs:string" minOccurs="0"/>
+							<xs:element name="UserTitle" type="xs:string" minOccurs="0"/>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="UserDicRowCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="UserParentCode" type="xs:string" minOccurs="0"/>
+							<xs:element name="UserParentSection" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetPANRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="ExtraAuthLevel" type="xs:int" minOccurs="0"/>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="SecretWordPos" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CAPCards" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PasswordExists" type="xs:int"/>
+							<xs:element name="LimitMax" type="xs:int"/>
+							<xs:element name="LimitCounter" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetPANRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="AuthMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="AuthPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="Certificate" type="xs:string" minOccurs="0"/>
+							<xs:element name="FIID" type="xs:string" minOccurs="0"/>
+							<xs:element name="NumericLogin" type="xs:string" minOccurs="0"/>
+							<xs:element name="TextLogin" type="xs:string" minOccurs="0"/>
+							<xs:element name="CommonLogin" type="xs:string" minOccurs="0"/>
+							<xs:element name="LimitOnly" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetPersonInfoRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Id" type="xs:int" minOccurs="1"/>
+							<xs:element name="Name" type="xs:string" minOccurs="1"/>
+							<xs:element name="Sex" type="xs:string" minOccurs="0"/>
+							<xs:element name="Title" type="xs:int" minOccurs="0"/>
+							<xs:element name="BirthDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="BirthLocation" type="xs:string" minOccurs="0"/>
+							<xs:element name="TPN" type="xs:string" minOccurs="0"/>
+							<xs:element name="CountryCitizen" type="xs:int" minOccurs="0"/>
+							<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+							<xs:element name="MobilePhone" type="xs:string" minOccurs="0"/>
+							<xs:element name="Fax" type="xs:string" minOccurs="0"/>
+							<xs:element name="Email" type="xs:string" minOccurs="0"/>
+							<xs:element name="EmpPhone" type="xs:string" minOccurs="0"/>
+							<xs:element name="VIP" type="xs:int" minOccurs="0"/>
+							<xs:element name="PostalAddress" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="3">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="Country" type="xs:int"/>
+													<xs:element name="Region" type="xs:string"/>
+													<xs:element name="City" type="xs:string"/>
+													<xs:element name="Street" type="xs:string"/>
+													<xs:element name="ZIPCode" type="xs:string"/>
+													<xs:element name="House" type="xs:string"/>
+													<xs:element name="Building" type="xs:string"/>
+													<xs:element name="Frame" type="xs:string"/>
+													<xs:element name="Flat" type="xs:string"/>
+													<xs:element name="Line" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="IdentInfo" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="What" type="xs:string"/>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="TelebankCustomerPAN" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetPersonInfoRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTermRateGroupsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Reversible" type="xs:int"/>
+													<xs:element name="NotificationRequired" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTermRateGroupsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetScheduleRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="FromAcct" type="xs:string"/>
+													<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="CustVendorAcct" type="ns:CustAcct" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Date" type="xs:dateTime"/>
+													<xs:element name="HistoryCount" type="xs:int"/>
+													<xs:element name="SchedCount" type="xs:int" minOccurs="0"/>
+													<xs:element name="Period" type="xs:int"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="PayType" type="xs:int"/>
+													<xs:element name="OutsideTransfer" type="xs:int"/>
+													<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+													<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+													<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+													<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+													<xs:element name="Amount2" type="xs:float" minOccurs="0"/>
+													<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+													<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetScheduleRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="IsCustAcct" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ExceptToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetServicePointRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TermList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="TermId" type="xs:int"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Location" type="xs:string" minOccurs="0"/>
+													<xs:element name="Owner" type="xs:string" minOccurs="0"/>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="Latitude" type="xs:float"/>
+													<xs:element name="Longitude" type="xs:float"/>
+													<xs:element name="Option" type="xs:int" minOccurs="0"/>
+													<xs:element name="Distance" type="xs:float"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_MON" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_TUE" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_WED" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_THU" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_FRI" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_SAT" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_SUN" type="xs:string" minOccurs="0"/>
+													<xs:element name="ServiceList" type="ns:ServiceList" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Denomination" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="TermId" type="xs:int"/>
+													<xs:element name="BillValue" type="xs:float"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Type" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BranchList" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Address" type="xs:string" minOccurs="0"/>
+													<xs:element name="City" type="xs:string" minOccurs="0"/>
+													<xs:element name="ZIP" type="xs:string" minOccurs="0"/>
+													<xs:element name="EMail" type="xs:string" minOccurs="0"/>
+													<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+													<xs:element name="Latitude" type="xs:float"/>
+													<xs:element name="Longitude" type="xs:float"/>
+													<xs:element name="Commentary" type="xs:string" minOccurs="0"/>
+													<xs:element name="Distance" type="xs:float"/>
+													<xs:element name="Schedule_MON" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_TUE" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_WED" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_THU" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_FRI" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_SAT" type="xs:string" minOccurs="0"/>
+													<xs:element name="Schedule_SUN" type="xs:string" minOccurs="0"/>
+													<xs:element name="ServiceList" type="ns:ServiceList" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetServicePointRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Latitude" type="xs:float"/>
+							<xs:element name="Longitude" type="xs:float"/>
+							<xs:element name="Radius" type="xs:int" minOccurs="0"/>
+							<xs:element name="Type" type="xs:int"/>
+							<xs:element name="BillValue" type="xs:float" minOccurs="0"/>
+							<xs:element name="Currency" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Option" type="xs:int" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSubscriptionListRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="VendorAcct" type="xs:string"/>
+													<xs:element name="ExtId" type="xs:string"/>
+													<xs:element name="Status" type="xs:int"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSubscriptionListRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTransHistoryRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Type" type="xs:int" minOccurs="0"/>
+													<xs:element name="Time" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TranCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+													<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+													<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="CardMember" type="xs:int" minOccurs="0"/>
+													<xs:element name="RespCode" type="xs:int" minOccurs="0"/>
+													<xs:element name="ApprovalCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="OrigType" type="xs:int" minOccurs="0"/>
+													<xs:element name="PAN2" type="xs:string" minOccurs="0"/>
+													<xs:element name="CardMember2" type="xs:int" minOccurs="0"/>
+													<xs:element name="TermLocation" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTransHistoryRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="OperType" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OrigType" type="xs:int" minOccurs="0"/>
+							<xs:element name="TranCode" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromTime" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="ToTime" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetUserDictionaryRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Section" type="xs:string"/>
+													<xs:element name="Code" type="xs:string"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetUserDictionaryRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="Section" type="xs:string"/>
+							<xs:element name="Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Title" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetVCProductsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ProductId" type="xs:int"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetVCProductsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HistoryRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="FromAcct" type="xs:string"/>
+													<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="CustVendorAcct" type="ns:CustAcct" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="ResponseCode" type="xs:int"/>
+													<xs:element name="ApprovalCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+													<xs:element name="PayType" type="xs:int"/>
+													<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="OutsideTransfer" type="xs:int"/>
+													<xs:element name="PayClass" type="xs:int"/>
+													<xs:element name="TranId" type="xs:int"/>
+													<xs:element name="TranType" type="xs:int"/>
+													<xs:element name="DeclineReason" type="xs:string" minOccurs="0"/>
+													<xs:element name="IssuerFee" type="xs:float" minOccurs="0"/>
+													<xs:element name="FeeCurrency" type="xs:int" minOccurs="0"/>
+													<xs:element name="FromPAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="FromMBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="AbonentReceiver" type="xs:string" minOccurs="0"/>
+													<xs:element name="Fee" type="xs:float" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HistoryRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="FromDate" type="xs:dateTime"/>
+							<xs:element name="IsCustAcct" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ExceptToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int"/>
+							<xs:element name="ToPAN" type="xs:string"/>
+							<xs:element name="TranId" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							<xs:element name="FromPAN" type="xs:string"/>
+							<xs:element name="FromMBR" type="xs:int"/>
+							<xs:element name="AbonentReceiver" type="xs:string"/>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InfoBuyerPinChangeRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InfoBuyerPinChangeRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NewPIN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InternetPINChangeRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InternetPINChangeRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="NewPIN" type="xs:string"/>
+							<xs:element name="PAN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LogoffRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LogoffRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LogonRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="BirthDay" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="CMSDisabled" type="xs:int" minOccurs="0"/>
+							<xs:element name="DefaultCurrency" type="xs:string"/>
+							<xs:element name="ExpDate" type="xs:dateTime"/>
+							<xs:element name="INN" type="xs:string" minOccurs="0"/>
+							<xs:element name="LastCustLocation" type="xs:string" minOccurs="0"/>
+							<xs:element name="LastLogonTime" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Messaging" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ChannelName" type="xs:string"/>
+													<xs:element name="ChannelTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="ChannelProtocol" type="xs:int" minOccurs="0"/>
+													<xs:element name="SchemeName" type="xs:string"/>
+													<xs:element name="SchemeTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="Address" type="xs:string"/>
+													<xs:element name="Name" type="xs:string" minOccurs="0"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Disabled" type="xs:int"/>
+													<xs:element name="UseForDynAuth" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="NumericLogin" type="xs:string" minOccurs="0"/>
+							<xs:element name="Operations">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Sex" type="xs:string" minOccurs="0"/>
+							<xs:element name="TextLogin" type="xs:string" minOccurs="0"/>
+							<xs:element name="VCardLimits" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="AmtLimitCurrency" type="xs:int"/>
+													<xs:element name="AmtLimitCurrency_AlphaCode" type="xs:string"/>
+													<xs:element name="MaxDaysActive" type="xs:int"/>
+													<xs:element name="MaxDayCountLimit" type="xs:int"/>
+													<xs:element name="MaxDayAmountLimit" type="xs:float"/>
+													<xs:element name="MaxNDayCountLimit" type="xs:int"/>
+													<xs:element name="MaxNDayAmountLimit" type="xs:float"/>
+													<xs:element name="MaxWeekCountLimit" type="xs:int"/>
+													<xs:element name="MaxWeekAmountLimit" type="xs:float"/>
+													<xs:element name="MaxMonthCountLimit" type="xs:int"/>
+													<xs:element name="MaxMonthAmountLimit" type="xs:float"/>
+													<xs:element name="MaxQuarterCountLimit" type="xs:int"/>
+													<xs:element name="MaxQuarterAmountLimit" type="xs:float"/>
+													<xs:element name="ActivityPeriodType" type="xs:int"/>
+													<xs:element name="PrefixId" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="RateGroups" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Id" type="xs:int"/>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Reversible" type="xs:int"/>
+													<xs:element name="NotificationRequired" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PersonId" type="xs:int" minOccurs="0"/>
+							<xs:element name="PersonExtId" type="xs:string" minOccurs="0"/>
+							<xs:element name="BirthPlace" type="xs:string" minOccurs="0"/>
+							<xs:element name="Branch" type="xs:string" minOccurs="0"/>
+							<xs:element name="Identity" type="xs:string" minOccurs="0"/>
+							<xs:element name="Status" type="xs:int" minOccurs="0"/>
+							<xs:element name="Retailers" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="RetailerId" type="xs:int"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AcctCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="CrdCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="PmtCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="TrnsfCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="LimCurrency" type="xs:int" minOccurs="0"/>
+							<xs:element name="PINExpDaysLeft" type="xs:int" minOccurs="0"/>
+							<xs:element name="AtmPmtCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="ScheduledPmtCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="ScheduledTrnsfCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="TermCity" type="xs:string" minOccurs="0"/>
+							<xs:element name="TermCountry" type="xs:string" minOccurs="0"/>
+							<xs:element name="AvatarId" type="xs:int" minOccurs="0"/>
+							<xs:element name="AvatarData" type="xs:string" minOccurs="0"/>
+							<xs:element name="AvatarInfo" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LogonRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="SecretWordLetters" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Pos" type="xs:int"/>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AccessPointType" type="xs:int" minOccurs="0"/>
+							<xs:element name="LoginType" type="xs:int" minOccurs="0"/>
+							<xs:element name="ATMID" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MessageToInstitutionRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MessageToInstitutionRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Account" type="xs:string"/>
+							<xs:element name="Code" type="xs:int"/>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="TextParams" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OperHistRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="CompositeAcct" type="xs:int" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int"/>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Date" type="xs:float"/>
+													<xs:element name="OperCode" type="xs:int"/>
+													<xs:element name="Amount" type="xs:float"/>
+													<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="TermClass" type="xs:int" minOccurs="0"/>
+													<xs:element name="TermName" type="xs:string" minOccurs="0"/>
+													<xs:element name="TermLocation" type="xs:string" minOccurs="0"/>
+													<xs:element name="Description" type="xs:string" minOccurs="0"/>
+													<xs:element name="TermSIC" type="xs:int" minOccurs="0"/>
+													<xs:element name="BackId" type="xs:string" minOccurs="0"/>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="TranTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="OrigAmount" type="xs:float" minOccurs="0"/>
+													<xs:element name="OrigCurrency" type="xs:int" minOccurs="0"/>
+													<xs:element name="AnotherTitle" type="xs:string" minOccurs="0"/>
+													<xs:element name="BackAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="BackAmount" type="xs:float" minOccurs="0"/>
+													<xs:element name="Remain" type="xs:float" minOccurs="0"/>
+													<xs:element name="ApprovalCode" type="xs:string" minOccurs="0"/>
+													<xs:element name="OrigCurrAlpha3Code" type="xs:string" minOccurs="0"/>
+													<xs:element name="FrontId" type="xs:int" minOccurs="0"/>
+													<xs:element name="OnlineIssuerFee" type="xs:float" minOccurs="0"/>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="TermCountry" type="xs:int" minOccurs="0"/>
+													<xs:element name="TermCity" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MultiAcct" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="Currency" type="xs:int"/>
+													<xs:element name="Amount" type="xs:float"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OperHistRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Acct" type="xs:string" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromAmount" type="xs:float" minOccurs="0"/>
+							<xs:element name="FromDate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="OperCode" type="xs:int" minOccurs="0"/>
+							<xs:element name="OperType" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+													<xs:element name="Value" type="xs:int"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToAmount" type="xs:float" minOccurs="0"/>
+							<xs:element name="ToDate" type="xs:dateTime" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PaymentByTemplateRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TranTime" type="xs:float" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PaymentByTemplateRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="SeqNo" type="xs:int"/>
+							<xs:element name="Date" type="xs:float" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="Period" type="xs:int"/>
+							<xs:element name="Amount" type="xs:float"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+							<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+							<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="IsAuthorization" type="xs:int" minOccurs="0"/>
+							<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+							<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PINChangeRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PINChangeRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NewPIN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PingRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PingRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PrepaidRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Code1" type="xs:string"/>
+							<xs:element name="Code2" type="xs:string"/>
+							<xs:element name="Info1" type="xs:string"/>
+							<xs:element name="Info2" type="xs:string"/>
+							<xs:element name="Info3" type="xs:string"/>
+							<xs:element name="Info4" type="xs:string"/>
+							<xs:element name="Info5" type="xs:string"/>
+							<xs:element name="Info6" type="xs:string"/>
+							<xs:element name="Info7" type="xs:string"/>
+							<xs:element name="Info8" type="xs:string"/>
+							<xs:element name="Info9" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PrepaidRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Currency" type="xs:int"/>
+							<xs:element name="CustAcct" type="ns:CustAcct"/>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="Price" type="xs:float"/>
+							<xs:element name="ToAcct" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisterInfoBuyerRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PIN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisterInfoBuyerRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReverseRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReverseRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TranId" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScheduleRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TranTime" type="xs:float" minOccurs="0"/>
+							<xs:element name="Cards" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PAN" type="xs:string"/>
+													<xs:element name="MBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="CardUID" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScheduleRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Amount" type="xs:float"/>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+							<xs:element name="Date" type="xs:float" minOccurs="0"/>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="OutsideTransfer" type="xs:int" minOccurs="0"/>
+							<xs:element name="Period" type="xs:int"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="IsAuthorization" type="xs:int" minOccurs="0"/>
+							<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+							<xs:element name="ThisTranId" type="xs:int" minOccurs="0"/>
+							<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+							<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="FromMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExpDate" type="xs:date" minOccurs="0"/>
+							<xs:element name="CVV2" type="xs:int" minOccurs="0"/>
+							<xs:element name="ECAAV" type="xs:string" minOccurs="0"/>
+							<xs:element name="ECTranId" type="xs:string" minOccurs="0"/>
+							<xs:element name="AbonentReceiver" type="xs:string" minOccurs="0"/>
+							<xs:element name="CardUID" type="xs:string" minOccurs="0"/>
+							<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+							<xs:element name="POSCondition" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SendTestMessageRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SendTestMessageRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Channel" type="xs:string"/>
+							<xs:element name="Address" type="xs:string"/>
+							<xs:element name="TestMessage" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetAcctLimitsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetAcctLimitsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Limits" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="LimitId" type="xs:int"/>
+													<xs:element name="Max" type="xs:float" minOccurs="0"/>
+													<xs:element name="PeriodType" type="xs:int" minOccurs="0"/>
+													<xs:element name="Period" type="xs:int" minOccurs="0"/>
+													<xs:element name="DateTimeForReset" type="xs:dateTime" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Account" type="xs:string"/>
+							<xs:element name="RemoveMissingLimits" type="xs:int" default="0" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetAvatarRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetAvatarRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="AvatarId" type="xs:int" minOccurs="0"/>
+							<xs:element name="AvatarData" type="xs:string" minOccurs="0"/>
+							<xs:element name="AvatarInfo" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="SetCard3DSecAuthRuleRp">
+      <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="SetCard3DSecAuthRuleRq">
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+					    <xs:sequence minOccurs="0">
+                            <xs:element name="PAN" type="xs:string" minOccurs="0"/>
+					        <xs:element name="MBR" type="xs:int" minOccurs="0"/>
+                            <xs:element name="UseCardSettings" type="xs:int" minOccurs="0"/>
+                            <xs:element name="NeedStatic" type="xs:int" minOccurs="0"/>
+                            <xs:element name="NeedDynPwd" type="xs:int" minOccurs="0"/>
+                            <xs:element name="NeedCAP" type="xs:int" minOccurs="0"/>
+                            <xs:element name="NeedToken" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetExtraAuthLevelRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetExtraAuthLevelRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NewLevel" type="xs:int"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetPersonInfoRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetPersonInfoRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+							<xs:element name="MobilePhone" type="xs:string" minOccurs="0"/>
+							<xs:element name="Fax" type="xs:string" minOccurs="0"/>
+							<xs:element name="Email" type="xs:string" minOccurs="0"/>
+							<xs:element name="EmpPhone" type="xs:string" minOccurs="0"/>
+							<xs:element name="PostalAddress" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="3">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Type" type="xs:int"/>
+													<xs:element name="Country" type="xs:int"/>
+													<xs:element name="Region" type="xs:string"/>
+													<xs:element name="City" type="xs:string"/>
+													<xs:element name="Street" type="xs:string"/>
+													<xs:element name="ZIPCode" type="xs:string"/>
+													<xs:element name="House" type="xs:string"/>
+													<xs:element name="Building" type="xs:string"/>
+													<xs:element name="Frame" type="xs:string"/>
+													<xs:element name="Flat" type="xs:string"/>
+													<xs:element name="Line" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetTmpAcctLimitsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetTmpAcctLimitsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Limits">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="LimitId" type="xs:int"/>
+													<xs:element name="TmpMax" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpMaxExpiration" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TmpMaxPeriodType" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Account" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetTmpCardLimitsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetTmpCardLimitsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Limits">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="LimitId" type="xs:int"/>
+													<xs:element name="TmpMax" type="xs:float" minOccurs="0"/>
+													<xs:element name="TmpMaxStartTime" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TmpMaxExpiration" type="xs:dateTime" minOccurs="0"/>
+													<xs:element name="TmpMaxPeriodType" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetCardLimitsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetCardLimitsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Limits" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="LimitId" type="xs:int"/>
+													<xs:element name="Max" type="xs:float" minOccurs="0"/>
+													<xs:element name="PeriodType" type="xs:int" minOccurs="0"/>
+													<xs:element name="Period" type="xs:int" minOccurs="0"/>
+													<xs:element name="DateTimeForReset" type="xs:dateTime" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="RemoveMissingLimits" type="xs:int" default="0" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetDefaultDynAuthAddressRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetDefaultDynAuthAddressRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Channel" type="xs:string"/>
+							<xs:element name="Address" type="xs:string"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetCustomerUserFieldsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SetCustomerUserFieldsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="xs:string"/>
+													<xs:element name="TextValue" type="xs:string" minOccurs="0"/>
+													<xs:element name="XMLValue" type="xs:base64Binary" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="FieldsFlag" type="xs:int" minOccurs="0"/>
+							<xs:element name="ObjectID" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransferByTemplateRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="TranTime" type="xs:float" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransferByTemplateRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="OutsideTransfer" type="xs:int" minOccurs="0"/>
+							<xs:element name="SeqNo" type="xs:int"/>
+							<xs:element name="Date" type="xs:float" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="Period" type="xs:int"/>
+							<xs:element name="Amount" type="xs:float"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+							<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+							<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+							<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransferTemplatesRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="FromAcct" type="xs:string"/>
+													<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+													<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+													<xs:element name="ExtraAuthApproved" type="xs:int" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransferTemplatesRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateAbonentRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateAbonentRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="PAN" type="xs:string"/>
+							<xs:element name="MBR" type="xs:int"/>
+							<xs:element name="OldChannel" type="xs:string"/>
+							<xs:element name="NewChannel" type="xs:string"/>
+							<xs:element name="OldAddress" type="xs:string"/>
+							<xs:element name="NewAddress" type="xs:string"/>
+							<xs:element name="Scheme" type="xs:string" minOccurs="0"/>
+							<xs:element name="Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Title" type="xs:string" minOccurs="0"/>
+							<xs:element name="Disabled" type="xs:int"/>
+							<xs:element name="UseForDynAuth" type="xs:int" minOccurs="0"/>
+							<xs:element name="IsDefault" type="xs:int" minOccurs="0"/>
+							<xs:element name="TestMessage" type="xs:string" minOccurs="0"/>
+							<xs:element name="Broadcast" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateScheduleRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateScheduleRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+							<xs:element name="Count" type="xs:int" minOccurs="0"/>
+							<xs:element name="Id" type="xs:int"/>
+							<xs:element name="Period" type="xs:int" minOccurs="0"/>
+							<xs:element name="CustAcct" type="ns:CustAcct" minOccurs="0"/>
+							<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Priority" type="xs:int" minOccurs="0"/>
+							<xs:element name="Postpone" type="xs:int" minOccurs="0"/>
+							<xs:element name="PartialExecution" type="xs:int" minOccurs="0"/>
+							<xs:element name="ExecutionTriesCount" type="xs:int" minOccurs="0"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="NeedNotify" type="xs:int" minOccurs="0"/>
+							<xs:element name="RefinedAmounts" type="ns:RefinedAmount" minOccurs="0"/>
+							<xs:element name="RemoveRefinedAmounts" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateTransferTemplateRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateTransferTemplateRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="SeqNo" type="xs:int"/>
+							<xs:element name="FromAcct" type="xs:string"/>
+							<xs:element name="ToAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToPAN" type="xs:string" minOccurs="0"/>
+							<xs:element name="ToMBR" type="xs:int" minOccurs="0"/>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateCardVendorRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateCardVendorRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="NewCustAcct" type="ns:CustAcct"/>
+							<xs:element name="Comment" type="xs:string"/>
+							<xs:element name="Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="SeqNo" type="xs:int" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateVendorRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateVendorRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+							<xs:element name="NewCustAcct" type="ns:CustAcct"/>
+							<xs:element name="OldCustAcct" type="ns:CustAcct"/>
+							<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+							<xs:element name="VendorAcct" type="xs:string"/>
+							<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+							<xs:element name="SeqNo" type="xs:int"/>
+							<xs:element name="CMSName" type="xs:string" minOccurs="0"/>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VendorsRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Row">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Acct" type="xs:string"/>
+													<xs:element name="CustAcct" type="ns:CustAcct"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+													<xs:element name="Amount" type="xs:float" minOccurs="0"/>
+													<xs:element name="Currency" type="xs:int" minOccurs="0"/>
+													<xs:element name="SeqNo" type="xs:int"/>
+													<xs:element name="FromAcct" type="xs:string" minOccurs="0"/>
+													<xs:element name="ExtraAuthApproved" type="xs:int" minOccurs="0"/>
+													<xs:element name="CMSName" type="xs:string" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DeclineRp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Response">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VendorsRq">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attributeGroup ref="ns:HeaderRq"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Card">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Row">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PAN" type="xs:string"/>
+						<xs:element name="MBR" type="xs:int"/>
+						<xs:element name="Status" type="xs:int"/>
+						<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+						<xs:element name="ExpDate" type="xs:dateTime"/>
+						<xs:element name="FIO" type="xs:string" minOccurs="0"/>
+						<xs:element name="LastUsed" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="Type" type="xs:int"/>
+						<xs:element name="Brand1Title" type="xs:string" minOccurs="0"/>
+						<xs:element name="Brand2Title" type="xs:string" minOccurs="0"/>
+						<xs:element name="LimCurrency" type="xs:int" minOccurs="0"/>
+						<xs:element name="CanChangeTitle" type="xs:int"/>
+						<xs:element name="CanChangeStatus" type="xs:int"/>
+						<xs:element name="PasswordExists" type="xs:int"/>
+						<xs:element name="ECStatus" type="xs:int" minOccurs="0"/>
+						<xs:element name="NameOnCard" type="xs:string" minOccurs="0"/>
+						<xs:element name="Enrolled" type="xs:int"/>
+						<xs:element name="PrefixId" type="xs:int"/>
+                  <xs:element name="ECUseCardSettings" type="xs:int" minOccurs="0"/>
+                  <xs:element name="ECNeedStaticAuth" type="xs:int" minOccurs="0"/>
+                  <xs:element name="ECNeedDynPwdAuth" type="xs:int" minOccurs="0"/>
+                  <xs:element name="ECNeedCAPAuth" type="xs:int" minOccurs="0"/>
+                  <xs:element name="ECNeedTokenAuth" type="xs:int" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CustAcct">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Row" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ID" type="xs:string" minOccurs="0"/>
+						<xs:element name="VAL" type="xs:string"/>
+						<xs:element name="SEQ" type="xs:integer" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RefinedAmount">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Row" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OperationNo" type="xs:integer"/>
+						<xs:element name="Amount" type="xs:float"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ServiceList">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Row" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ServiceCode" type="xs:integer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Challenge">
+		<xs:sequence>
+			<xs:element name="CAPChallenge" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Status">
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

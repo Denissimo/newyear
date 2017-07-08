@@ -1,0 +1,2508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:data="http://schemas.compassplus.com/two/1.0/telebank.xsd"
+             xmlns:ns="http://schemas.compassplus.com/two/1.0/telebank.wsdl"
+             targetNamespace="http://schemas.compassplus.com/two/1.0/telebank.wsdl">
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+      <import namespace="http://schemas.compassplus.com/two/1.0/telebank.xsd" schemaLocation="telebank.xsd"/>
+    </schema>
+  </types>
+  <message name="AcctLimitsRq">
+    <part name="Request" element="data:AcctLimitsRq"/>
+  </message>
+  <message name="AcctLimitsRp">
+    <part name="Response" element="data:AcctLimitsRp"/>
+  </message>
+  <message name="AcctsRq">
+    <part name="Request" element="data:AcctsRq"/>
+  </message>
+  <message name="AcctsRp">
+    <part name="Response" element="data:AcctsRp"/>
+  </message>
+  <message name="AddAbonentRq">
+    <part name="Request" element="data:AddAbonentRq"/>
+  </message>
+  <message name="AddAbonentRp">
+    <part name="Response" element="data:AddAbonentRp"/>
+  </message>
+  <message name="AddCardVendorRq">
+    <part name="Request" element="data:AddCardVendorRq"/>
+  </message>
+  <message name="AddCardVendorRp">
+    <part name="Response" element="data:AddCardVendorRp"/>
+  </message>
+  <message name="AddTransferTemplateRq">
+    <part name="Request" element="data:AddTransferTemplateRq"/>
+  </message>
+  <message name="AddTransferTemplateRp">
+    <part name="Response" element="data:AddTransferTemplateRp"/>
+  </message>
+  <message name="AddVendorRq">
+    <part name="Request" element="data:AddVendorRq"/>
+  </message>
+  <message name="AddVendorRp">
+    <part name="Response" element="data:AddVendorRp"/>
+  </message>
+  <message name="AllVendorsRq">
+    <part name="Request" element="data:AllVendorsRq"/>
+  </message>
+  <message name="AllVendorsRp">
+    <part name="Response" element="data:AllVendorsRp"/>
+  </message>
+  <message name="AttachForeignCardToCustomerRq">
+    <part name="Request" element="data:AttachForeignCardToCustomerRq"/>
+  </message>
+  <message name="AttachForeignCardToCustomerRp">
+    <part name="Response" element="data:AttachForeignCardToCustomerRp"/>
+  </message>
+  <message name="BillsRequestRq">
+    <part name="Request" element="data:BillsRequestRq"/>
+  </message>
+  <message name="BillsRequestRp">
+    <part name="Response" element="data:BillsRequestRp"/>
+  </message>
+  <message name="BMSGetFormFieldsRq">
+    <part name="Request" element="data:BMSGetFormFieldsRq"/>
+  </message>
+  <message name="BMSGetFormFieldsRp">
+    <part name="Response" element="data:BMSGetFormFieldsRp"/>
+  </message>
+  <message name="BMSGetFormsRq">
+    <part name="Request" element="data:BMSGetFormsRq"/>
+  </message>
+  <message name="BMSGetFormsRp">
+    <part name="Response" element="data:BMSGetFormsRp"/>
+  </message>
+  <message name="BMSGetMessageFieldsRq">
+    <part name="Request" element="data:BMSGetMessageFieldsRq"/>
+  </message>
+  <message name="BMSGetMessageFieldsRp">
+    <part name="Response" element="data:BMSGetMessageFieldsRp"/>
+  </message>
+  <message name="BMSGetMessagesRq">
+    <part name="Request" element="data:BMSGetMessagesRq"/>
+  </message>
+  <message name="BMSGetMessagesRp">
+    <part name="Response" element="data:BMSGetMessagesRp"/>
+  </message>
+  <message name="BMSReadMessagesRq">
+    <part name="Request" element="data:BMSReadMessagesRq"/>
+  </message>
+  <message name="BMSReadMessagesRp">
+    <part name="Response" element="data:BMSReadMessagesRp"/>
+  </message>
+  <message name="BMSSendMessageRq">
+    <part name="Request" element="data:BMSSendMessageRq"/>
+  </message>
+  <message name="BMSSendMessageRp">
+    <part name="Response" element="data:BMSSendMessageRp"/>
+  </message>
+  <message name="BalanceInquiryRq">
+    <part name="Request" element="data:BalanceInquiryRq"/>
+  </message>
+  <message name="BalanceInquiryRp">
+    <part name="Response" element="data:BalanceInquiryRp"/>
+  </message>
+  <message name="BillPaymentRq">
+    <part name="Request" element="data:BillPaymentRq"/>
+  </message>
+  <message name="BillPaymentRp">
+    <part name="Response" element="data:BillPaymentRp"/>
+  </message>
+  <message name="BuyBalanceRq">
+    <part name="Request" element="data:BuyBalanceRq"/>
+  </message>
+  <message name="BuyBalanceRp">
+    <part name="Response" element="data:BuyBalanceRp"/>
+  </message>
+  <message name="BuyMiniStmtRq">
+    <part name="Request" element="data:BuyMiniStmtRq"/>
+  </message>
+  <message name="BuyMiniStmtRp">
+    <part name="Response" element="data:BuyMiniStmtRp"/>
+  </message>
+  <message name="CalcVCardCVV2Rq">
+    <part name="Request" element="data:CalcVCardCVV2Rq"/>
+  </message>
+  <message name="CalcVCardCVV2Rp">
+    <part name="Response" element="data:CalcVCardCVV2Rp"/>
+  </message>
+  <message name="CancelScheduleRq">
+    <part name="Request" element="data:CancelScheduleRq"/>
+  </message>
+  <message name="CancelScheduleRp">
+    <part name="Response" element="data:CancelScheduleRp"/>
+  </message>
+  <message name="CardActivationRq">
+    <part name="Request" element="data:CardActivationRq"/>
+  </message>
+  <message name="CardActivationRp">
+    <part name="Response" element="data:CardActivationRp"/>
+  </message>
+  <message name="CardLimitsRq">
+    <part name="Request" element="data:CardLimitsRq"/>
+  </message>
+  <message name="CardLimitsRp">
+    <part name="Response" element="data:CardLimitsRp"/>
+  </message>
+  <message name="CardLockRq">
+    <part name="Request" element="data:CardLockRq"/>
+  </message>
+  <message name="CardLockRp">
+    <part name="Response" element="data:CardLockRp"/>
+  </message>
+  <message name="CardPaymentRq">
+    <part name="Request" element="data:CardPaymentRq"/>
+  </message>
+  <message name="CardPaymentRp">
+    <part name="Response" element="data:CardPaymentRp"/>
+  </message>
+  <message name="CardPaymentByTemplateRq">
+    <part name="Request" element="data:CardPaymentByTemplateRq"/>
+  </message>
+  <message name="CardPaymentByTemplateRp">
+    <part name="Response" element="data:CardPaymentByTemplateRp"/>
+  </message>
+  <message name="CardPINChangeRq">
+    <part name="Request" element="data:CardPINChangeRq"/>
+  </message>
+  <message name="CardPINChangeRp">
+    <part name="Response" element="data:CardPINChangeRp"/>
+  </message>
+  <message name="CardVendorsRq">
+    <part name="Request" element="data:CardVendorsRq"/>
+  </message>
+  <message name="CardVendorsRp">
+    <part name="Response" element="data:CardVendorsRp"/>
+  </message>
+  <message name="CardsRq">
+    <part name="Request" element="data:CardsRq"/>
+  </message>
+  <message name="CardsRp">
+    <part name="Response" element="data:CardsRp"/>
+  </message>
+  <message name="CardsOnAcctRq">
+    <part name="Request" element="data:CardsOnAcctRq"/>
+  </message>
+  <message name="CardsOnAcctRp">
+    <part name="Response" element="data:CardsOnAcctRp"/>
+  </message>
+  <message name="CardStatementRq">
+    <part name="Request" element="data:CardStatementRq"/>
+  </message>
+  <message name="CardStatementRp">
+    <part name="Response" element="data:CardStatementRp"/>
+  </message>
+  <message name="ChangeECStatusRq">
+    <part name="Request" element="data:ChangeECStatusRq"/>
+  </message>
+  <message name="ChangeECStatusRp">
+    <part name="Response" element="data:ChangeECStatusRp"/>
+  </message>
+  <message name="ChangeAcctAliasRq">
+    <part name="Request" element="data:ChangeAcctAliasRq"/>
+  </message>
+  <message name="ChangeAcctAliasRp">
+    <part name="Response" element="data:ChangeAcctAliasRp"/>
+  </message>
+  <message name="ChangeCMSAddressRq">
+    <part name="Request" element="data:ChangeCMSAddressRq"/>
+  </message>
+  <message name="ChangeCMSAddressRp">
+    <part name="Response" element="data:ChangeCMSAddressRp"/>
+  </message>
+  <message name="ChangeCard2AcctDescrRq">
+    <part name="Request" element="data:ChangeCard2AcctDescrRq"/>
+  </message>
+  <message name="ChangeCard2AcctDescrRp">
+    <part name="Response" element="data:ChangeCard2AcctDescrRp"/>
+  </message>
+  <message name="ChangeCardAliasRq">
+    <part name="Request" element="data:ChangeCardAliasRq"/>
+  </message>
+  <message name="ChangeCardAliasRp">
+    <part name="Response" element="data:ChangeCardAliasRp"/>
+  </message>
+  <message name="ChangeCardCMSAddressRq">
+    <part name="Request" element="data:ChangeCardCMSAddressRq"/>
+  </message>
+  <message name="ChangeCardCMSAddressRp">
+    <part name="Response" element="data:ChangeCardCMSAddressRp"/>
+  </message>
+  <message name="ChangeNumericLoginRq">
+    <part name="Request" element="data:ChangeNumericLoginRq"/>
+  </message>
+  <message name="ChangeNumericLoginRp">
+    <part name="Response" element="data:ChangeNumericLoginRp"/>
+  </message>
+  <message name="ChangePasswordRq">
+    <part name="Request" element="data:ChangePasswordRq"/>
+  </message>
+  <message name="ChangePasswordRp">
+    <part name="Response" element="data:ChangePasswordRp"/>
+  </message>
+  <message name="ChangeCardPasswordRq">
+    <part name="Request" element="data:ChangeCardPasswordRq"/>
+  </message>
+  <message name="ChangeCardPasswordRp">
+    <part name="Response" element="data:ChangeCardPasswordRp"/>
+  </message>
+  <message name="ChangeTextLoginRq">
+    <part name="Request" element="data:ChangeTextLoginRq"/>
+  </message>
+  <message name="ChangeTextLoginRp">
+    <part name="Response" element="data:ChangeTextLoginRp"/>
+  </message>
+  <message name="CheckCAPTokenRq">
+    <part name="Request" element="data:CheckCAPTokenRq"/>
+  </message>
+  <message name="CheckCAPTokenRp">
+    <part name="Response" element="data:CheckCAPTokenRp"/>
+  </message>
+  <message name="CheckPVVRq">
+    <part name="Request" element="data:CheckPVVRq"/>
+  </message>
+  <message name="CheckPVVRp">
+    <part name="Response" element="data:CheckPVVRp"/>
+  </message>
+  <message name="CreateSessionRq">
+    <part name="Request" element="data:CreateSessionRq"/>
+  </message>
+  <message name="CreateSessionRp">
+    <part name="Response" element="data:CreateSessionRp"/>
+  </message>
+  <message name="CreateSubscriptionRq">
+    <part name="Request" element="data:CreateSubscriptionRq"/>
+  </message>
+  <message name="CreateSubscriptionRp">
+    <part name="Response" element="data:CreateSubscriptionRp"/>
+  </message>
+  <message name="CreateTBCustomerRq">
+    <part name="Request" element="data:CreateTBCustomerRq"/>
+  </message>
+  <message name="CreateTBCustomerRp">
+    <part name="Response" element="data:CreateTBCustomerRp"/>
+  </message>
+  <message name="CreateVCardRq">
+    <part name="Request" element="data:CreateVCardRq"/>
+  </message>
+  <message name="CreateVCardRp">
+    <part name="Response" element="data:CreateVCardRp"/>
+  </message>
+  <message name="DelAbonentRq">
+    <part name="Request" element="data:DelAbonentRq"/>
+  </message>
+  <message name="DelAbonentRp">
+    <part name="Response" element="data:DelAbonentRp"/>
+  </message>
+  <message name="DelCardVendorRq">
+    <part name="Request" element="data:DelCardVendorRq"/>
+  </message>
+  <message name="DelCardVendorRp">
+    <part name="Response" element="data:DelCardVendorRp"/>
+  </message>
+  <message name="DeleteSubscriptionRq">
+    <part name="Request" element="data:DeleteSubscriptionRq"/>
+  </message>
+  <message name="DeleteSubscriptionRp">
+    <part name="Response" element="data:DeleteSubscriptionRp"/>
+  </message>
+  <message name="DelTransferTemplateRq">
+    <part name="Request" element="data:DelTransferTemplateRq"/>
+  </message>
+  <message name="DelTransferTemplateRp">
+    <part name="Response" element="data:DelTransferTemplateRp"/>
+  </message>
+  <message name="DelVendorRq">
+    <part name="Request" element="data:DelVendorRq"/>
+  </message>
+  <message name="DelVendorRp">
+    <part name="Response" element="data:DelVendorRp"/>
+  </message>
+  <message name="DetachForeignCardFromCustomerRq">
+    <part name="Request" element="data:DetachForeignCardFromCustomerRq"/>
+  </message>
+  <message name="DetachForeignCardFromCustomerRp">
+    <part name="Response" element="data:DetachForeignCardFromCustomerRp"/>
+  </message>
+  <message name="DynAuthAddressListRq">
+    <part name="Request" element="data:DynAuthAddressListRq"/>
+  </message>
+  <message name="DynAuthAddressListRp">
+    <part name="Response" element="data:DynAuthAddressListRp"/>
+  </message>
+  <message name="EditSubscriptionRq">
+    <part name="Request" element="data:EditSubscriptionRq"/>
+  </message>
+  <message name="EditSubscriptionRp">
+    <part name="Response" element="data:EditSubscriptionRp"/>
+  </message>
+  <message name="ExplainScheduleRq">
+    <part name="Request" element="data:ExplainScheduleRq"/>
+  </message>
+  <message name="ExplainScheduleRp">
+    <part name="Response" element="data:ExplainScheduleRp"/>
+  </message>
+  <message name="GenerateDynPasswordRq">
+    <part name="Request" element="data:GenerateDynPasswordRq"/>
+  </message>
+  <message name="GenerateDynPasswordRp">
+    <part name="Response" element="data:GenerateDynPasswordRp"/>
+  </message>
+  <message name="GetBackOfficeInfoRq">
+    <part name="Request" element="data:GetBackOfficeInfoRq"/>
+  </message>
+  <message name="GetBackOfficeInfoRp">
+    <part name="Response" element="data:GetBackOfficeInfoRp"/>
+  </message>
+  <message name="GetCAPChallengeRq">
+    <part name="Request" element="data:GetCAPChallengeRq"/>
+  </message>
+  <message name="GetCAPChallengeRp">
+    <part name="Response" element="data:GetCAPChallengeRp"/>
+  </message>
+  <message name="GetCurrencyRatesRq">
+    <part name="Request" element="data:GetCurrencyRatesRq"/>
+  </message>
+  <message name="GetCurrencyRatesRp">
+    <part name="Response" element="data:GetCurrencyRatesRp"/>
+  </message>
+  <message name="GetCustomerUserFieldsRq">
+    <part name="Request" element="data:GetCustomerUserFieldsRq"/>
+  </message>
+  <message name="GetCustomerUserFieldsRp">
+    <part name="Response" element="data:GetCustomerUserFieldsRp"/>
+  </message>
+  <message name="GetDictionariesRq">
+    <part name="Request" element="data:GetDictionariesRq"/>
+  </message>
+  <message name="GetDictionariesRp">
+    <part name="Response" element="data:GetDictionariesRp"/>
+  </message>
+  <message name="GetKeyRq">
+    <part name="Request" element="data:GetKeyRq"/>
+  </message>
+  <message name="GetKeyRp">
+    <part name="Response" element="data:GetKeyRp"/>
+  </message>
+  <message name="GetChallengeRq">
+    <part name="Request" element="data:GetChallengeRq"/>
+  </message>
+  <message name="GetChallengeRp">
+    <part name="Response" element="data:GetChallengeRp"/>
+  </message>
+  <message name="GetPANRq">
+    <part name="Request" element="data:GetPANRq"/>
+  </message>
+  <message name="GetPANRp">
+    <part name="Response" element="data:GetPANRp"/>
+  </message>
+  <message name="GetPersonInfoRq">
+    <part name="Request" element="data:GetPersonInfoRq"/>
+  </message>
+  <message name="GetPersonInfoRp">
+    <part name="Response" element="data:GetPersonInfoRp"/>
+  </message>
+  <message name="GetTermRateGroupsRq">
+    <part name="Request" element="data:GetTermRateGroupsRq"/>
+  </message>
+  <message name="GetTermRateGroupsRp">
+    <part name="Response" element="data:GetTermRateGroupsRp"/>
+  </message>
+  <message name="GetScheduleRq">
+    <part name="Request" element="data:GetScheduleRq"/>
+  </message>
+  <message name="GetScheduleRp">
+    <part name="Response" element="data:GetScheduleRp"/>
+  </message>
+  <message name="GetServicePointRq">
+    <part name="Request" element="data:GetServicePointRq"/>
+  </message>
+  <message name="GetServicePointRp">
+    <part name="Response" element="data:GetServicePointRp"/>
+  </message>
+  <message name="GetSubscriptionListRq">
+    <part name="Request" element="data:GetSubscriptionListRq"/>
+  </message>
+  <message name="GetSubscriptionListRp">
+    <part name="Response" element="data:GetSubscriptionListRp"/>
+  </message>
+  <message name="GetTransHistoryRq">
+    <part name="Request" element="data:GetTransHistoryRq"/>
+  </message>
+  <message name="GetTransHistoryRp">
+    <part name="Response" element="data:GetTransHistoryRp"/>
+  </message>
+  <message name="GetUserDictionaryRq">
+    <part name="Request" element="data:GetUserDictionaryRq"/>
+  </message>
+  <message name="GetUserDictionaryRp">
+    <part name="Response" element="data:GetUserDictionaryRp"/>
+  </message>
+  <message name="GetVCProductsRq">
+    <part name="Request" element="data:GetVCProductsRq"/>
+  </message>
+  <message name="GetVCProductsRp">
+    <part name="Response" element="data:GetVCProductsRp"/>
+  </message>
+  <message name="HistoryRq">
+    <part name="Request" element="data:HistoryRq"/>
+  </message>
+  <message name="HistoryRp">
+    <part name="Response" element="data:HistoryRp"/>
+  </message>
+  <message name="InfoBuyerPinChangeRq">
+    <part name="Request" element="data:InfoBuyerPinChangeRq"/>
+  </message>
+  <message name="InfoBuyerPinChangeRp">
+    <part name="Response" element="data:InfoBuyerPinChangeRp"/>
+  </message>
+  <message name="InternetPINChangeRq">
+    <part name="Request" element="data:InternetPINChangeRq"/>
+  </message>
+  <message name="InternetPINChangeRp">
+    <part name="Response" element="data:InternetPINChangeRp"/>
+  </message>
+  <message name="LogoffRq">
+    <part name="Request" element="data:LogoffRq"/>
+  </message>
+  <message name="LogoffRp">
+    <part name="Response" element="data:LogoffRp"/>
+  </message>
+  <message name="LogonRq">
+    <part name="Request" element="data:LogonRq"/>
+  </message>
+  <message name="LogonRp">
+    <part name="Response" element="data:LogonRp"/>
+  </message>
+  <message name="MessageToInstitutionRq">
+    <part name="Request" element="data:MessageToInstitutionRq"/>
+  </message>
+  <message name="MessageToInstitutionRp">
+    <part name="Response" element="data:MessageToInstitutionRp"/>
+  </message>
+  <message name="OperHistRq">
+    <part name="Request" element="data:OperHistRq"/>
+  </message>
+  <message name="OperHistRp">
+    <part name="Response" element="data:OperHistRp"/>
+  </message>
+  <message name="PaymentByTemplateRq">
+    <part name="Request" element="data:PaymentByTemplateRq"/>
+  </message>
+  <message name="PaymentByTemplateRp">
+    <part name="Response" element="data:PaymentByTemplateRp"/>
+  </message>
+  <message name="PINChangeRq">
+    <part name="Request" element="data:PINChangeRq"/>
+  </message>
+  <message name="PINChangeRp">
+    <part name="Response" element="data:PINChangeRp"/>
+  </message>
+  <message name="PingRq">
+    <part name="Request" element="data:PingRq"/>
+  </message>
+  <message name="PingRp">
+    <part name="Response" element="data:PingRp"/>
+  </message>
+  <message name="PrepaidRq">
+    <part name="Request" element="data:PrepaidRq"/>
+  </message>
+  <message name="PrepaidRp">
+    <part name="Response" element="data:PrepaidRp"/>
+  </message>
+  <message name="RegisterInfoBuyerRq">
+    <part name="Request" element="data:RegisterInfoBuyerRq"/>
+  </message>
+  <message name="RegisterInfoBuyerRp">
+    <part name="Response" element="data:RegisterInfoBuyerRp"/>
+  </message>
+  <message name="ReverseRq">
+    <part name="Request" element="data:ReverseRq"/>
+  </message>
+  <message name="ReverseRp">
+    <part name="Response" element="data:ReverseRp"/>
+  </message>
+  <message name="ScheduleRq">
+    <part name="Request" element="data:ScheduleRq"/>
+  </message>
+  <message name="ScheduleRp">
+    <part name="Response" element="data:ScheduleRp"/>
+  </message>
+  <message name="SendTestMessageRq">
+    <part name="Request" element="data:SendTestMessageRq"/>
+  </message>
+  <message name="SendTestMessageRp">
+    <part name="Response" element="data:SendTestMessageRp"/>
+  </message>
+  <message name="SetAcctLimitsRq">
+    <part name="Request" element="data:SetAcctLimitsRq"/>
+  </message>
+  <message name="SetAcctLimitsRp">
+    <part name="Response" element="data:SetAcctLimitsRp"/>
+  </message>
+  <message name="SetAvatarRq">
+    <part name="Request" element="data:SetAvatarRq"/>
+  </message>
+  <message name="SetAvatarRp">
+    <part name="Response" element="data:SetAvatarRp"/>
+  </message>
+  <message name="SetExtraAuthLevelRq">
+    <part name="Request" element="data:SetExtraAuthLevelRq"/>
+  </message>
+  <message name="SetExtraAuthLevelRp">
+    <part name="Response" element="data:SetExtraAuthLevelRp"/>
+  </message>
+  <message name="SetPersonInfoRq">
+    <part name="Request" element="data:SetPersonInfoRq"/>
+  </message>
+  <message name="SetPersonInfoRp">
+    <part name="Response" element="data:SetPersonInfoRp"/>
+  </message>
+  <message name="SetTmpAcctLimitsRq">
+    <part name="Request" element="data:SetTmpAcctLimitsRq"/>
+  </message>
+  <message name="SetTmpAcctLimitsRp">
+    <part name="Response" element="data:SetTmpAcctLimitsRp"/>
+  </message>
+  <message name="SetTmpCardLimitsRq">
+    <part name="Request" element="data:SetTmpCardLimitsRq"/>
+  </message>
+  <message name="SetTmpCardLimitsRp">
+    <part name="Response" element="data:SetTmpCardLimitsRp"/>
+  </message>
+  <message name="SetCardLimitsRq">
+    <part name="Request" element="data:SetCardLimitsRq"/>
+  </message>
+  <message name="SetCardLimitsRp">
+    <part name="Response" element="data:SetCardLimitsRp"/>
+  </message>
+  <message name="SetDefaultDynAuthAddressRq">
+    <part name="Request" element="data:SetDefaultDynAuthAddressRq"/>
+  </message>
+  <message name="SetDefaultDynAuthAddressRp">
+    <part name="Response" element="data:SetDefaultDynAuthAddressRp"/>
+  </message>
+  <message name="SetCustomerUserFieldsRq">
+    <part name="Request" element="data:SetCustomerUserFieldsRq"/>
+  </message>
+  <message name="SetCustomerUserFieldsRp">
+    <part name="Response" element="data:SetCustomerUserFieldsRp"/>
+  </message>
+  <message name="TransferByTemplateRq">
+    <part name="Request" element="data:TransferByTemplateRq"/>
+  </message>
+  <message name="TransferByTemplateRp">
+    <part name="Response" element="data:TransferByTemplateRp"/>
+  </message>
+  <message name="TransferTemplatesRq">
+    <part name="Request" element="data:TransferTemplatesRq"/>
+  </message>
+  <message name="TransferTemplatesRp">
+    <part name="Response" element="data:TransferTemplatesRp"/>
+  </message>
+  <message name="UpdateAbonentRq">
+    <part name="Request" element="data:UpdateAbonentRq"/>
+  </message>
+  <message name="UpdateAbonentRp">
+    <part name="Response" element="data:UpdateAbonentRp"/>
+  </message>
+  <message name="UpdateScheduleRq">
+    <part name="Request" element="data:UpdateScheduleRq"/>
+  </message>
+  <message name="UpdateScheduleRp">
+    <part name="Response" element="data:UpdateScheduleRp"/>
+  </message>
+  <message name="UpdateTransferTemplateRq">
+    <part name="Request" element="data:UpdateTransferTemplateRq"/>
+  </message>
+  <message name="UpdateTransferTemplateRp">
+    <part name="Response" element="data:UpdateTransferTemplateRp"/>
+  </message>
+  <message name="UpdateCardVendorRq">
+    <part name="Request" element="data:UpdateCardVendorRq"/>
+  </message>
+  <message name="UpdateCardVendorRp">
+    <part name="Response" element="data:UpdateCardVendorRp"/>
+  </message>
+  <message name="UpdateVendorRq">
+    <part name="Request" element="data:UpdateVendorRq"/>
+  </message>
+  <message name="UpdateVendorRp">
+    <part name="Response" element="data:UpdateVendorRp"/>
+  </message>
+  <message name="VendorsRq">
+    <part name="Request" element="data:VendorsRq"/>
+  </message>
+  <message name="VendorsRp">
+    <part name="Response" element="data:VendorsRp"/>
+  </message>
+  <message name="GetBICRq">
+    <part name="Request" element="data:GetBICRq"/>
+  </message>
+  <message name="GetBICRp">
+    <part name="Response" element="data:GetBICRp"/>
+  </message>
+  <message name="GetCardAllowed3DSecAuthRulesRq">
+    <part name="Request" element="data:GetCardAllowed3DSecAuthRulesRq"/>
+  </message>
+  <message name="GetCardAllowed3DSecAuthRulesRp">
+    <part name="Response" element="data:GetCardAllowed3DSecAuthRulesRp"/>
+  </message>
+  <message name="SetCard3DSecAuthRuleRq">
+    <part name="Request" element="data:SetCard3DSecAuthRuleRq"/>
+  </message>
+  <message name="SetCard3DSecAuthRuleRp">
+    <part name="Response" element="data:SetCard3DSecAuthRuleRp"/>
+  </message>
+  <message name="DeclineRp">
+    <part name="DeclineRp" element="data:DeclineRp"/>
+  </message>
+  <portType name="telebank">
+    <operation name="AcctLimitsRq">
+      <input message="ns:AcctLimitsRq"/>
+      <output message="ns:AcctLimitsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AcctsRq">
+      <input message="ns:AcctsRq"/>
+      <output message="ns:AcctsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AddAbonentRq">
+      <input message="ns:AddAbonentRq"/>
+      <output message="ns:AddAbonentRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AddCardVendorRq">
+      <input message="ns:AddCardVendorRq"/>
+      <output message="ns:AddCardVendorRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AddTransferTemplateRq">
+      <input message="ns:AddTransferTemplateRq"/>
+      <output message="ns:AddTransferTemplateRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AddVendorRq">
+      <input message="ns:AddVendorRq"/>
+      <output message="ns:AddVendorRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AllVendorsRq">
+      <input message="ns:AllVendorsRq"/>
+      <output message="ns:AllVendorsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="AttachForeignCardToCustomerRq">
+      <input message="ns:AttachForeignCardToCustomerRq"/>
+      <output message="ns:AttachForeignCardToCustomerRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BillsRequestRq">
+      <input message="ns:BillsRequestRq"/>
+      <output message="ns:BillsRequestRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BMSGetFormFieldsRq">
+      <input message="ns:BMSGetFormFieldsRq"/>
+      <output message="ns:BMSGetFormFieldsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BMSGetFormsRq">
+      <input message="ns:BMSGetFormsRq"/>
+      <output message="ns:BMSGetFormsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BMSGetMessageFieldsRq">
+      <input message="ns:BMSGetMessageFieldsRq"/>
+      <output message="ns:BMSGetMessageFieldsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BMSGetMessagesRq">
+      <input message="ns:BMSGetMessagesRq"/>
+      <output message="ns:BMSGetMessagesRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BMSReadMessagesRq">
+      <input message="ns:BMSReadMessagesRq"/>
+      <output message="ns:BMSReadMessagesRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BMSSendMessageRq">
+      <input message="ns:BMSSendMessageRq"/>
+      <output message="ns:BMSSendMessageRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BalanceInquiryRq">
+      <input message="ns:BalanceInquiryRq"/>
+      <output message="ns:BalanceInquiryRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BillPaymentRq">
+      <input message="ns:BillPaymentRq"/>
+      <output message="ns:BillPaymentRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BuyBalanceRq">
+      <input message="ns:BuyBalanceRq"/>
+      <output message="ns:BuyBalanceRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="BuyMiniStmtRq">
+      <input message="ns:BuyMiniStmtRq"/>
+      <output message="ns:BuyMiniStmtRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CalcVCardCVV2Rq">
+      <input message="ns:CalcVCardCVV2Rq"/>
+      <output message="ns:CalcVCardCVV2Rp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CancelScheduleRq">
+      <input message="ns:CancelScheduleRq"/>
+      <output message="ns:CancelScheduleRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardActivationRq">
+      <input message="ns:CardActivationRq"/>
+      <output message="ns:CardActivationRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardLimitsRq">
+      <input message="ns:CardLimitsRq"/>
+      <output message="ns:CardLimitsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardLockRq">
+      <input message="ns:CardLockRq"/>
+      <output message="ns:CardLockRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardPaymentRq">
+      <input message="ns:CardPaymentRq"/>
+      <output message="ns:CardPaymentRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardPaymentByTemplateRq">
+      <input message="ns:CardPaymentByTemplateRq"/>
+      <output message="ns:CardPaymentByTemplateRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardPINChangeRq">
+      <input message="ns:CardPINChangeRq"/>
+      <output message="ns:CardPINChangeRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardVendorsRq">
+      <input message="ns:CardVendorsRq"/>
+      <output message="ns:CardVendorsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardsRq">
+      <input message="ns:CardsRq"/>
+      <output message="ns:CardsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardsOnAcctRq">
+      <input message="ns:CardsOnAcctRq"/>
+      <output message="ns:CardsOnAcctRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CardStatementRq">
+      <input message="ns:CardStatementRq"/>
+      <output message="ns:CardStatementRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeECStatusRq">
+      <input message="ns:ChangeECStatusRq"/>
+      <output message="ns:ChangeECStatusRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeAcctAliasRq">
+      <input message="ns:ChangeAcctAliasRq"/>
+      <output message="ns:ChangeAcctAliasRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeCMSAddressRq">
+      <input message="ns:ChangeCMSAddressRq"/>
+      <output message="ns:ChangeCMSAddressRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeCard2AcctDescrRq">
+      <input message="ns:ChangeCard2AcctDescrRq"/>
+      <output message="ns:ChangeCard2AcctDescrRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeCardAliasRq">
+      <input message="ns:ChangeCardAliasRq"/>
+      <output message="ns:ChangeCardAliasRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeCardCMSAddressRq">
+      <input message="ns:ChangeCardCMSAddressRq"/>
+      <output message="ns:ChangeCardCMSAddressRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeNumericLoginRq">
+      <input message="ns:ChangeNumericLoginRq"/>
+      <output message="ns:ChangeNumericLoginRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangePasswordRq">
+      <input message="ns:ChangePasswordRq"/>
+      <output message="ns:ChangePasswordRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeCardPasswordRq">
+      <input message="ns:ChangeCardPasswordRq"/>
+      <output message="ns:ChangeCardPasswordRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ChangeTextLoginRq">
+      <input message="ns:ChangeTextLoginRq"/>
+      <output message="ns:ChangeTextLoginRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CheckCAPTokenRq">
+      <input message="ns:CheckCAPTokenRq"/>
+      <output message="ns:CheckCAPTokenRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CheckPVVRq">
+      <input message="ns:CheckPVVRq"/>
+      <output message="ns:CheckPVVRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CreateSessionRq">
+      <input message="ns:CreateSessionRq"/>
+      <output message="ns:CreateSessionRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CreateSubscriptionRq">
+      <input message="ns:CreateSubscriptionRq"/>
+      <output message="ns:CreateSubscriptionRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CreateTBCustomerRq">
+      <input message="ns:CreateTBCustomerRq"/>
+      <output message="ns:CreateTBCustomerRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="CreateVCardRq">
+      <input message="ns:CreateVCardRq"/>
+      <output message="ns:CreateVCardRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DelAbonentRq">
+      <input message="ns:DelAbonentRq"/>
+      <output message="ns:DelAbonentRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DelCardVendorRq">
+      <input message="ns:DelCardVendorRq"/>
+      <output message="ns:DelCardVendorRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DelTransferTemplateRq">
+      <input message="ns:DelTransferTemplateRq"/>
+      <output message="ns:DelTransferTemplateRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DelVendorRq">
+      <input message="ns:DelVendorRq"/>
+      <output message="ns:DelVendorRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DeleteSubscriptionRq">
+      <input message="ns:DeleteSubscriptionRq"/>
+      <output message="ns:DeleteSubscriptionRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DetachForeignCardFromCustomerRq">
+      <input message="ns:DetachForeignCardFromCustomerRq"/>
+      <output message="ns:DetachForeignCardFromCustomerRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="DynAuthAddressListRq">
+      <input message="ns:DynAuthAddressListRq"/>
+      <output message="ns:DynAuthAddressListRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="EditSubscriptionRq">
+      <input message="ns:EditSubscriptionRq"/>
+      <output message="ns:EditSubscriptionRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ExplainScheduleRq">
+      <input message="ns:ExplainScheduleRq"/>
+      <output message="ns:ExplainScheduleRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GenerateDynPasswordRq">
+      <input message="ns:GenerateDynPasswordRq"/>
+      <output message="ns:GenerateDynPasswordRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetBackOfficeInfoRq">
+      <input message="ns:GetBackOfficeInfoRq"/>
+      <output message="ns:GetBackOfficeInfoRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetCAPChallengeRq">
+      <input message="ns:GetCAPChallengeRq"/>
+      <output message="ns:GetCAPChallengeRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetCurrencyRatesRq">
+      <input message="ns:GetCurrencyRatesRq"/>
+      <output message="ns:GetCurrencyRatesRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetCustomerUserFieldsRq">
+      <input message="ns:GetCustomerUserFieldsRq"/>
+      <output message="ns:GetCustomerUserFieldsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetDictionariesRq">
+      <input message="ns:GetDictionariesRq"/>
+      <output message="ns:GetDictionariesRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetKeyRq">
+      <input message="ns:GetKeyRq"/>
+      <output message="ns:GetKeyRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetChallengeRq">
+      <input message="ns:GetChallengeRq"/>
+      <output message="ns:GetChallengeRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetPANRq">
+      <input message="ns:GetPANRq"/>
+      <output message="ns:GetPANRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetPersonInfoRq">
+      <input message="ns:GetPersonInfoRq"/>
+      <output message="ns:GetPersonInfoRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetTermRateGroupsRq">
+      <input message="ns:GetTermRateGroupsRq"/>
+      <output message="ns:GetTermRateGroupsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetScheduleRq">
+      <input message="ns:GetScheduleRq"/>
+      <output message="ns:GetScheduleRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetServicePointRq">
+      <input message="ns:GetServicePointRq"/>
+      <output message="ns:GetServicePointRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetSubscriptionListRq">
+      <input message="ns:GetSubscriptionListRq"/>
+      <output message="ns:GetSubscriptionListRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetTransHistoryRq">
+      <input message="ns:GetTransHistoryRq"/>
+      <output message="ns:GetTransHistoryRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetUserDictionaryRq">
+      <input message="ns:GetUserDictionaryRq"/>
+      <output message="ns:GetUserDictionaryRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetVCProductsRq">
+      <input message="ns:GetVCProductsRq"/>
+      <output message="ns:GetVCProductsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="HistoryRq">
+      <input message="ns:HistoryRq"/>
+      <output message="ns:HistoryRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="InfoBuyerPinChangeRq">
+      <input message="ns:InfoBuyerPinChangeRq"/>
+      <output message="ns:InfoBuyerPinChangeRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="InternetPINChangeRq">
+      <input message="ns:InternetPINChangeRq"/>
+      <output message="ns:InternetPINChangeRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="LogoffRq">
+      <input message="ns:LogoffRq"/>
+      <output message="ns:LogoffRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="LogonRq">
+      <input message="ns:LogonRq"/>
+      <output message="ns:LogonRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="MessageToInstitutionRq">
+      <input message="ns:MessageToInstitutionRq"/>
+      <output message="ns:MessageToInstitutionRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="OperHistRq">
+      <input message="ns:OperHistRq"/>
+      <output message="ns:OperHistRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="PaymentByTemplateRq">
+      <input message="ns:PaymentByTemplateRq"/>
+      <output message="ns:PaymentByTemplateRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="PINChangeRq">
+      <input message="ns:PINChangeRq"/>
+      <output message="ns:PINChangeRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="PingRq">
+      <input message="ns:PingRq"/>
+      <output message="ns:PingRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="PrepaidRq">
+      <input message="ns:PrepaidRq"/>
+      <output message="ns:PrepaidRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="RegisterInfoBuyerRq">
+      <input message="ns:RegisterInfoBuyerRq"/>
+      <output message="ns:RegisterInfoBuyerRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ReverseRq">
+      <input message="ns:ReverseRq"/>
+      <output message="ns:ReverseRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="ScheduleRq">
+      <input message="ns:ScheduleRq"/>
+      <output message="ns:ScheduleRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SendTestMessageRq">
+      <input message="ns:SendTestMessageRq"/>
+      <output message="ns:SendTestMessageRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetAcctLimitsRq">
+      <input message="ns:SetAcctLimitsRq"/>
+      <output message="ns:SetAcctLimitsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetAvatarRq">
+      <input message="ns:SetAvatarRq"/>
+      <output message="ns:SetAvatarRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetExtraAuthLevelRq">
+      <input message="ns:SetExtraAuthLevelRq"/>
+      <output message="ns:SetExtraAuthLevelRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetPersonInfoRq">
+      <input message="ns:SetPersonInfoRq"/>
+      <output message="ns:SetPersonInfoRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetTmpAcctLimitsRq">
+      <input message="ns:SetTmpAcctLimitsRq"/>
+      <output message="ns:SetTmpAcctLimitsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetTmpCardLimitsRq">
+      <input message="ns:SetTmpCardLimitsRq"/>
+      <output message="ns:SetTmpCardLimitsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetCardLimitsRq">
+      <input message="ns:SetCardLimitsRq"/>
+      <output message="ns:SetCardLimitsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetDefaultDynAuthAddressRq">
+      <input message="ns:SetDefaultDynAuthAddressRq"/>
+      <output message="ns:SetDefaultDynAuthAddressRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetCustomerUserFieldsRq">
+      <input message="ns:SetCustomerUserFieldsRq"/>
+      <output message="ns:SetCustomerUserFieldsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="TransferByTemplateRq">
+      <input message="ns:TransferByTemplateRq"/>
+      <output message="ns:TransferByTemplateRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="TransferTemplatesRq">
+      <input message="ns:TransferTemplatesRq"/>
+      <output message="ns:TransferTemplatesRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="UpdateScheduleRq">
+      <input message="ns:UpdateScheduleRq"/>
+      <output message="ns:UpdateScheduleRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="UpdateAbonentRq">
+      <input message="ns:UpdateAbonentRq"/>
+      <output message="ns:UpdateAbonentRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="UpdateTransferTemplateRq">
+      <input message="ns:UpdateTransferTemplateRq"/>
+      <output message="ns:UpdateTransferTemplateRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="UpdateCardVendorRq">
+      <input message="ns:UpdateCardVendorRq"/>
+      <output message="ns:UpdateCardVendorRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="UpdateVendorRq">
+      <input message="ns:UpdateVendorRq"/>
+      <output message="ns:UpdateVendorRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="VendorsRq">
+      <input message="ns:VendorsRq"/>
+      <output message="ns:VendorsRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetBICRq">
+      <input message="ns:GetBICRq"/>
+      <output message="ns:GetBICRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="GetCardAllowed3DSecAuthRulesRq">
+      <input message="ns:GetCardAllowed3DSecAuthRulesRq"/>
+      <output message="ns:GetCardAllowed3DSecAuthRulesRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+    <operation name="SetCard3DSecAuthRuleRq">
+      <input message="ns:SetCard3DSecAuthRuleRq"/>
+      <output message="ns:SetCard3DSecAuthRuleRp"/>
+      <fault name="DeclineFault" message="ns:DeclineRp"/>
+    </operation>
+  </portType>
+  <binding name="telebank" type="ns:telebank" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="AcctLimitsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AcctLimits"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AcctsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Accts"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AddAbonentRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AddAbonent"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AddCardVendorRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AddCardVendor"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AddTransferTemplateRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AddTransferTemplate"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AddVendorRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AddVendor"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AllVendorsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AllVendors"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="AttachForeignCardToCustomerRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#AttachForeignCardToCustomer"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BillsRequestRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BillsRequest"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BMSGetFormFieldsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BMSGetFormFields"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BMSGetFormsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BMSGetForms"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BMSGetMessageFieldsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BMSGetMessageFields"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BMSGetMessagesRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BMSGetMessages"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BMSReadMessagesRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BMSReadMessages"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BMSSendMessageRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BMSSendMessage"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BalanceInquiryRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BalanceInquiry"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BillPaymentRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BillPayment"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BuyBalanceRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BuyBalance"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="BuyMiniStmtRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#BuyMiniStmt"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CalcVCardCVV2Rq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CalcVCardCVV2"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CancelScheduleRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CancelSchedule"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardActivationRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardActivation"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardLimitsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardLimits"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardLockRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardLock"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardPaymentRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardPayment"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardPaymentByTemplateRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardPaymentByTemplate"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardPINChangeRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardPINChange"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardVendorsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardVendors"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Cards"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardsOnAcctRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardsOnAcct"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CardStatementRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CardStatement"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeECStatusRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeECStatus"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeAcctAliasRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeAcctAlias"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeCMSAddressRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeCMSAddress"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeCard2AcctDescrRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeCard2AcctDescr"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeCardAliasRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeCardAlias"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeCardCMSAddressRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeCardCMSAddress"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeNumericLoginRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeNumericLogin"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangePasswordRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangePassword"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeCardPasswordRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeCardPassword"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ChangeTextLoginRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ChangeTextLogin"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CheckCAPTokenRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CheckCAPToken"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CheckPVVRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CheckPVV"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CreateSessionRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CreateSession"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CreateSubscriptionRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CreateSubscription"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CreateTBCustomerRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CreateTBCustomer"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="CreateVCardRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#CreateVCard"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DelAbonentRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DelAbonent"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DelCardVendorRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DelCardVendor"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DelTransferTemplateRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DelTransferTemplate"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DelVendorRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DelVendor"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DeleteSubscriptionRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DeleteSubscription"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DetachForeignCardFromCustomerRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DetachForeignCardFromCustomer"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="DynAuthAddressListRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#DynAuthAddressList"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="EditSubscriptionRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#EditSubscription"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ExplainScheduleRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#ExplainSchedule"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GenerateDynPasswordRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GenerateDynPassword"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetBackOfficeInfoRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetBackOfficeInfo"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetCAPChallengeRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetCAPChallenge"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetCurrencyRatesRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetCurrencyRates"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetCustomerUserFieldsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetCustomerUserFields"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetDictionariesRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetDictionaries"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetKeyRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetKey"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetChallengeRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetChallenge"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetPANRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetPAN"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetPersonInfoRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetPersonInfo"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetTermRateGroupsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetTermRateGroups"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetScheduleRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetSchedule"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetServicePointRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetServicePoint"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetSubscriptionListRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetSubscriptionList"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetTransHistoryRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetTransHistory"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetUserDictionaryRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetUserDictionary"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetVCProductsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetVCProducts"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="HistoryRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#History"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="InfoBuyerPinChangeRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#InfoBuyerPinChange"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="InternetPINChangeRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#InternetPINChange"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="LogoffRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Logoff"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="LogonRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Logon"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="MessageToInstitutionRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#MessageToInstitution"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="OperHistRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#OperHist"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="PaymentByTemplateRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#PaymentByTemplate"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="PINChangeRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#PINChange"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="PingRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Ping"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="PrepaidRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Prepaid"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="RegisterInfoBuyerRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#RegisterInfoBuyer"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ReverseRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Reverse"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ScheduleRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Schedule"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SendTestMessageRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SendTestMessage"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetAcctLimitsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetAcctLimits"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetAvatarRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetAvatar"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetDefaultDynAuthAddressRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetDefaultDynAuthAddress"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetCustomerUserFieldsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetCustomerUserFields"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetExtraAuthLevelRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetExtraAuthLevel"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetPersonInfoRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetPersonInfo"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetTmpAcctLimitsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetTmpAcctLimits"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetTmpCardLimitsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetTmpCardLimits"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetCardLimitsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetCardLimits"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="TransferByTemplateRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#TransferByTemplate"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="TransferTemplatesRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#TransferTemplates"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="UpdateAbonentRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#UpdateAbonent"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="UpdateScheduleRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#UpdateSchedule"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="UpdateTransferTemplateRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#UpdateTransferTemplate"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="UpdateCardVendorRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#UpdateCardVendor"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="UpdateVendorRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#UpdateVendor"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="VendorsRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#Vendors"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetBICRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetBIC"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetCardAllowed3DSecAuthRulesRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#GetCardAllowed3DSecAuthRules"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SetCard3DSecAuthRuleRq">
+      <soap:operation soapAction="http://schemas.compassplus.com/two/1.0/telebank.wsdl#SetCard3DSecAuthRule"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeclineFault">
+        <soap:fault name="DeclineFault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="telebank">
+    <port name="telebank" binding="ns:telebank" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/">
+      <soap:address location="http://localhost:21004/telebank/"/>
+    </port>
+  </service>
+</definitions>

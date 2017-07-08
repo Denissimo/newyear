@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(colors.css);
+@import url(sizes.css);
+
+
+body{
+
+	zoom:1;
+	adding:0; margin:0; min-height:100%; color:#000000;
+
+	background: #FFFFFF url('/imag/back/bkg-site.jpg') fixed top left no-repeat;
+	
+	/*background: #FFFFFF url('/imag/back/gf050.jpg') fixed center left no-repeat;*/
+	background-color: #e4e4e4;
+	/*
+	-o-background-size: 100% 100%; 
+	-webkit-background-size:100% 100%; 
+	-moz-background-size:100% 100%; 
+	-khtml-background-size:100% 100%;
+	background-size: 100% 100%;
+	*/
+
+}
+
+.red{
+	background:#FF8080;
+	/*border: #FF0000 1px solid;*/
+}
+
+
+.green{
+	background:#80FF80;
+}
+
+
+.blue{
+	background:#8080FF;
+}
+
+.wide{
+	width:100%;
+	padding-left:50px;
+}
+
+
+.shad0{
+	background:#FFFFFF;
+	min-height:100%;
+	-moz-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	-webkit-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	box-shadow: 1px 1px 3px 1px #AAAAAA;
+	padding:3px;
+	margin:0;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+
+.shad1{
+	position:inherit;
+
+	background:#FFFFFF;
+	min-height:100%;
+	-moz-box-shadow: 1px 1px 3px 1px #AAAAAA !important; 
+	-webkit-box-shadow: 1px 1px 3px 1px #AAAAAA !important; 
+	box-shadow: 1px 1px 3px 1px #AAAAAA !important; 
+	padding:10px 0 10px 0;
+	margin-bottom:0;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+.shad2{
+
+	background:#FFFFFF;
+	min-height:160px;
+	-moz-box-shadow: 3px 3px 3px 3px #AAAAAA;
+	-webkit-box-shadow: 3px 3px 3px 3px #AAAAAA;
+	box-shadow: 3px 3px 3px 3px #AAAAAA;
+	padding:10px 0 10px 0;
+	margin-bottom:0;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+
+
+.shad3{
+
+	background:#FFFFFF;
+	/*min-height:160px;*/
+	-moz-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	-webkit-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	box-shadow: 1px 1px 3px 1px #AAAAAA;
+	padding:10px 0 10px 0;
+	margin-bottom:0;
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+.shad3r10{
+	color:#000000;
+	background:#FFFFFF;
+	/*min-height:160px;*/
+	-moz-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	-webkit-box-shadow: 1px 1px 3px 1px #AAAAAA;
+	box-shadow: 1px 1px 3px 1px #AAAAAA;
+	padding:10px 10px 10px 10px;
+	
+	-moz-border-radius: 10px; /* FF1+ */
+	-webkit-border-radius: 10px; /* Saf3+, Chrome */
+	-khtml-border-radius: 10px; /* old Konqueror browsers */ 
+	border-radius: 10px; /* Opera 10.5+, IE 9 */
+
+	behavior: url('/pie/PIE.htc');
+
+		/*behavior: url('/pie/PIE.htc');  for IE */
+}
+
+.shad3r10 > a > img{
+	margin: 15px 10px 0px 0px;
+
+}
+
+
+
+
+.trans1{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background:rgba(128, 128, 128, 0.5) !important; 
+	-ms-background:rgba(128, 128, 128, 0.5) !important; 
+	-pie-background: rgba(128,128, 128, 0.5) !important; 
+	/*z-index:0;*/
+	behavior: url('/pie/PIE.htc');
+}
+
+#footer{
+	background:#BCA;
+	-moz-box-shadow: 0 0 5px 3px #AAAAAA;
+	-webkit-box-shadow: 0 0 5px 3px #AAAAAA;
+	box-shadow: 0 0 10px 1px #AAAAAA;
+	behavior: url('/pie/PIE.htc');
+}
+
+.separator{
+	height:15px;
+}
+
+.bcrumb{
+	margin-top: -15px;
+	margin-bottom: 8px;
+	padding:0;
+	height:20px;
+}
+
+.tester{
+	background:#CCCCFF;
+	padding:10px;
+	color:#000090;
+}
+
+.corr001{
+	margin-top:-18px;
+	color:$FFFFFF;
+	
+}
+
+.corr002 {
+	color:$FFFF00;
+	
+}
+
+
+.bluediv{
+  color: #ffffff;
+  /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #5ebdf3, #6adcc2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5ebdf3), to(#6adcc2));
+  background-image: -webkit-linear-gradient(top, #5ebdf3, #6adcc2);
+  background-image: -o-linear-gradient(top, #5ebdf3, #6adcc2);
+  background-image: linear-gradient(to bottom, #5ebdf3, #6adcc2);
+  background-repeat: repeat-x;
+  border-color: #6adcc2 #6adcc2 #ad6704;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5ebdf3', endColorstr='#ff6adcc2', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+}

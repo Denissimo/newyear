@@ -1,0 +1,3 @@
+<?
+include 'editor/new.php';
+?>

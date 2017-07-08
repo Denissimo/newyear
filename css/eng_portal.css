@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(sizes.css);
+@import url(forms.css);
+@import url(tables.css);
+@import url(lightbox.css);
+
+
+.messbox{
+/*
+	position:relative;
+	width:10px;
+*/
+	
+	left: 50%;
+	top: 200px;
+	margin-top:0px;
+	margin-left: -200px;
+	position: absolute;
+	width: 400px;
+	z-index:100;
+	/*
+	position:absolute;
+	margin:-80% 15% 0 15% !important;
+	width:50% !important;
+	z-index:100;
+	*/
+}
+
+.logout{
+	/*background:#ff0000;*/
+	display:inline;
+	
+}
+
+
+.settings-profile{
+	/*background:#FFDDDD;*/
+	padding:0;
+}
+
+.settings-profile span{
+	/*background:#00FFFF;*/
+}
+
+.red{
+	background:#FF7777;
+}

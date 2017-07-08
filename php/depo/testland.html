@@ -1,0 +1,125 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+<form class="form-horizontal" name="webToLeadForm" onSubmit="sendWebToLeadDataRequest(); return false">
+<input type=hidden id="FormId" value="8870fa41-5c5e-459b-8d24-31109f1507bf"/>
+<div class="control-group">
+<label class="control-label" for="Email">E-mail<abbr title="required" font="150%" style="color:#ff0000">*</abbr></label>
+<div class="controls">
+<input id="Email" maxlength="250" size="40" type="text" required="true"/><br>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="Contact">Физ. лицо<abbr title="required" font="150%" style="color:#ff0000">*</abbr></label>
+<div class="controls">
+<input id="Contact" maxlength="250" size="40" type="text" required="true"/><br>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="Account">Контрагент</label>
+<div class="controls">
+<input id="Account" maxlength="250" size="40" type="text"/><br>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="BusinesPhone">Рабочий телефон</label>
+<div class="controls">
+<input id="BusinesPhone" maxlength="250" size="40" type="text"/><br>
+</div>
+</div>
+
+<input type="submit" id="submit" value="Отправить">
+</form>
+
+<script src="/jquery.min.js"></script>
+<script type="text/javascript">
+var bpmjQueryNamespace = {};
+var webToLeadForm = null;
+var fieldsCaptionsArray = [{fieldName: "Email", caption: "E-mail"}, {fieldName: "Contact", caption: "Физ. лицо"}, {fieldName: "Account", caption: "Контрагент"}, {fieldName: "BusinesPhone", caption: "Рабочий телефон"}];
+var fillRequiredFieldsMessage = "Необходимо заполнить поля: ";
+bpmjQueryNamespace.query = jQuery.noConflict(true);
+function getFieldCaptionByName(fieldName) {
+	var result = "";
+	for (var i = 0; i < fieldsCaptionsArray.length; i++) {
+		var arrayItem = fieldsCaptionsArray[i];
+		if (arrayItem.fieldName === fieldName) {
+			result = arrayItem.caption;
+			break;
+		}
+	}
+	return result;
+}
+function getWebToLeadForm() {
+	var result = null;
+	for (var i = 0; i < this.document.forms.length; i++) {
+		var form = this.document.forms[i];
+		if (form.name === "webToLeadForm") {
+			result = form;
+			break;
+		}
+	}
+	return result;
+}
+function checkFormData() {
+	var result = "";
+	for (var i = 0; i < webToLeadForm.length; i++) {
+		var element = webToLeadForm[i];
+		if (element.type !== "text") {
+			continue;
+		}
+		if ((element.required === "true") && (element.value === "")) {
+			if (!result) {
+				result = fillRequiredFieldsMessage;
+			}
+			result += getFieldCaptionByName(element.id) + ", ";
+		}
+	}
+	if (result) {
+		result = result.substring(0, result.length - 2) + ".";
+	}
+	return result;
+}
+function getWebToLeadData() {
+	var result = {};
+	result.formFieldsData = [];
+	for (var i = 0; i < webToLeadForm.length; i++) {
+		var element = webToLeadForm[i];
+		if (element.id === "FormId") {
+			result.formId = element.value;
+			continue;
+		}
+		if ((element.type === "hidden") || (element.type === "submit")) {
+			continue;
+		}
+		if (element.constructor && (element.constructor != HTMLInputElement)) {
+			continue;
+		}
+		result.formFieldsData.push({
+			name: element.id,
+			value: element.value
+		});
+	}
+	return result;
+}
+function sendWebToLeadDataRequest() {
+	webToLeadForm = getWebToLeadForm();
+	var checkResult = checkFormData();
+	if (checkResult) {
+		alert(checkResult);
+		return;
+	}
+		var formData = {formData: getWebToLeadData()};
+		bpmjQueryNamespace.query.ajax({
+			type: "POST",
+			url: "http://bpm/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+			data: JSON.stringify(formData),
+			contentType : "application/json; charset=UTF-8",
+			crossDomain: true,
+			complete: function() {
+				window.location.href = "https://depo.myplatfon.ru/";
+			}
+		});
+	}
+</script>
+</body>
+</html>

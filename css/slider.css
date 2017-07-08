@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	float:left;
+	margin:0;
+	background: #E3E3E3;
+	color: #803030;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	z-index:0;
+}
+
+div.selector{
+	position:absolute;
+	top:200px;
+	left:200px;
+	background:#FFDDAA;
+	width:500px;
+	height:8px;
+	
+}
+
+div.monitor{
+	
+	position:relative;
+	float:left;
+	background:#C0C0C0;
+	width:100px;
+	height:70px;
+	margin:10px;
+	
+}

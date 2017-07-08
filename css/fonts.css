@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {font-family: "SnellRoundhandW01-Bold";
+    src: url("/fonts/SnellRoundhandW01-Bold.eot");
+    src: url("/fonts/SnellRoundhandW01-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/SnellRoundhandW01-Bold.woff") format("woff"),
+    url("/fonts/SnellRoundhandW01-Bold.ttf") format("truetype"),
+    url("/fonts/SnellRoundhandW01-Bold.svg#SnellRoundhandW01-Bold") format("svg");
+}
+
+@font-face {
+    font-family: "OpenSansCondensedLight";
+    src: url("../fonts/OpenSansCondensedLight/OpenSansCondensedLight.eot");
+    src: url("../fonts/OpenSansCondensedLight/OpenSansCondensedLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSansCondensedLight/OpenSansCondensedLight.woff") format("woff"),
+    url("../fonts/OpenSansCondensedLight/OpenSansCondensedLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansCondensedLightItalic"; */
+@font-face {
+    font-family: "OpenSansCondensedLightItalic";
+    src: url("/fonts/OpenSansCondensedLightItalic/OpenSansCondensedLightItalic.eot");
+    src: url("/fonts/OpenSansCondensedLightItalic/OpenSansCondensedLightItalic.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/OpenSansCondensedLightItalic/OpenSansCondensedLightItalic.woff") format("woff"),
+    url("/fonts/OpenSansCondensedLightItalic/OpenSansCondensedLightItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansCondensedBold"; */
+@font-face {
+    font-family: "OpenSansCondensedBold";
+    src: url("/fonts/OpenSansCondensedBold/OpenSansCondensedBold.eot");
+    src: url("/fonts/OpenSansCondensedBold/OpenSansCondensedBold.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/OpenSansCondensedBold/OpenSansCondensedBold.woff") format("woff"),
+    url("/fonts/OpenSansCondensedBold/OpenSansCondensedBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

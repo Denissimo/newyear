@@ -1,0 +1,42 @@
+@charset "windows-1251";
+/* CSS Document */
+
+img.browthumb{
+	margin: 10px;
+}
+
+table.browtab{
+	height:400px;
+}
+
+
+.bootright{
+	/*background:#FFFFDD;*/
+	max-height:480px;
+	overflow:auto;
+}
+
+.bootleft{
+	max-height:480px;
+	/*overflow:auto;*/
+	overflow-y:auto;//только справа скрол
+	/*overflow-x:hidden;*/
+	/*background:#DDFFFF;*/
+	
+}
+.foldcell{
+	width:150px;
+	/*background:#FFDDFF;*/
+}
+
+.foldcell a{
+	background:#DDFFFF;
+	margin:0;
+	/*padding: 0 150px 0 0;*/
+	display:block;
+
+}
+
+.foldcell a:hover{
+	background:#00DDFF;
+}

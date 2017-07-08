@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>2TБанк</title>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- jQueryMobileCSS - original without styling -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.light.css"  id='jQMnDTheme' />
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.yellow.css" id='jQMnDColor' />
+
+		<!-- customize nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.2tbank.css" />
+		
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.4.3.min.js"></script>
+
+		<!-- Extras for: Cards.html -->
+	    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+
+		<script src="js/ttbank.js"></script>
+
+    </head>
+    <body>
+	<div id='map-canvas'></div>        
+    <div data-role="page" data-theme='b'>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="#ttb-menu" data-ajax="false"><i class='fa fa-bars'></i></a>
+            <h1><a href="http://2tbank.ru" target="blank"><img data-inline="true" alt="2ТБанк" src="img/2t-logo.small.png"/></a></h1>
+			<!--
+			<a href="#" data-position="right"><i class="lIcon fa fa-user"></i>Пользователь</a>
+			<a href="#" data-position="right"><i class="lIcon fa fa-exit"></i>Выход</a>
+			-->
+        </div>
+		<div data-role="popup" id="smsConfirmation" data-theme="b">
+			<div data-role="header" data-theme="b">
+				<h1>Подтверждение операции</h1>
+			</div>
+			<div data-role="content" data-theme="b">
+				<div data-role="fieldcontain">
+					<div id="idPopupMessage"></div>
+					<!--<label for="smscode">SMS код:</label>-->
+					<input type="number" name="smscode" id="smscode" value="" data-clear-btn="true" placeholder="Введите полученный sms-код ">
+					<div class='showastabs center nobg'>
+						<a href="#" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-refresh'></i>Отправить еще раз.</a>
+						<a href="index.html" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-check'></i>Ок</a>
+					</div>
+				</div>
+			<!--
+			-->
+			</div>
+		</div>
+		<div data-role="panel" id="ttb-menu" data-theme="b">
+			<ul data-role="listview">
+				<li>Меню</li>
+				<li data-icon="false"><a href="index.html" data-ajax="false"><i class="lIcon fa fa-home"></i>На главную</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="cards.html" data-ajax="false"><i class="lIcon fa fa-credit-card"></i>Мои карты</a></li>
+				<li data-icon="false"><a href="accounts.html" data-ajax="false"><i class="lIcon fa fa-rouble"></i>Мои счета</a></li>
+				<li data-icon="false"><a href="deposits.html" data-ajax="false"><i class="lIcon fa fa-bank"></i>Вклады</a></li>
+				<li data-icon="false"><a href="credits.html" data-ajax="false"><i class="lIcon fa fa-money"></i>Кредиты</a></li>
+				<li data-icon="false">Платежи&Переводы</li>
+				<li data-icon="false"><a href="#" data-ajax="false"><i class="lIcon fa fa-mobile"></i>Мобильная связь</a></li>
+				<li data-icon="false"><a href="#" data-ajax="false"><i class="lIcon fa fa-hand-o-right"></i>P2P</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="settings.html" data-ajax="false"><i class="lIcon fa fa-gears"></i>Сервисы</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="#idContacts" data-ajax="false"><i class="lIcon fa fa-compass"></i>Контакты</a></li>
+				<!--<a href='#popupDialog' data-rel='popup' data-position-to='window' data-role='button' data-icon='external-link' data-transition='pop' data-inline='true'>Open popup dialog</a>-->
+			</ul>
+		</div>
+		<div data-role="content">   			
+			<ul data-nativedroid-plugin='cards'>
+				<li data-cards-type='text' id="idOpenDeposit">
+					<h1>Открыть тВклад</h1>
+					<h2>Вклад до востребования</h2>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                            <legend>Валюта вклада</legend>
+                            <input type="radio" name="currency" id="idCurrencyRub" value="rub" checked="checked">
+                            <label for="idCurrencyRub"><i class="fa fa-rub">&nbsp;</i>Рубль</label>
+                            <input type="radio" name="currency" id="idCurrencyUSD" value="usd">
+                            <label for="idCurrencyUSD"><i class="fa fa-usd">&nbsp;</i>Доллар США</label>
+                            <input type="radio" name="currency" id="idCurrencyEuro" value="euro">
+                            <label for="idCurrencyEuro"><i class="fa fa-euro">&nbsp;</i>Евро</label>
+                        </fieldset>
+					
+						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                            <legend>Начальный взнос</legend>
+                            <label for="idAmount"><i class="fa fa-rub">&nbsp;</i>Сумма</label>
+                            <input type="number" name="amount" id="idAmount" value="1">
+                        </fieldset>
+					
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                            <legend>Выплата процентов</legend>
+                            <input type="radio" name="toaccount" id="idToAccount" value="this" checked="checked" onclick="{$('#idAccounts:visible').slideUp();$('#idOtherClient:visible').slideUp();}">
+                            <label for="idToAccount">Капитализация вклада</label>
+                            <input type="radio" name="toaccount" id="idToMyAccount" value="myaccount" onclick="{$('#idOtherClient:visible').slideUp();$('#idAccounts').slideDown();}">
+                            <label for="idToMyAccount">На мой счет</label>
+							<fieldset data-role="controlgroup" data-type="vertical" data-mini="true" id="idAccounts" style="display:none;">
+								<legend>Списрок счетов</legend>
+								<input type="radio" name="myaccount" id="idMyAccountRub-0" value="40817810630002436486" checked="checked">
+								<label for="idMyAccountRub-0">тСчет <code>40817810630002436486</code></label>
+								<input type="radio" name="myaccount" id="idMyAccountRub-1" value="42317810730002436443">
+								<label for="idMyAccountRub-1">Карточный счет <code>42317810730002436443</code></label>
+							</fieldset>
+                            <input type="radio" name="toaccount" id="idOtherAccount" value="otheraccount" onclick="{$('#idAccounts:visible').slideUp();$('#idOtherClient').slideDown();}">
+                            <label for="idOtherAccount">На счет клиента банка</label>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="idOtherClient" style="display:none;">
+								<legend>Клиента 2ТБанка</legend>
+								<label for="idFIO">ФИО</label>
+								<input type="text" name="fio" id="idFIO" placeholder="ФИО">
+								<label for="idOtherAccountNumber">Номер счета</label>
+								<input type="text" name="otherAccount" id="idOtherAccountNumber" placeholder="номер счета">
+							</fieldset>
+                        </fieldset>
+					</div>
+					<a href="#smsConfirmation" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-ajaz="false"><i class="lIcon fa fa-check"></i> Открыть</a>
+				</li>
+				<li data-cards-type='weather'>
+					<h1>Открыть вклад</h1>
+					<h2>тВклад</h2>
+					<ul class='detail'>
+						<li><i class='fa fa-line-chart sunny'></i>
+							<span>Бонус с 31 дня</span>
+							<span><i class='fa fa-plus'></i> 0.65%</span>
+						</li>
+						<li>10%</li>
+					</ul>
+					<ul class='property'>
+						<li>
+							<a href="https://2tbank.ru/files/file/kbo-current/" target="blank"><i class='fa fa-file-pdf-o'></i></a>
+							<small>Единые условия</small>
+							<strong>КБО ФЛ</strong>
+						</li>
+						<li>
+							<img alt="АСВ" src="img/asv-logo.32.png"/>
+							<small>Вы Застрахованы</small>
+						</li>
+						<li>
+							<a href="deposits.html?#idOpenDeposit" style="height:62px;">
+								<i class='lIcon fa fa-check-circle-o fa'></i>
+								Открыть сейчас
+							</a>							
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+				
+        </div>
+
+    </div>
+    
+    <script src="js/nativedroid.script.js"></script>
+    </body>
+</html>

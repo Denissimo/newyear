@@ -1,0 +1,6 @@
+Content-Type: text/xml
+Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT
+Cache-Control: no-cache, must-revalidate
+Cache-Control: post-check=0,pre-check=0
+Cache-Control: max-age=0
+Pragma: no-cache

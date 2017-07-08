@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+#test01{
+
+/*	
+	color: #00FF00;
+	height: 200px;
+	width: 200px;
+	
+background:
+  -moz-linear-gradient( top left, #FF0000, transparent 25% ),
+  -moz-linear-gradient( bottom right, white, transparent 25% ),
+  -moz-radial-gradient( 25% 50%, circle, #0000FF, #FFFF00 20%, transparent 25% ),
+  -moz-radial-gradient( 75% 50%, contain, white, white 20%, transparent 25% )
+  black;
+ 
+background:
+  -webkit-linear-gradient( top left, #FF0000, transparent 25% ),
+  -webkit-radial-gradient( 10% 10%, circle closest-corner, #FF0000, #FFFF00, transparent 100%),
+  -webkit-radial-gradient( 90% 90%, circle, #FF0000 0%, #FFFF00 8%, transparent 0%),
+  -webkit-radial-gradient( 10% 90%, circle, #FF0000 0%, #FFFF00 8%, transparent 0%),
+  -webkit-radial-gradient( 90% 10%, circle, #FF0000 0%, #FFFF00 8%, transparent 0%),
+  -webkit-linear-gradient( bottom right, white, transparent 25% ),
+  -webkit-radial-gradient( 15% 50%, circle, #0000FF, #FFFFFF 100px, transparent 110px ),
+  -webkit-radial-gradient( 75% 50%, contain, white, white 20%, transparent 25% ),
+  -webkit-radial-gradient(45px 45px, circle cover, aqua 0%, rgba(0, 0, 255, 0) 100%, blue 95%)
+  black;
+
+ 
+background:
+  -o-linear-gradient( top left, #FF0000, transparent 25% ),
+  -o-linear-gradient( bottom right, white, transparent 25% ),
+  -o-radial-gradient( 25% 50%, circle,#0000FF, #FFFF00 20%, transparent 25% ),
+  -o-radial-gradient( 75% 50%, contain, white, white 20%, transparent 25% )
+  black;
+ 
+background:
+  -khtml-linear-gradient( top left, #FF0000, transparent 25% ),
+  -khtml-linear-gradient( bottom right, white, transparent 25% ),
+  -khtml-radial-gradient( 25% 50%, circle,#0000FF, #FFFF00 20%, transparent 25% ),
+  -khtml-radial-gradient( 75% 50%, contain, white, white 20%, transparent 25% )
+  black;
+ 
+background:
+  -ms-linear-gradient( top left, #FF0000, transparent 25% ),
+  -ms-linear-gradient( bottom right, white, transparent 25% ),
+  -ms-radial-gradient( 25% 50%, circle, #0000FF, #FFFF00 20%, transparent 25% ),
+  -ms-radial-gradient( 75% 50%, contain, white, white 20%, transparent 25% )
+  black;
+ 
+background:
+  linear-gradient( top left, #FF0000, transparent 25% ),
+  linear-gradient( bottom right, white, transparent 25% ),
+  radial-gradient( 25% 50%, circle, #0000FF, #FFFF00 20%, transparent 25% ),
+  radial-gradient( 75% 50%, contain, white, white 20%, transparent 25% )
+  black; 
+  
+ */ 
+    
+width: 250px;
+height: 250px;
+padding: 15px;
+background: #F56991;
+color: #E8F3F8;
+border-radius:155px;
+-moz-border-radius: 155px;
+-webkit-border-radius: 155px;
+-o-border-radius: 155px;
+
+box-shadow: 10px 10px 25px #CCC;
+-moz-box-shadow: 5px 5px 25px #CCC;
+-webkit-box-shadow: 5px 5px 25px #CCC;
+-o-box-shadow: 5px 5px 25px #CCC;
+
+background-position: center center;
+background-image: radial-gradient(175px 75px 45deg, circle , #ffffff 0%, #F56991 50%, #8A2624 100%);
+background-image: -o-radial-gradient(175px 75px 45deg, circle , #ffffff 0%, #F56991 50%, #8A2624 100%);
+ 
+background-image: -moz-radial-gradient(175px 75px 45deg, circle , #ffffff 0%, #F56991 50%, #8A2624 100%);
+background-image: -o-radial-gradient(175px 75px 45deg, circle , #ffffff 0%, #F56991 50%, #8A2624 100%);
+background-image: -webkit-gradient(radial, 175 75, 15, center center, 250, color-stop(0%, #ffffff), color-stop(50%, #F56991), color-stop(100%, #8A2624));
+
+behavior: url('/pie/PIE.htc');
+  
+}

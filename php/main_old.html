@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>2TБанк</title>
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+
+	<!-- jQueryMobileCSS - original without styling -->
+	<link rel="stylesheet" href="/css/jquery.mobile-1.4.3.min.css" />
+
+	<!-- nativeDroid core CSS -->
+    <link rel="stylesheet" href="/css/jquerymobile.nativedroid.css" />
+
+	<!-- nativeDroid: Light/Dark -->
+    <link rel="stylesheet" href="/css/jquerymobile.nativedroid.light.css"  id='jQMnDTheme' />
+    <!--<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />-->
+
+	<!-- nativeDroid: Color Schemes -->
+    <link rel="stylesheet" href="/css/jquerymobile.nativedroid.color.yellow.css" id='jQMnDColor' />
+
+	<!-- customize nativeDroid core CSS -->
+    <link rel="stylesheet" href="/css/jquerymobile.2tbank.css" />
+	
+	<link rel="stylesheet" href="/css/basic2t.css" />
+	
+	<!-- jQuery / jQueryMobile Scripts -->
+	<script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.mobile-1.4.3.min.js"></script>
+
+	<!-- Extras for: Cards.html -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+	
+	<script>
+		$(function(){
+			$("#idDepositPeriod").change(function(){
+				var depends={
+					2:9
+					,3:9.1
+					,4:9.4
+					,5:9.7
+					,6:10.1
+					,7:10.1
+					,8:10.1
+					,9:10.5
+					,10:10.5
+					,11:10.5
+					,12:11.14
+					
+				};
+				$("#idDependsOnPeriod").html(depends[$(this).val()]+"%");
+			});
+		})
+	</script>
+	
+</head>
+<body>
+	<div id='map-canvas'></div>        
+    <div data-role="page" data-theme='b'>
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b' class="tt-header">
+            <a href="#ttb-menu" data-ajax="false"><i class='fa fa-bars'></i></a>
+			<h3>
+            <table width="100%">
+				<tr>
+					<td><a href="http://2tbank.ru" target="blank"><img data-inline="true" alt="2ТБанк" src="/img/2t-logo.small.png"/></a></td>
+					<td align="right"><a id="tt-user" href="#" data-position="right" class="popuper" data-ref="#authentication" data-position-to="window" data-transition="pop"><i class="lIcon fa fa-user"></i>Пользователь</a></td>
+					<td align="right"><a id="tt-logout" href="#" data-position="right"><i class="lIcon fa fa-sign-out"></i>Выход</a></td>
+				</tr>
+			</table>
+			</h3>
+        </div>
+        <div data-role="popup" id="smsConfirmation" data-theme="b">
+			<div data-role="header" data-theme="b">
+				<h1>Подтверждение операции</h1>
+			</div>
+			<div data-role="content" data-theme="b">
+				<div data-role="fieldcontain">
+					<div id="idPopupMessage"></div>
+					<!--<label for="smscode">SMS код:</label>-->
+					<input type="number" name="smscode" id="smscode" value="" data-clear-btn="true" placeholder="Введите полученный sms-код ">
+					<div class='showastabs center nobg'>
+						<a href="#" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-refresh'></i>Отправить еще раз.</a>
+						<a href="index.html" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-check'></i>Ок</a>
+					</div>
+				</div>
+			<!--
+			-->
+			</div>
+		</div>
+        <div data-role="popup" id="authentication" data-theme="b">
+			<div data-role="header" data-theme="b">
+				<h1>Личное пространство</h1>
+			</div>
+			<div data-role="content" data-theme="b">
+				<div data-role="fieldcontain" >
+					<div id="idAuthMessage"></div>
+					<!--<label for="smscode">SMS код:</label>-->
+					<input type="text" name="username" id="tt-username" value="LOGIN" data-clear-btn="true" placeholder="Логин">
+					<input type="password" name="pswd" id="tt-pswd" value="PASSWORD" data-clear-btn="true" placeholder="Пароль">
+					<div class='showastabs center nobg'>
+						<a id="tt-login" href="#" data-rel="back" data-role="button" data-inline="true"><i class='lIcon fa fa-check'></i>Вход</a>
+					</div>
+				</div>
+			<!--
+			-->
+			</div>
+		</div>
+		<div data-role="panel" id="ttb-menu" data-theme="b">
+			<ul data-role="listview">
+				<li>Меню</li>
+				<li data-icon="false"><a href="index.html" data-ajax="false"><i class="lIcon fa fa-home"></i>На главную</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="cards.html" data-ajax="false"><i class="lIcon fa fa-credit-card"></i>Мои карты</a></li>
+				<li data-icon="false"><a href="accounts.html" data-ajax="false"><i class="lIcon fa fa-rouble"></i>Мои счета</a></li>
+				<li data-icon="false"><a href="deposits.html" data-ajax="false"><i class="lIcon fa fa-bank"></i>Вклады</a></li>
+				<li data-icon="false"><a href="credits.html" data-ajax="false"><i class="lIcon fa fa-money"></i>Кредиты</a></li>
+				<li data-icon="false">Платежи&Переводы</li>
+				<li data-icon="false"><a href="https://plat2.myplatfon.ru" data-ajax="false"><i class="lIcon fa fa-mobile"></i>Платежи</a></li>
+				<li data-icon="false"><a href="https://2tbank.ru/money-transfer-sdghfj567as85g6adfshj/" data-ajax="false"><i class="lIcon fa fa-hand-o-right"></i>P2P</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="settings.html" data-ajax="false"><i class="lIcon fa fa-gears"></i>Сервисы</a></li>
+				<li data-icon="false"></li>
+				<li data-icon="false"><a href="#idContacts" data-ajax="false"><i class="lIcon fa fa-compass"></i>Контакты</a></li>
+				<!--<a href='#popupDialog' data-rel='popup' data-position-to='window' data-role='button' data-icon='external-link' data-transition='pop' data-inline='true'>Open popup dialog</a>-->
+			</ul>
+		</div>
+		<div data-role="content"> 
+			<div class="tt-box tt-private">
+				<div class="deep-header">Личное пространство</div>
+				<ul data-nativedroid-plugin='cards'>
+				
+					<li data-cards-type='publictransport'>
+						<h1>Платежи</h1>
+							<div class="top_block2 mobile-pay">
+							<a href="https://pay.myplatfon.ru/mobile/" title="Оплатить мобильный, пополнить счет, МТС, Мегафон, Билайн, Скайлинк, BeeLine, MTS, Megafon,Megaphone,региональные оператор, Енисей-телеком, Волга-Телеком, Оренбург, НТК, Сотел, Смартс, Теле2, Tatincom, Ульяновск, СтекGSM..."><span class="tb_image"><span class="tb_text">Пополнить<br>мобильный<br></span><span class="tb_button">Положить деньги</span></span></a></div>
+
+							<div class="top_block2 jku-pay">
+							<a href="https://pay.myplatfon.ru/categories/gkh-kom/935/" title="Оплатить ЖКУ, ЖКХ, квартплата, онлайн, через Интрнет, с банковской карты, Visa-Classic, Visa Electron, по всей России, оплата коммунальных услуг, в регионах, водоснабжение, газ, электроэнергия, счётчики за воду, квартплата, жировки..."><span class="tb_image"><span class="tb_text">Оплатить<br>услуги&nbsp;ЖКХ</span><span class="tb_button">Перейти к оплате</span></span></a></div>
+
+							<div class="top_block2 gosposhlini-pay">
+							<a href="https://pay.myplatfon.ru/fines/findbills/" title="Оплатить штрафы и госпошлины ГИБДД..."><span class="tb_image"><span class="tb_text">Проверка<br>штрафов<br>ГИБДД</span><span class="tb_button">Перейти к оплате</span></span></a></div>
+							<!--
+							<div class="top_block2 games-pay">
+							<a href="https://pay.myplatfon.ru/categories/games/964/" title="Online игры, полный список платежей за игры, оплатить игры, контент провайдеры, оплата игр"><span class="tb_image"><span class="tb_text">Online<br>игры</span><span class="tb_button">Перейти в раздел</span></span></a></div>
+							-->
+						</li>
+						
+						<li data-cards-type='publictransport'>
+						<h1>Платежи</h1>
+							<div class="top_block2 credit-pay">
+							<a href="https://pay.myplatfon.ru/categories/credit/930/" title="Оплатить кредит, через Интернет, онлайн, перевод в банк, перевести на счет, с карты, с телефона, со счёта, оплата в любой банк, VISA, MasterCard, Master Card, Виза, оплата картой, пополнить баланс, пополнить счёт..."><span class="tb_image"><span class="tb_text">Погашение<br>кредитов</span><span class="tb_button">Выбрать банк</span></span></a></div>
+							
+							<div class="top_block2 internet-pay">
+							<a href="https://pay.myplatfon.ru/categories/internet-and-phone/910/" title="Оплата телефона через интернет банковской картой, оплати интернет на Платфоне..."><span class="tb_image"><span class="tb_text">Оплатить<br>Интернет</span><span class="tb_button">Перейти к оплате</span></span></a></div>
+							
+							<div class="top_block2 internet-purses-pay">
+							<a href="https://2tbank.ru/money-transfer/" title="Перевод на карту..."><span class="tb_image"><span class="tb_text">Перевод<br>на карту</span><span class="tb_button">Положить деньги</span></span></a></div>
+						
+						
+						
+						
+					</li>
+					
+					
+					<li data-cards-type='publictransport'>
+						<h1>Мои счета</h1>
+						<h2>2014г.</h2>
+						<table>
+							<tr>
+								<td><small><cite>Счет для жизни</cite></small></td>
+								<td><a href="#" data-inline="true">40817 8103 **** **** 1486 <i class="fa fa-arrow-down"></i></a></td>
+								<td><b><i class="fa fa-rouble">&nbsp;1200.00</i></b></td>
+							</tr>
+							<tr>
+								<td><small><cite>Вклад на срок</cite></small></td>
+								<td><a href="#" data-inline="true">42317 8100 **** **** 1326 <i class="fa fa-arrow-down"></i></a></td>
+								<td><b><i class="fa fa-rouble">&nbsp;100 018.74</i></b></td>
+							</tr>
+						</table>
+						<h1>Мои карты</h1>
+						<table>
+							<tr>
+								<td><i class="fa fa-cc-mastercard"></i></td>
+								<td><a href="#" data-inline="true">5122 **** **** 3022 <i class="fa fa-arrow-down"></i></a></td>
+								<td><b><i class="fa fa-rouble">&nbsp;1200.00</i></b></td>
+							</tr>
+						</table>
+					</li>
+					<li data-cards-type='publictransport'>
+						<h1>Последние операции</h1>
+						<h2>2014г.</h2>
+						<table>
+							<tr>
+								<td><i class="fa fa-arrow-left"></i> 03:19 <small>30 Авг</small></td>
+								<td>Оплата сотовой связи <img src="http://moscow.megafon.ru/b-header/i/logo.svg" alt="Megafon" height="24px"/></td>
+								<td><b><i class="fa fa-rouble">&nbsp;200</i></b></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-arrow-left"></i> 19:41 <small>29 Авг</small></td>
+								<td>Покупка товара <img src="http://av.ru/templates/av/img/logo.png" alt="АзбукаВкуса" height="24px"/></td>
+								<td><b><i class="fa fa-rouble">&nbsp;234.71</i></b></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-arrow-right"></i> 09:01 <small>29 Авг</small></td>
+								<td>Начисление процентов по вкладу</td>
+								<td><b><i class="fa fa-rouble">&nbsp;1 043.71</i></b></td>
+							</tr>
+							
+							<tr>
+								<td><i class="fa fa-frown-o"></i> 14:15 <small>28 Авг</small></td>
+								<td>Внутрибанковский перевод</td>
+								<td><b><i class="fa fa-rouble">&nbsp;24 000.00</i></b></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-arrow-left"></i> 07:41 <small>27 Авг</small></td>
+								<td>Покупка товара <img src="http://www.starbucks.com/static/images/global/logo.svg" alt="StartBucks" height="24px"/></td>
+								<td><b><i class="fa fa-rouble">&nbsp;234.71</i></b></td>
+							</tr>
+						</table>
+						<a href='#'><i class='fa fa-file-text-o'></i> Посмотреть всю историю..</a>
+					</li>
+					<li data-cards-type='text'>
+						<h1>Избраные платежи</h1>
+						<h2><img src="http://moscow.megafon.ru/b-header/i/logo.svg" alt="Megafon" height="24px"/></h2>
+							"Мой мобильный"
+						<table><tr>
+							<td style="text-align:left;"><small>+7(926)111-2244</small></td>
+							<td style="text-align:right;"><i class="fa fa-rub">&nbsp;100</i></td>
+						</tr></table>
+						<!--<a href="#smsConfirmation" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop"><i class="lIcon fa fa-check"></i> Выполнить</a>-->
+						<button class="popuper" data-ref="#smsConfirmation" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop"><i class="lIcon fa fa-check"></i> Выполнить</button>
+					</li>
+					<li data-cards-type='text'>
+						<h1>Избранные переводы</h1>
+						<h2><i class="fa fa-money"></i> Внутрибанковский перевод на счет</h2>
+						"Перевод Васе Пупкину"
+						<table><tr>
+							<td style="text-align:left;"><small>БИК:0445678910;CЧЕТ:408..</small></td>
+							<td style="text-align:right;"><i class="fa fa-usd">&nbsp;250</i></td>
+						</tr></table>
+						<!--<a href="#smsConfirmation" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop"><i class="lIcon fa fa-check"></i> Выполнить</a>-->
+						<button class="popuper" data-ref="#smsConfirmation" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop"><i class="lIcon fa fa-check"></i> Выполнить</button>
+					</li>
+				</ul>
+			</div>
+			<div class="tt-box tt-promo">
+				<div class="deep-header">Дополнительные услуги банка</div>
+				<ul data-nativedroid-plugin='cards'>
+					<li data-cards-type='weather'>
+						<h1>Вклад на срок</h1>
+						<h2>Высокий доход при досрочном расторжении вклада</h2>
+						<ul class='detail'>
+							<li><i class='fa fa-line-chart sunny'></i>
+								<span>Бонус</span>
+								<span><i class='fa fa-plus'></i> 1%</span>
+							</li>
+							<li id="idDependsOnPeriod">11.14%</li>
+						</ul>
+						<div data-role="fieldcontain" data-theme="b">
+							<label for="idDepositPeriod">Срок вклада:</label>
+							<input type="range" name="slider2" id="idDepositPeriod" value="12" min="2" max="12" data-highlight="true">
+						</div>
+						<ul class='property'>
+							<li>
+								<a href="https://2tbank.ru/files/file/kbo-current/" target="blank"><i class='fa fa-file-pdf-o'></i></a>
+								<small>Единые условия</small>
+								<strong>КБО ФЛ</strong>
+							</li>
+							<li>
+								<img alt="АСВ" src="img/asv-logo.32.png"/>
+								<small>Вы Застрахованы</small>
+							</li>
+							<li>
+								<a href="deposits.html?#idOpenDeposit" style="height:62px;">
+									<i class='lIcon fa fa-check-circle-o fa'></i>
+									Открыть сейчас
+								</a>							
+							</li>
+						</ul>
+					</li>
+					<li data-cards-type='weather'>
+						<h1>Кредит на Вашу Карту</h1>
+						<h2></h2>
+						<ul class='detail'>
+							<li><i class='fa fa-credit-card sunny'></i>
+								<span>минимальный платеж</span>
+								<span><i class='fa fa-chevron-circle-right'></i> 3%</span>
+							</li>
+							<li id="idDependsOnAmount">19.9%</li>
+						</ul>
+						<ul class='property'>
+							<li>
+								<a href="https://2tbank.ru/files/file/tariff-knvk-current/" target="blank"><i class='fa fa-file-pdf-o'></i></a>
+								<small>Тарифный план</small>
+								<strong>КнВК</strong>
+							</li>
+							<li>
+								<small>Требования к заемщику</small>
+								<strong>Гражданство РФ</strong>
+								<strong>от 23 до 60 лет</strong>
+							</li>
+							<li>
+								<a href="deposits.html?#idOpenDeposit" style="height:62px;">
+									<i class='lIcon fa fa-check-circle-o fa'></i>
+									Получить
+								</a>							
+							</li>
+						</ul>
+					</li>
+					<li data-cards-type='sports'>
+						<h1><i class="fa fa-usd">&nbsp;</i> Доллар США<span>36.3052</span></h1>
+						<h1><i class="fa fa-euro">&nbsp;</i> Евро<span>47.952</span></h1>
+						<h2>Курс ЦБ, 29 Авг</h2>
+					</li>
+					<!--
+					<li id='idContacts' data-cards-type='traffic' data-cards-traffic-route='{"from":"55.751088, 37.617381","to":"55.755061, 37.557686","type" : "coords"}'>
+						<h1>2ТБанк предоставляет полное дистанционное обслуживание</h1>
+						<h2><strong>49 минут</strong> до ближайшего отделения Банка</h2>
+						<div class='map'></div>
+						<a href='#'><i class='fa fa-comments-o'></i> Чат</a>
+						<a href='#'><i class="fa fa-phone"></i> 8-800-100-94-34</a>
+					</li>
+					-->
+					<li data-cards-type='text'>
+						<h1>Default Card</h1>
+						<h2>Subtitle of a default card</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec sapien eu lorem condimentum mollis vel vel mauris. Proin dolor libero, ultricies quis semper eu, bibendum nec quam. Sed pellentesque, nunc vitae ornare tempus, turpis nisl aliquam nisl, vel faucibus neque magna eu odio. Fusce venenatis sem vitae arcu lacinia tincidunt. Quisque ornare sollicitudin mauris, adipiscing auctor magna commodo vel. Praesent ipsum diam, feugiat ut vulputate eget, congue id lorem. Mauris sollicitudin venenatis aliquam. Aliquam interdum orci a orci posuere fermentum. Vestibulum placerat tristique sem, eu pretium nisl feugiat in. Phasellus non mi mi. Proin porta metus in nulla fringilla non adipiscing risus ullamcorper.</p>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+	<script src="/js/nativedroid.script.js"></script>
+	<script src="/js/ttbank.js"></script>
+</body>
+</html>

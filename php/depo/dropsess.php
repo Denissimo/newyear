@@ -1,0 +1,6 @@
+<?
+
+unset($_SESSION);
+phpinfo();
+
+?>

@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<link rel="stylesheet" href="/assets/styles/bootstrap.css">
+		<link rel="stylesheet" href="/assets/styles/bootstrap-theme.css">
+		<link rel="stylesheet" href="/assets/styles/bootsnew.css">
+		<link rel="stylesheet" href="/css/basic.css">
+		<title id="title">Лендинг</title>
+		<link href="/assets/styles/common.css?1413448382800" rel="stylesheet">
+		<link href="/assets/styles/letsplay.css" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+	</head>
+		<body>
+		<div class="page-wrapper">
+			<header class="inner-header"><a href="#" class="inner-logo">Темпл банк. Мой банк - моя крепость.</a>
+
+			<!--start b-main-nav-->
+			<div class="b-main-nav"><a href="/" class="b-main-nav__el [#main#]"><span>Весь банк</span></a><a href="[{inflistacc}]" class="b-main-nav__el [#inflistacc#]"><span>Мои счета</span></a><a href="[{infhistory}]" class="b-main-nav__el [#infhistory#]"><span>Платежи</span></a><a href="[{payments}]" class="b-main-nav__el [#payments#]"><span>Оплата</span></a><a href="" class="b-main-nav__el"><span>Переводы</span></a>
+				<a
+				href="" class="b-main-nav__el"><span>Банк</span>
+					</a>
+			</div>
+			<!--end b-main-nav-->
+						
+				<a href="[{ttlogin}]" class="btn-action">Вход/Выход</a>
+			</header>
+			<div class="b-header b-header_mobile b-header_mobile--inner">
+				<div class="h-wrap">
+					<div class="b-header__menu"></div><a href="/" class="inner-logo">Темпл банк. Мой банк - моя крепость.</a><a href="[{ttlogin}]" class="btn-action btn-action--login">Вход/Выход</a>
+				</div>
+			</div>
+			<div class="h-wrap b-header__menu_toggler b-header__menu_toggler--inner">
+				<ul>
+					<li><a href="#" class="line">Для жизни</a>
+					</li>
+					<li><a href="#" class="line">Для бизнеса</a>
+					</li>
+					<li><a href="#" class="line">О системе</a>
+					</li>
+					<li><a href="#" class="line">Партнерам</a>
+					</li>
+				</ul>
+			</div>
+			<div class="b-content">
+			
+			
+			
+			
+			<div class="container-fluid">
+<div class="col-md-6 col-md-offset-3 shad1">
+<form class="form-horizontal" name="webToLeadForm" onSubmit="sendWebToLeadDataRequest(); return false">
+
+<input type=hidden id="FormId" value="771113a5-253c-469d-a70a-a7197c50e432"/>
+
+
+	<div class="form-group">
+	<div class="container-fluid" align="center"><div class="col-md-12 formhead">
+		<b>Заполните, пожалуйста, регистрационную форму.</b>
+	</div></div>
+	
+<div class="control-group container-fluid">
+<label class="control-label col-md-3" for="Contact">Физ. лицо<abbr title="required" font="150%" style="color:#ff0000">*</abbr></label>
+<div class="controls col-md-9">
+<input id="Contact" class="form-control" maxlength="250" size="40" type="text" required="true"/><br>
+</div>
+</div>
+<div class="control-group container-fluid">
+<label class="control-label col-md-3" for="Email">E-mail<abbr title="required" font="150%" style="color:#ff0000">*</abbr></label>
+<div class="controls col-md-9">
+<input id="Email" class="form-control" maxlength="250" size="40" type="text" required="true"/><br>
+</div>
+</div>
+<div class="control-group container-fluid">
+<label class="control-label col-md-3" for="BusinesPhone">Рабочий телефон</label>
+<div class="controls col-md-9">
+<input id="BusinesPhone" class="form-control" maxlength="250" size="40" type="text"/><br>
+</div>
+</div>
+
+
+	<div class="container-fluid" align="center"><div class="col-md-12 formhead">
+		Все поля обязательны для заполнения<br><br>
+		<input type="submit" id="submit" class="btn btn-primary"  value="Отправить">
+	</div></div>
+	
+	
+	</div>
+</form>
+</div>
+</div>
+
+
+			
+			
+
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+var bpmjQueryNamespace = {};
+var webToLeadForm = null;
+var fieldsCaptionsArray = [{fieldName: "Contact", caption: "Физ. лицо"}, {fieldName: "Email", caption: "E-mail"}, {fieldName: "BusinesPhone", caption: "Рабочий телефон"}];
+var fillRequiredFieldsMessage = "Необходимо заполнить поля: ";
+bpmjQueryNamespace.query = jQuery.noConflict(true);
+function getFieldCaptionByName(fieldName) {
+	var result = "";
+	for (var i = 0; i < fieldsCaptionsArray.length; i++) {
+		var arrayItem = fieldsCaptionsArray[i];
+		if (arrayItem.fieldName === fieldName) {
+			result = arrayItem.caption;
+			break;
+		}
+	}
+	return result;
+}
+function getWebToLeadForm() {
+	var result = null;
+	for (var i = 0; i < this.document.forms.length; i++) {
+		var form = this.document.forms[i];
+		if (form.name === "webToLeadForm") {
+			result = form;
+			break;
+		}
+	}
+	return result;
+}
+function checkFormData() {
+	var result = "";
+	for (var i = 0; i < webToLeadForm.length; i++) {
+		var element = webToLeadForm[i];
+		if (element.type !== "text") {
+			continue;
+		}
+		if ((element.required === "true") && (element.value === "")) {
+			if (!result) {
+				result = fillRequiredFieldsMessage;
+			}
+			result += getFieldCaptionByName(element.id) + ", ";
+		}
+	}
+	if (result) {
+		result = result.substring(0, result.length - 2) + ".";
+	}
+	return result;
+}
+function getWebToLeadData() {
+	var result = {};
+	result.formFieldsData = [];
+	for (var i = 0; i < webToLeadForm.length; i++) {
+		var element = webToLeadForm[i];
+		if (element.id === "FormId") {
+			result.formId = element.value;
+			continue;
+		}
+		if ((element.type === "hidden") || (element.type === "submit")) {
+			continue;
+		}
+		if (element.constructor && (element.constructor != HTMLInputElement)) {
+			continue;
+		}
+		result.formFieldsData.push({
+			name: element.id,
+			value: element.value
+		});
+	}
+	return result;
+}
+function sendWebToLeadDataRequest() {
+	webToLeadForm = getWebToLeadForm();
+	var checkResult = checkFormData();
+	if (checkResult) {
+		alert(checkResult);
+		return;
+	}
+		var formData = {formData: getWebToLeadData()};
+		bpmjQueryNamespace.query.ajax({
+			type: "POST",
+			url: "http://bpm/0/ServiceModel/GeneratedWebFormService.svc/SaveWebFormLeadData",
+			data: JSON.stringify(formData),
+			contentType : "application/json; charset=UTF-8",
+			crossDomain: true,
+			complete: function() {
+				window.location.href = "http://bpm:8080/ok.html";
+			}
+		});
+	}
+</script>
+
+				</div>
+		</div>
+		<div class="b-footer">
+			<div class="h-wrap">
+				<div class="b-footer__copy">© 2014 ТЕМПЛ Банк</div><a href="+78001949465" class="b-footer__tell">8 (800) 194-94-65</a>
+				<nav class="b-footer__menu"><a href="#" class="b-footer__link line">Правила</a><a href="#" class="b-footer__link line">Условия использования</a><a href="#" class="b-footer__link line">Оферта</a><a href="#" class="b-footer__link line">Тарифы</a>
+				</nav>
+			</div>
+		</div>
+		<div class="b-footer b-footer_mobile">
+			<div class="h-wrap"><a href="+78001949465" class="b-footer__tell">8 (800) 194-94-65</a>
+				<nav class="b-footer__menu"><a href="#" class="b-footer__link line">Правила</a><a href="#" class="b-footer__link line">Условия использования</a><a href="#" class="b-footer__link line">Оферта</a><a href="#" class="b-footer__link line">Тарифы</a>
+				</nav>
+				<div class="b-footer__copy">© 2014 ТЕМПЛ Банк</div>
+			</div>
+		</div>
+	</body>
+		<script src="/assets/scripts/debug.js?1413448382800"></script>
+		<script src="/assets/scripts/libs/jquery-2.1.1.min.js?1413448382800"></script>
+		<script src="/assets/scripts/ui/jquery-ui.js"></script>
+		<script src="/assets/scripts/mask.js?1413448382800"></script>
+		<script src="/assets/scripts/common.js?1413448382800"></script>
+		<script src="/assets/scripts/bootstrap.js"></script>
+		<script src="/assets/scripts/master.js"></script>
+
+</html>

@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+.red{
+	background:#FFBBBB;
+}
+
+.green{
+	background:#BBFFBB;
+}
+
+.blue{
+	background:#BBBBFF;
+}
+
+.yellow{
+	background:#FFFFBB;
+}
+
+.white{
+	background:#FFFFFF;
+}
+
+.tabyellow{
+	/*display:none;*/
+	background:#FFFFDD;
+}

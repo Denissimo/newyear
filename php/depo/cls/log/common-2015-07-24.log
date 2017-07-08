@@ -1,0 +1,275 @@
+2015-07-24T11:17:12+03:00 [26335] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T11:17:12+03:00 [26335] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T11:17:12+03:00 [26335] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T12:56:49+03:00 [27326] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79261234215"]
+2015-07-24T12:56:49+03:00 [27326] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79261234215" telebank="13955310571"]
+2015-07-24T12:56:49+03:00 [27326] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79261234215" telebank="13955310571"]
+2015-07-24T12:57:13+03:00 [27201] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T12:57:13+03:00 [27201] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T12:57:13+03:00 [27201] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T14:15:48+03:00 [28087] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T14:15:48+03:00 [28087] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T14:15:49+03:00 [28087] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:02:46+03:00 [28536] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:02:46+03:00 [28536] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:02:46+03:00 [28536] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:08+03:00 [28537] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:03:08+03:00 [28537] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:08+03:00 [28537] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:09+03:00 [28537] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:03:09+03:00 [28537] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:09+03:00 [28537] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:26+03:00 [28464] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:03:26+03:00 [28464] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:26+03:00 [28464] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:27+03:00 [28464] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:03:27+03:00 [28464] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:03:28+03:00 [28464] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:09:03+03:00 [28592] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:09:03+03:00 [28592] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:09:03+03:00 [28592] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:14:23+03:00 [28513] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:14:23+03:00 [28513] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:14:23+03:00 [28513] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:38:39+03:00 [28836] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:38:39+03:00 [28836] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:38:39+03:00 [28836] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:38:56+03:00 [28855] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:38:56+03:00 [28855] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:38:56+03:00 [28855] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:41:01+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:41:01+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:41:02+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:41:02+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 57 root ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:42:03+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:42:03+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:42:03+03:00 [28858] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="853"]
+2015-07-24T15:45:42+03:00 [28971] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:45:42+03:00 [28971] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:45:42+03:00 [28971] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="858"]
+2015-07-24T15:45:55+03:00 [28971] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:45:55+03:00 [28971] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:45:55+03:00 [28971] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 61 root ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:46:33+03:00 [28974] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:46:33+03:00 [28974] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:46:33+03:00 [28974] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 61 root ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:46:34+03:00 [28974] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:46:34+03:00 [28974] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:46:34+03:00 [28974] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 61 root ERROR Parameter KeyId is requered for VTBIAdapter::Accts
+2015-07-24T15:52:20+03:00 [28838] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:52:20+03:00 [28838] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:52:21+03:00 [28838] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="859"]
+2015-07-24T15:52:51+03:00 [28996] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:52:51+03:00 [28996] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:52:51+03:00 [28996] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="860"]
+2015-07-24T15:53:24+03:00 [29066] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:53:24+03:00 [29066] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:53:25+03:00 [29066] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="861"]
+2015-07-24T15:53:50+03:00 [29082] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:53:50+03:00 [29082] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:53:50+03:00 [29082] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="862"]
+2015-07-24T15:55:06+03:00 [29071] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:55:06+03:00 [29071] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:55:06+03:00 [29071] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="863"]
+2015-07-24T15:55:24+03:00 [28996] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:55:24+03:00 [28996] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:55:25+03:00 [28996] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="864"]
+2015-07-24T15:59:19+03:00 [29132] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T15:59:19+03:00 [29132] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T15:59:19+03:00 [29132] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="867"]
+2015-07-24T16:07:42+03:00 [29215] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:07:42+03:00 [29215] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:07:42+03:00 [29215] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="871"]
+2015-07-24T16:07:58+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:07:58+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:07:58+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="872"]
+2015-07-24T16:08:00+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:08:00+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:08:00+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="873"]
+2015-07-24T16:08:31+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:08:31+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:08:31+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="874"]
+2015-07-24T16:08:32+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:08:32+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:08:32+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="875"]
+2015-07-24T16:08:46+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:08:46+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:08:46+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="876"]
+2015-07-24T16:09:08+03:00 [29214] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:09:08+03:00 [29214] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:09:08+03:00 [29214] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="877"]
+2015-07-24T16:09:32+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:09:32+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:09:32+03:00 [29212] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="878"]
+2015-07-24T16:09:49+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:09:49+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:09:49+03:00 [29245] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="879"]
+2015-07-24T16:12:00+03:00 [29206] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:12:00+03:00 [29206] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:12:01+03:00 [29206] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="880"]
+2015-07-24T16:12:25+03:00 [29298] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:12:25+03:00 [29298] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:12:26+03:00 [29298] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="881"]
+2015-07-24T16:44:11+03:00 [29549] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:44:11+03:00 [29549] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:44:11+03:00 [29549] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="886"]
+2015-07-24T16:45:49+03:00 [29297] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:45:49+03:00 [29297] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:45:50+03:00 [29297] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="887"]
+2015-07-24T16:52:16+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:52:16+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:52:16+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="888"]
+2015-07-24T16:52:53+03:00 [29652] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:52:53+03:00 [29652] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:52:53+03:00 [29652] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="889"]
+2015-07-24T16:53:19+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter telebank is requered for VTBIAdapter::Accts
+2015-07-24T16:53:19+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 57 root ERROR Parameter telebank is requered for VTBIAdapter::Accts
+2015-07-24T16:55:03+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:55:03+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId=""]
+2015-07-24T16:55:03+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T16:55:03+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 58 root ERROR Format Error.
+2015-07-24T16:55:15+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:55:15+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:55:15+03:00 [29610] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="891"]
+2015-07-24T16:55:38+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:55:38+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:55:38+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="892"]
+2015-07-24T16:55:39+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T16:55:39+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T16:55:39+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="893"]
+2015-07-24T16:55:51+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter telebank is requered for VTBIAdapter::Logon
+2015-07-24T16:55:51+03:00 [29548] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 61 root ERROR Parameter telebank is requered for VTBIAdapter::Logon
+2015-07-24T17:22:38+03:00 [29826] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T17:22:38+03:00 [29826] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T17:22:38+03:00 [29826] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="894"]
+2015-07-24T17:23:02+03:00 [29889] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR Parameter telebank is requered for VTBIAdapter::Accts
+2015-07-24T17:23:02+03:00 [29889] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Parameter telebank is requered for VTBIAdapter::Accts
+2015-07-24T17:23:21+03:00 [29888] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T17:23:21+03:00 [29888] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T17:23:21+03:00 [29888] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="895"]
+2015-07-24T17:23:53+03:00 [29826] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="895"]
+2015-07-24T17:23:53+03:00 [29826] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T17:23:53+03:00 [29826] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 60 root ERROR Format Error.
+2015-07-24T17:24:59+03:00 [30003] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="895"]
+2015-07-24T17:24:59+03:00 [30003] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T17:24:59+03:00 [30003] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 60 root ERROR Format Error.
+2015-07-24T17:25:02+03:00 [30003] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="895"]
+2015-07-24T17:25:02+03:00 [30003] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T17:25:02+03:00 [30003] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 60 root ERROR Format Error.
+2015-07-24T18:07:08+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:07:08+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Unknown session
+2015-07-24T18:07:08+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 60 root ERROR Unknown session
+2015-07-24T18:07:31+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:07:31+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="908"]
+2015-07-24T18:07:37+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:07:37+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="909"]
+2015-07-24T18:08:16+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:16+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="910"]
+2015-07-24T18:08:18+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:18+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="911"]
+2015-07-24T18:08:42+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:42+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:43+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:44+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:45+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:08:45+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:09:33+03:00 [30098] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:09:33+03:00 [30098] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:09:53+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:09:53+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Unknown session
+2015-07-24T18:09:53+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Unknown session
+2015-07-24T18:09:55+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:09:55+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Unknown session
+2015-07-24T18:09:55+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Unknown session
+2015-07-24T18:10:02+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:10:02+03:00 [30069] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:10:29+03:00 [30237] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:10:29+03:00 [30237] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:10:49+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:10:49+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Unknown session
+2015-07-24T18:10:49+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Unknown session
+2015-07-24T18:10:51+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:10:51+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Unknown session
+2015-07-24T18:10:51+03:00 [29654] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Unknown session
+2015-07-24T18:11:40+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:11:40+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:11:40+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:11:41+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:11:41+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:11:41+03:00 [29909] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:11:57+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:11:57+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:11:57+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:11:59+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:11:59+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:11:59+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:12:34+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:12:34+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:12:34+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:12:36+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:12:36+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:12:36+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:12:47+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:12:47+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:12:47+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:12:49+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:12:49+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:12:49+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:12:50+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:12:50+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:12:50+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:12:50+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:12:50+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:12:50+03:00 [30258] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:13:28+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:13:28+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:13:28+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:13:30+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:13:30+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:13:30+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:13:31+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:13:31+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:13:31+03:00 [30259] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 62 root ERROR Format Error.
+2015-07-24T18:13:53+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:13:53+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:13:53+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:14:14+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:14:14+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:14:14+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:14:26+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:14:26+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:14:27+03:00 [30136] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:15:34+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:15:34+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:15:34+03:00 [30022] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:15:51+03:00 [30418] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:15:51+03:00 [30418] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:15:51+03:00 [30418] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Format Error.
+2015-07-24T18:16:18+03:00 [30428] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:16:18+03:00 [30428] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:16:18+03:00 [30428] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Format Error.
+2015-07-24T18:18:27+03:00 [30443] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:18:27+03:00 [30443] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:18:27+03:00 [30443] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Format Error.
+2015-07-24T18:19:57+03:00 [30441] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:19:57+03:00 [30441] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Format Error.
+2015-07-24T18:19:57+03:00 [30441] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Format Error.
+2015-07-24T18:20:29+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:20:29+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:20:29+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Invalid STAN
+2015-07-24T18:20:29+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Invalid STAN
+2015-07-24T18:20:34+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:20:34+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:20:34+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 70 VTBIAdapter ERROR [-1]Invalid STAN
+2015-07-24T18:20:34+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/logon.php line 63 root ERROR Invalid STAN
+2015-07-24T18:21:05+03:00 [30474] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::GetPAN[ pin="1111" login="79057107350"]
+2015-07-24T18:21:05+03:00 [30474] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:21:05+03:00 [30474] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:22:09+03:00 [30441] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:22:09+03:00 [30441] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="934"]
+2015-07-24T18:23:23+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:23:23+03:00 [30386] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="935"]
+2015-07-24T18:24:30+03:00 [30023] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:24:30+03:00 [30023] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="936"]
+2015-07-24T18:24:32+03:00 [30023] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Logon[ pin="1111" login="79057107350" telebank="18625602711"]
+2015-07-24T18:24:32+03:00 [30023] /var/www/depo.myplatfon.ru/php/depo/cls/src/Tym.php line 61 VTBIAdapter INFO  VTBIAdapter::Accts[ pin="1111" login="79057107350" telebank="18625602711" KeyId="937"]
